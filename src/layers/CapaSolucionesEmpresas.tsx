@@ -59,7 +59,7 @@ export const CapaSolucionesEmpresas: React.FC<CapaSolucionesEmpresasProps> = ({ 
     <div className="max-w-5xl mx-auto py-12 px-4 sm:px-6 space-y-16">
       
       {/* Encabezado */}
-      <div className="border-b border-slate-200 pb-8">
+      <div className="border-b border-slate-300 pb-8">
         <span className="font-mono text-xs font-bold text-amber-600 uppercase tracking-wider block mb-1">
           Capa 06 · Soluciones B2B
         </span>
@@ -79,7 +79,7 @@ export const CapaSolucionesEmpresas: React.FC<CapaSolucionesEmpresasProps> = ({ 
       />
 
       {/* Concepto Institucional B2B */}
-      <section className="bg-white rounded-2xl p-6 sm:p-8 border border-slate-200 space-y-4 text-sm sm:text-base text-slate-700 leading-relaxed">
+      <section className="bg-[#f4f6f9] rounded-2xl p-6 sm:p-8 border border-slate-300 space-y-4 text-sm sm:text-base text-slate-700 leading-relaxed">
         <div className="flex items-center space-x-2 text-slate-900 font-bold text-sm uppercase tracking-wider">
           <Building2 className="w-4 h-4 text-indigo-700" />
           <span>Alineación Estratégica con la Productividad</span>
@@ -103,7 +103,7 @@ export const CapaSolucionesEmpresas: React.FC<CapaSolucionesEmpresasProps> = ({ 
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {lineasEmpresas.map((linea, idx) => (
-            <div key={idx} className="bg-white rounded-2xl border border-slate-200 p-6 sm:p-7 space-y-4 flex flex-col justify-between">
+            <div key={idx} className="bg-[#f4f6f9] rounded-2xl border border-slate-300 p-6 sm:p-7 space-y-4 flex flex-col justify-between">
               <div>
                 <h3 className="text-base font-bold text-slate-950">
                   {linea.titulo}
@@ -112,7 +112,7 @@ export const CapaSolucionesEmpresas: React.FC<CapaSolucionesEmpresasProps> = ({ 
                   {linea.descripcion}
                 </p>
 
-                <div className="mt-4 pt-4 border-t border-slate-100">
+                <div className="mt-4 pt-4 border-t border-slate-200">
                   <h4 className="text-[11px] font-bold uppercase text-slate-400 mb-2">
                     Alcances del servicio:
                   </h4>
@@ -160,7 +160,7 @@ export const CapaSolucionesEmpresas: React.FC<CapaSolucionesEmpresasProps> = ({ 
       </section>
 
       {/* Navegación al final de la capa */}
-      <div className="pt-8 border-t border-slate-200 flex justify-between items-center text-xs">
+      <div className="pt-8 border-t border-slate-300 flex justify-between items-center text-xs">
         <button
           onClick={() => {
             onSelectCapa('asesoria-personas');

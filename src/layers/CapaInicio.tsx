@@ -66,7 +66,7 @@ export const CapaInicio: React.FC<CapaInicioProps> = ({ onSelectCapa }) => {
             </div>
 
             {/* Premisa Central */}
-            <div className="bg-white border-l-4 border-amber-500 rounded-2xl p-5 sm:p-6 shadow-2xs border border-slate-200/80">
+            <div className="bg-[#f4f6f9] border-l-4 border-amber-500 rounded-2xl p-5 sm:p-6 shadow-2xs border border-slate-300">
               <p className="text-sm sm:text-base text-slate-800 leading-relaxed">
                 <strong className="font-semibold text-slate-950">NIVAL Sciences no espera a que las personas enfermen para acercarse a ellas.</strong> Trabaja también para que las personas y las organizaciones comprendan mejor sus necesidades, conozcan sus riesgos, accedan a información confiable y puedan tomar decisiones oportunas.
               </p>
@@ -95,36 +95,36 @@ export const CapaInicio: React.FC<CapaInicioProps> = ({ onSelectCapa }) => {
         </div>
 
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3">
-          <div className="p-4 rounded-xl bg-white border border-slate-200 shadow-2xs text-center">
+          <div className="p-4 rounded-xl bg-[#f4f6f9] border border-slate-300 shadow-2xs text-center">
             <span className="block font-bold text-slate-900 text-sm">El diagnóstico</span>
-            <span className="text-xs text-slate-500 mt-1 block">aporta información</span>
+            <span className="text-xs text-slate-600 mt-1 block">aporta información</span>
           </div>
-          <div className="p-4 rounded-xl bg-white border border-slate-200 shadow-2xs text-center">
+          <div className="p-4 rounded-xl bg-[#f4f6f9] border border-slate-300 shadow-2xs text-center">
             <span className="block font-bold text-slate-900 text-sm">La prevención</span>
-            <span className="text-xs text-slate-500 mt-1 block">ayuda a anticiparse</span>
+            <span className="text-xs text-slate-600 mt-1 block">ayuda a anticiparse</span>
           </div>
-          <div className="p-4 rounded-xl bg-white border border-slate-200 shadow-2xs text-center">
+          <div className="p-4 rounded-xl bg-[#f4f6f9] border border-slate-300 shadow-2xs text-center">
             <span className="block font-bold text-slate-900 text-sm">La asesoría</span>
-            <span className="text-xs text-slate-500 mt-1 block">transforma en soluciones</span>
+            <span className="text-xs text-slate-600 mt-1 block">transforma en soluciones</span>
           </div>
-          <div className="p-4 rounded-xl bg-white border border-slate-200 shadow-2xs text-center">
+          <div className="p-4 rounded-xl bg-[#f4f6f9] border border-slate-300 shadow-2xs text-center">
             <span className="block font-bold text-slate-900 text-sm">La formación</span>
-            <span className="text-xs text-slate-500 mt-1 block">desarrolla capacidades</span>
+            <span className="text-xs text-slate-600 mt-1 block">desarrolla capacidades</span>
           </div>
-          <div className="p-4 rounded-xl bg-white border border-slate-200 shadow-2xs text-center">
+          <div className="p-4 rounded-xl bg-[#f4f6f9] border border-slate-300 shadow-2xs text-center">
             <span className="block font-bold text-slate-900 text-sm">La tecnología</span>
-            <span className="text-xs text-slate-500 mt-1 block">conecta y facilita</span>
+            <span className="text-xs text-slate-600 mt-1 block">conecta y facilita</span>
           </div>
-          <div className="p-4 rounded-xl bg-white border border-slate-200 shadow-2xs text-center">
+          <div className="p-4 rounded-xl bg-[#f4f6f9] border border-slate-300 shadow-2xs text-center">
             <span className="block font-bold text-slate-900 text-sm">La innovación</span>
-            <span className="text-xs text-slate-500 mt-1 block">permite evolucionar</span>
+            <span className="text-xs text-slate-600 mt-1 block">permite evolucionar</span>
           </div>
         </div>
       </section>
 
       {/* Directorio de Acceso a las Principales Soluciones (Las 8 capas siguientes) */}
       <section className="max-w-6xl mx-auto px-4 sm:px-6 pt-6">
-        <div className="border-t border-slate-200 pt-10">
+        <div className="border-t border-slate-300 pt-10">
           <div className="max-w-2xl mb-8">
             <h2 className="text-2xl font-bold text-slate-950 tracking-tight">
               Estructura Institucional y Soluciones
@@ -142,14 +142,14 @@ export const CapaInicio: React.FC<CapaInicioProps> = ({ onSelectCapa }) => {
                   onSelectCapa(capa.id);
                   window.scrollTo({ top: 0, behavior: 'smooth' });
                 }}
-                className="text-left p-6 rounded-2xl bg-white border border-slate-200 hover:border-slate-400 hover:shadow-md transition-all duration-200 flex flex-col justify-between group cursor-pointer"
+                className="text-left p-6 rounded-2xl bg-[#f4f6f9] border border-slate-300 hover:border-slate-500 hover:shadow-md transition-all duration-200 flex flex-col justify-between group cursor-pointer"
               >
                 <div>
                   <div className="flex items-center justify-between mb-4">
-                    <span className="font-mono text-xs font-bold text-slate-400 group-hover:text-amber-600 transition-colors">
+                    <span className="font-mono text-xs font-bold text-slate-500 group-hover:text-amber-600 transition-colors">
                       Capa {capa.number}
                     </span>
-                    <div className="p-2 rounded-lg bg-slate-50 border border-slate-100">
+                    <div className="p-2 rounded-lg bg-[#e8ecf2] border border-slate-300">
                       {layerIcons[capa.id] || <FileText className="w-5 h-5 text-slate-600" />}
                     </div>
                   </div>
@@ -163,7 +163,7 @@ export const CapaInicio: React.FC<CapaInicioProps> = ({ onSelectCapa }) => {
                   </p>
                 </div>
 
-                <div className="mt-5 pt-3 border-t border-slate-100 flex items-center justify-between text-xs font-semibold text-slate-700 group-hover:text-amber-600 transition-colors">
+                <div className="mt-5 pt-3 border-t border-slate-300/80 flex items-center justify-between text-xs font-semibold text-slate-700 group-hover:text-amber-600 transition-colors">
                   <span>Acceder a esta capa</span>
                   <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
                 </div>

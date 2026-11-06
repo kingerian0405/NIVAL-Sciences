@@ -60,7 +60,7 @@ export function App() {
   };
 
   return (
-    <div className="min-h-screen bg-slate-50 flex flex-col font-sans text-slate-800 antialiased selection:bg-amber-400 selection:text-slate-900">
+    <div className="min-h-screen bg-[#e8ecf2] flex flex-col font-sans text-slate-800 antialiased selection:bg-amber-400 selection:text-slate-900">
       {/* Cabecera Institucional Sobria con Navegación de las 9 Capas */}
       <InstitutionalHeader 
         activeCapaId={activeCapaId}

@@ -40,7 +40,7 @@ export const CapaContacto: React.FC<CapaContactoProps> = ({ onSelectCapa }) => {
     <div className="max-w-5xl mx-auto py-12 px-4 sm:px-6 space-y-16">
       
       {/* Encabezado */}
-      <div className="border-b border-slate-200 pb-8 space-y-1.5">
+      <div className="border-b border-slate-300 pb-8 space-y-1.5">
         <span className="font-mono text-xs font-bold text-amber-600 uppercase tracking-wider block">
           Capa 09 · Enlace Institucional
         </span>
@@ -67,7 +67,7 @@ export const CapaContacto: React.FC<CapaContactoProps> = ({ onSelectCapa }) => {
         {/* Columna Izquierda: Directorio de Atención (5 cols) */}
         <div className="lg:col-span-5 space-y-6">
           
-          <div className="bg-white rounded-2xl p-6 sm:p-7 border border-slate-200 space-y-5">
+          <div className="bg-[#f4f6f9] rounded-2xl p-6 sm:p-7 border border-slate-300 space-y-5">
             <h3 className="text-base font-bold text-slate-950">
               Canales Oficiales
             </h3>
@@ -113,7 +113,7 @@ export const CapaContacto: React.FC<CapaContactoProps> = ({ onSelectCapa }) => {
 
             </div>
 
-            <div className="pt-4 border-t border-slate-100 flex items-start space-x-2 text-[11px] text-slate-500">
+            <div className="pt-4 border-t border-slate-200 flex items-start space-x-2 text-[11px] text-slate-500">
               <ShieldCheck className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
               <span>Garantía de confidencialidad y estricto apego a normas de protección de datos sanitarios.</span>
             </div>
@@ -123,7 +123,7 @@ export const CapaContacto: React.FC<CapaContactoProps> = ({ onSelectCapa }) => {
 
         {/* Columna Derecha: Formulario Formal de Solicitudes (7 cols) */}
         <div className="lg:col-span-7">
-          <div className="bg-white rounded-2xl p-6 sm:p-8 border border-slate-200 space-y-6">
+          <div className="bg-[#f4f6f9] rounded-2xl p-6 sm:p-8 border border-slate-300 space-y-6">
             
             <div>
               <h3 className="text-base font-bold text-slate-950">
@@ -142,7 +142,7 @@ export const CapaContacto: React.FC<CapaContactoProps> = ({ onSelectCapa }) => {
                 className={`py-2 px-2.5 rounded-xl text-xs font-semibold text-center cursor-pointer transition-colors ${
                   tipoGestion === 'servicio'
                     ? 'bg-slate-900 text-white'
-                    : 'bg-slate-100 text-slate-700 hover:bg-slate-200'
+                    : 'bg-[#dde3ea] text-slate-700 hover:bg-slate-300'
                 }`}
               >
                 Servicio / Paciente
@@ -154,7 +154,7 @@ export const CapaContacto: React.FC<CapaContactoProps> = ({ onSelectCapa }) => {
                 className={`py-2 px-2.5 rounded-xl text-xs font-semibold text-center cursor-pointer transition-colors ${
                   tipoGestion === 'empresa'
                     ? 'bg-slate-900 text-white'
-                    : 'bg-slate-100 text-slate-700 hover:bg-slate-200'
+                    : 'bg-[#dde3ea] text-slate-700 hover:bg-slate-300'
                 }`}
               >
                 Empresa / B2B
@@ -166,7 +166,7 @@ export const CapaContacto: React.FC<CapaContactoProps> = ({ onSelectCapa }) => {
                 className={`py-2 px-2.5 rounded-xl text-xs font-semibold text-center cursor-pointer transition-colors ${
                   tipoGestion === 'alianza'
                     ? 'bg-slate-900 text-white'
-                    : 'bg-slate-100 text-slate-700 hover:bg-slate-200'
+                    : 'bg-[#dde3ea] text-slate-700 hover:bg-slate-300'
                 }`}
               >
                 Alianza / Formación
@@ -174,7 +174,7 @@ export const CapaContacto: React.FC<CapaContactoProps> = ({ onSelectCapa }) => {
             </div>
 
             {enviado ? (
-              <div className="p-8 text-center bg-slate-50 rounded-xl border border-slate-200 space-y-3">
+              <div className="p-8 text-center bg-[#e8ecf2] rounded-xl border border-slate-300 space-y-3">
                 <CheckCircle2 className="w-10 h-10 text-emerald-600 mx-auto" />
                 <h4 className="text-base font-bold text-slate-950">Mensaje recibido correctamente</h4>
                 <p className="text-xs text-slate-600 max-w-sm mx-auto leading-relaxed">
@@ -195,7 +195,7 @@ export const CapaContacto: React.FC<CapaContactoProps> = ({ onSelectCapa }) => {
                       value={formData.nombre}
                       onChange={(e) => setFormData({ ...formData, nombre: e.target.value })}
                       placeholder={tipoGestion === 'empresa' ? 'Nombre de la empresa' : 'Ej. Lic. Carlos Méndez'}
-                      className="w-full px-3.5 py-2 rounded-xl bg-slate-50 border border-slate-200 text-xs sm:text-sm text-slate-800 focus:outline-hidden focus:border-slate-400"
+                      className="w-full px-3.5 py-2 rounded-xl bg-[#e8ecf2] border border-slate-300 text-xs sm:text-sm text-slate-800 focus:outline-hidden focus:border-slate-500"
                     />
                   </div>
 
@@ -209,7 +209,7 @@ export const CapaContacto: React.FC<CapaContactoProps> = ({ onSelectCapa }) => {
                       value={formData.contacto}
                       onChange={(e) => setFormData({ ...formData, contacto: e.target.value })}
                       placeholder="Ej. +58 412 0000000"
-                      className="w-full px-3.5 py-2 rounded-xl bg-slate-50 border border-slate-200 text-xs sm:text-sm text-slate-800 focus:outline-hidden focus:border-slate-400"
+                      className="w-full px-3.5 py-2 rounded-xl bg-[#e8ecf2] border border-slate-300 text-xs sm:text-sm text-slate-800 focus:outline-hidden focus:border-slate-500"
                     />
                   </div>
                 </div>
@@ -225,7 +225,7 @@ export const CapaContacto: React.FC<CapaContactoProps> = ({ onSelectCapa }) => {
                       value={formData.correo}
                       onChange={(e) => setFormData({ ...formData, correo: e.target.value })}
                       placeholder="correo@ejemplo.com"
-                      className="w-full px-3.5 py-2 rounded-xl bg-slate-50 border border-slate-200 text-xs sm:text-sm text-slate-800 focus:outline-hidden focus:border-slate-400"
+                      className="w-full px-3.5 py-2 rounded-xl bg-[#e8ecf2] border border-slate-300 text-xs sm:text-sm text-slate-800 focus:outline-hidden focus:border-slate-500"
                     />
                   </div>
 
@@ -244,7 +244,7 @@ export const CapaContacto: React.FC<CapaContactoProps> = ({ onSelectCapa }) => {
                             ? 'Ej. Solicitud de jornada in-company o convenio'
                             : 'Ej. Propuesta de convenio o curso'
                       }
-                      className="w-full px-3.5 py-2 rounded-xl bg-slate-50 border border-slate-200 text-xs sm:text-sm text-slate-800 focus:outline-hidden focus:border-slate-400"
+                      className="w-full px-3.5 py-2 rounded-xl bg-[#e8ecf2] border border-slate-300 text-xs sm:text-sm text-slate-800 focus:outline-hidden focus:border-slate-500"
                     />
                   </div>
                 </div>
@@ -259,7 +259,7 @@ export const CapaContacto: React.FC<CapaContactoProps> = ({ onSelectCapa }) => {
                     value={formData.mensaje}
                     onChange={(e) => setFormData({ ...formData, mensaje: e.target.value })}
                     placeholder="Escriba aquí los detalles de su consulta, solicitud de servicios o propuesta de alianza institucional..."
-                    className="w-full px-3.5 py-2 rounded-xl bg-slate-50 border border-slate-200 text-xs sm:text-sm text-slate-800 focus:outline-hidden focus:border-slate-400"
+                    className="w-full px-3.5 py-2 rounded-xl bg-[#e8ecf2] border border-slate-300 text-xs sm:text-sm text-slate-800 focus:outline-hidden focus:border-slate-500"
                   ></textarea>
                 </div>
 
@@ -279,7 +279,7 @@ export const CapaContacto: React.FC<CapaContactoProps> = ({ onSelectCapa }) => {
       </div>
 
       {/* Navegación al final de la capa */}
-      <div className="pt-8 border-t border-slate-200 flex justify-between items-center text-xs">
+      <div className="pt-8 border-t border-slate-300 flex justify-between items-center text-xs">
         <button
           onClick={() => {
             onSelectCapa('innovacion');

@@ -20,7 +20,7 @@ export const InstitutionalHeader: React.FC<InstitutionalHeaderProps> = ({
   };
 
   return (
-    <header className="sticky top-0 z-50 bg-white/98 backdrop-blur-md border-b border-slate-200">
+    <header className="sticky top-0 z-50 bg-[#e8ecf2]/95 backdrop-blur-md border-b border-slate-300 shadow-2xs">
       {/* Barra superior de proyección institucional */}
       <div className="bg-slate-900 text-slate-350 text-[11px] py-1.5 px-4 sm:px-8 border-b border-slate-800">
         <div className="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-1">
@@ -49,7 +49,7 @@ export const InstitutionalHeader: React.FC<InstitutionalHeaderProps> = ({
               alt="NIVAL Sciences" 
               className="h-12 sm:h-14 w-auto object-contain rounded-md"
             />
-            <div className="hidden sm:flex flex-col border-l border-slate-200 pl-3">
+            <div className="hidden sm:flex flex-col border-l border-slate-300 pl-3">
               <span className="text-xs font-bold text-slate-900 tracking-tight">
                 Ecosistema Integral de Salud
               </span>
@@ -70,7 +70,7 @@ export const InstitutionalHeader: React.FC<InstitutionalHeaderProps> = ({
                   className={`px-3 py-2 rounded-lg text-xs font-semibold tracking-tight transition-all cursor-pointer ${
                     isActive
                       ? 'bg-slate-900 text-white shadow-xs'
-                      : 'text-slate-600 hover:text-slate-950 hover:bg-slate-100'
+                      : 'text-slate-700 hover:text-slate-950 hover:bg-slate-200/80'
                   }`}
                 >
                   {capa.shortTitle}
@@ -83,7 +83,7 @@ export const InstitutionalHeader: React.FC<InstitutionalHeaderProps> = ({
           <div className="lg:hidden">
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="p-2 rounded-lg text-slate-700 hover:bg-slate-100 focus:outline-hidden"
+              className="p-2 rounded-lg text-slate-700 hover:bg-slate-200 focus:outline-hidden"
               aria-label="Menú institucional"
             >
               {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -94,14 +94,14 @@ export const InstitutionalHeader: React.FC<InstitutionalHeaderProps> = ({
       </div>
 
       {/* Sub-barra informativa de la capa activa */}
-      <div className="bg-slate-50 border-t border-slate-200/80 px-4 sm:px-8 py-2">
+      <div className="bg-[#dde3ea] border-t border-slate-300/80 px-4 sm:px-8 py-2">
         <div className="max-w-7xl mx-auto flex items-center justify-between text-xs">
-          <div className="flex items-center space-x-2 text-slate-600">
-            <span className="font-mono text-slate-400 font-semibold">Capa {CAPAS.find(c => c.id === activeCapaId)?.number}</span>
-            <span className="text-slate-300">/</span>
-            <span className="font-bold text-slate-900">{CAPAS.find(c => c.id === activeCapaId)?.title}</span>
+          <div className="flex items-center space-x-2 text-slate-700">
+            <span className="font-mono text-slate-500 font-semibold">Capa {CAPAS.find(c => c.id === activeCapaId)?.number}</span>
+            <span className="text-slate-400">/</span>
+            <span className="font-bold text-slate-950">{CAPAS.find(c => c.id === activeCapaId)?.title}</span>
           </div>
-          <span className="text-[11px] text-slate-500 hidden sm:inline">
+          <span className="text-[11px] text-slate-600 hidden sm:inline">
             {CAPAS.find(c => c.id === activeCapaId)?.subtitle}
           </span>
         </div>
@@ -109,8 +109,8 @@ export const InstitutionalHeader: React.FC<InstitutionalHeaderProps> = ({
 
       {/* Desplegable móvil */}
       {mobileMenuOpen && (
-        <div className="lg:hidden border-t border-slate-200 bg-white px-4 pt-2 pb-6 space-y-1 shadow-lg">
-          <div className="px-3 py-2 text-[11px] font-bold uppercase tracking-wider text-slate-400 border-b border-slate-100 mb-2">
+        <div className="lg:hidden border-t border-slate-300 bg-[#e8ecf2] px-4 pt-2 pb-6 space-y-1 shadow-lg">
+          <div className="px-3 py-2 text-[11px] font-bold uppercase tracking-wider text-slate-500 border-b border-slate-300/80 mb-2">
             Capas del Ecosistema NIVAL
           </div>
           {CAPAS.map((capa) => {
@@ -122,16 +122,16 @@ export const InstitutionalHeader: React.FC<InstitutionalHeaderProps> = ({
                 className={`w-full flex items-center justify-between px-3 py-2.5 rounded-lg text-xs font-medium text-left transition-colors ${
                   isActive
                     ? 'bg-slate-900 text-white font-bold'
-                    : 'text-slate-700 hover:bg-slate-100'
+                    : 'text-slate-700 hover:bg-slate-200'
                 }`}
               >
                 <div className="flex items-center space-x-2">
-                  <span className={`font-mono text-[10px] ${isActive ? 'text-amber-400' : 'text-slate-400'}`}>
+                  <span className={`font-mono text-[10px] ${isActive ? 'text-amber-400' : 'text-slate-500'}`}>
                     {capa.number}
                   </span>
                   <span>{capa.title}</span>
                 </div>
-                <ChevronRight className={`w-4 h-4 ${isActive ? 'text-amber-400' : 'text-slate-400'}`} />
+                <ChevronRight className={`w-4 h-4 ${isActive ? 'text-amber-400' : 'text-slate-500'}`} />
               </button>
             );
           })}

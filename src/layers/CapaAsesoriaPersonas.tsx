@@ -42,7 +42,7 @@ export const CapaAsesoriaPersonas: React.FC<CapaAsesoriaPersonasProps> = ({ onSe
     <div className="max-w-5xl mx-auto py-12 px-4 sm:px-6 space-y-16">
       
       {/* Encabezado */}
-      <div className="border-b border-slate-200 pb-8">
+      <div className="border-b border-slate-300 pb-8">
         <span className="font-mono text-xs font-bold text-amber-600 uppercase tracking-wider block mb-1">
           Capa 05 · Acompañamiento Individual
         </span>
@@ -62,7 +62,7 @@ export const CapaAsesoriaPersonas: React.FC<CapaAsesoriaPersonasProps> = ({ onSe
       />
 
       {/* Concepto Central */}
-      <section className="bg-white rounded-2xl p-6 sm:p-8 border border-slate-200 space-y-4 text-sm sm:text-base text-slate-700 leading-relaxed">
+      <section className="bg-[#f4f6f9] rounded-2xl p-6 sm:p-8 border border-slate-300 space-y-4 text-sm sm:text-base text-slate-700 leading-relaxed">
         <div className="flex items-center space-x-2 text-slate-900 font-bold text-sm uppercase tracking-wider">
           <UserCheck className="w-4 h-4 text-amber-600" />
           <span>El Valor de la Orientación Profesional</span>
@@ -89,8 +89,8 @@ export const CapaAsesoriaPersonas: React.FC<CapaAsesoriaPersonasProps> = ({ onSe
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {serviciosAsesoria.map((servicio, idx) => (
-            <div key={idx} className="bg-white rounded-2xl border border-slate-200 p-6 sm:p-7 space-y-3">
-              <div className="w-10 h-10 rounded-xl bg-slate-50 border border-slate-200 flex items-center justify-center">
+            <div key={idx} className="bg-[#f4f6f9] rounded-2xl border border-slate-300 p-6 sm:p-7 space-y-3">
+              <div className="w-10 h-10 rounded-xl bg-[#e8ecf2] border border-slate-300 flex items-center justify-center">
                 {servicio.icono}
               </div>
               <h3 className="text-base font-bold text-slate-950">
@@ -105,7 +105,7 @@ export const CapaAsesoriaPersonas: React.FC<CapaAsesoriaPersonasProps> = ({ onSe
       </section>
 
       {/* Principio de Delimitación y Responsabilidad */}
-      <section className="bg-slate-50 rounded-2xl p-6 sm:p-8 border border-slate-300 space-y-3 text-xs sm:text-sm">
+      <section className="bg-[#e8ecf2] rounded-2xl p-6 sm:p-8 border border-slate-300 space-y-3 text-xs sm:text-sm">
         <div className="flex items-center space-x-2 text-slate-900 font-bold uppercase tracking-wider text-xs">
           <ShieldAlert className="w-4 h-4 text-amber-600" />
           <span>Marco Ético y Responsabilidad Profesional</span>
@@ -116,7 +116,7 @@ export const CapaAsesoriaPersonas: React.FC<CapaAsesoriaPersonasProps> = ({ onSe
       </section>
 
       {/* Navegación al final de la capa */}
-      <div className="pt-8 border-t border-slate-200 flex justify-between items-center text-xs">
+      <div className="pt-8 border-t border-slate-300 flex justify-between items-center text-xs">
         <button
           onClick={() => {
             onSelectCapa('prevencion');
