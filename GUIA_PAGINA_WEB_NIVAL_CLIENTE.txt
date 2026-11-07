@@ -1,0 +1,153 @@
+================================================================================
+GUIA EXPLICATIVA DE LA PAGINA WEB INSTITUCIONAL
+NIVAL SCIENCES · ECOSISTEMA INTEGRAL DE SALUD
+================================================================================
+
+Lema oficial: "La vision que necesitas para vivir como sueñas"
+Enlace para ver la pagina en vivo por internet:
+https://kingerian0405.github.io/NIVAL-Sciences/
+
+--------------------------------------------------------------------------------
+1. QUE ES ESTA PAGINA Y CUAL ES SU PROPOSITO
+--------------------------------------------------------------------------------
+Esta pagina web es la carta de presentacion oficial de NIVAL Sciences ante 
+pacientes, medicos, instituciones de salud y empresas aliadas.
+
+A diferencia de una pagina de ventas comun y corriente (que suele estar llena 
+de anuncios llamativos, promociones insistentes o botones agresivos de compra), 
+esta web fue diseñada con un tono formal, sobrio y respetuoso. 
+
+El objetivo es proyectar prestigio, confianza cientifica y orden. Muestra con 
+claridad que NIVAL no es solamente un laboratorio clinico, sino un ecosistema 
+completo de salud que integra diagnostico, prevencion, asesoria, capacitacion 
+y tecnologia.
+
+
+--------------------------------------------------------------------------------
+2. POR QUE SE ELIGIO ESTE DISEÑO VISUAL
+--------------------------------------------------------------------------------
+
+A. EL FONDO GRIS CLARO (DESCANSO PARA LA VISTA):
+   El color blanco puro de fondo suele ser molesto e incuso cegador cuando se 
+   mira la pantalla del telefono o de la computadora por mucho tiempo. 
+   Por esta razon, se utilizo una gama de tonos grises suaves y elegantes. 
+   Este color mate relaja la vista, permite leer comodamente todos los textos y 
+   le da a la pagina una apariencia moderna de consultorio o clinica de alto 
+   nivel.
+
+B. EL LOGOTIPO OFICIAL:
+   El logotipo oficial (con las letras cromadas y el búho dorado en el centro) 
+   esta ubicado en la parte superior izquierda de la pantalla, colocado dentro 
+   de un marco limpio para que sus detalles dorados y sombras se aprecien 
+   a la perfeccion. Se evito colocar un logo gigante en el medio de la pantalla 
+   para no estorbar la lectura del mensaje principal.
+
+C. EL LEMA DE LA EMPRESA:
+   El lema "La vision que necesitas para vivir como sueñas" acompaña la 
+   cabecera de la pagina, la portada de bienvenida y el pie de pagina, 
+   reforzando el proposito humano y la vision positiva de NIVAL Sciences.
+
+D. LOS ESPACIOS EN GRIS ("ESPACIO RESERVADO PARA FOTO"):
+   A lo largo de la pagina encontrara varios recuadros grises que dicen 
+   claramente que fotografia deberia colocarse alli (por ejemplo: fotos de 
+   la fachada, fotos del laboratorio trabajando, o fotos del equipo medico).
+   Esto se hizo a proposito para no colocar fotos genericas de internet, sino 
+   dejar el espacio exacto listo para cuando la empresa tome sus propias 
+   fotografias reales.
+
+
+--------------------------------------------------------------------------------
+3. EXPLICACION SENCILLA DE LAS 9 CAPAS DE LA PAGINA
+--------------------------------------------------------------------------------
+La pagina esta organizada en 9 secciones o "capas", siguiendo fielmente el plan 
+estrategico de NIVAL. Al hacer clic en el menu superior, el visitante puede ir 
+directamente a cualquiera de ellas:
+
+CAPA 01 · INICIO (PRESENTACION INSTITUCIONAL)
+Es la portada de bienvenida. Aqui se presenta la empresa, el lema y la idea 
+central: NIVAL Sciences no espera a que la gente se enferme para ayudarla, 
+sino que trabaja para que las personas conozcan sus riesgos y puedan cuidarse 
+a tiempo. Tambien incluye un menu rapido para entrar a todas las demas capas.
+
+CAPA 02 · NOSOTROS (HISTORIA, MISION Y VALORES)
+Explica que es NIVAL Sciences, cual es su mision y su vision a futuro. Destaca 
+los 5 valores que guian su trabajo: etica, rigor cientifico, vocacion de 
+servicio, innovacion y seguimiento continuo al paciente.
+
+CAPA 03 · LABORATORIO CLINICO (SERVICIOS Y EXAMENES)
+Muestra la primera sede operativa ya en marcha. Cuenta con un buscador donde el 
+paciente o el medico puede escribir el nombre de un examen (por ejemplo: Perfil 
+20, Glicemia, Tiroides) y ver al instante que es, cuantas horas de ayuno se 
+necesitan, que tipo de muestra se toma y como debe prepararse antes de ir. 
+Tambien informa sobre los horarios de atencion y el servicio de toma a domicilio.
+
+CAPA 04 · PREVENCION Y CALIDAD DE VIDA
+Muestra como NIVAL ayuda a anticiparse a los problemas de salud. Explica los 
+programas preventivos de evaluacion periodica, las jornadas de despistaje y el 
+control de riesgos silenciosos como la prediabetes, el colesterol alto y la salud 
+del higado y los riñones.
+
+CAPA 05 · ASESORIA PARA PERSONAS (ORIENTACION INDIVIDUAL)
+Explica que los resultados de laboratorio no deben ser papeles incomprensibles. 
+NIVAL ofrece orientacion para explicar que significan los valores y orientar al 
+paciente sobre que pasos seguir, respetando siempre el diagnostico y las 
+recetas del medico tratante.
+
+CAPA 06 · SOLUCIONES PARA EMPRESAS (SERVICIOS CORPORATIVOS)
+Dedicada a gerentes y dueños de empresas. Explica como NIVAL puede realizar 
+jornadas de salud para los empleados en la propia oficina sin interrumpir el 
+trabajo, programas de medicina laboral, capacitacion en primeros auxilios y 
+convenios especiales.
+
+CAPA 07 · FORMACION Y CAPACITACION (CURSOS Y TALLERES)
+Presenta los cursos y talleres que ofrece NIVAL, tanto para profesionales de 
+la salud y estudiantes de bioanalisis, como para brigadas de empresas y la 
+comunidad en general. Tambien proyecta el futuro campus virtual para estudiar 
+por internet.
+
+CAPA 08 · INNOVACION Y TECNOLOGIA
+Muestra como NIVAL utiliza la tecnologia para conectar sus servicios. Explica el 
+portal web, el desarrollo de herramientas digitales para orientar a las 
+personas y la hoja de ruta de crecimiento planificada para los proximos 3 años.
+
+CAPA 09 · CONTACTO Y ATENCION
+El punto de comunicacion oficial. Muestra la direccion fisica, lineas de 
+telefono y correos electronicos. Incluye un formulario donde el usuario puede 
+elegir si escribe como paciente particular, como empresa interesada en un 
+convenio o para alianzas academicas.
+
+
+--------------------------------------------------------------------------------
+4. COMO PUEDE VER LA PAGINA HOY MISMO
+--------------------------------------------------------------------------------
+La pagina ya esta completamente programada y funcionando en internet. 
+
+Cualquier persona puede abrirla desde un telefono inteligente, tablet o 
+computadora con este enlace directo:
+
+https://kingerian0405.github.io/NIVAL-Sciences/
+
+Funciona sin retrasos, se adapta automaticamente al tamaño de la pantalla y 
+permite navegar por todas las capas con total fluidez.
+
+
+--------------------------------------------------------------------------------
+5. PASOS RECOMENDADOS PARA EL CLIENTE A CONTINUACION
+--------------------------------------------------------------------------------
+1. FOTOGRAFIAS PROPIAS:
+   Tomar fotos con buena iluminacion de la sede, de las personas atendiendo y 
+   de los equipos del laboratorio. Estas fotos reemplazaran facilmente los 
+   espacios grises reservados.
+
+2. CORREOS Y TELEFONOS DEFINITIVOS:
+   Confirmar los numeros de telefono y direcciones de correo exactas donde 
+   desean recibir los mensajes de los pacientes y las empresas.
+
+3. DOMINIO PROPIO (OPCIONAL):
+   Si en el futuro desean que la pagina se llame www.nivalsciences.com en lugar 
+   del enlace de github.io, solo hace falta comprar el nombre y se conecta de 
+   forma muy sencilla.
+
+================================================================================
+Fin del documento explicativo.
+================================================================================
