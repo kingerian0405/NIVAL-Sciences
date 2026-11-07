@@ -39,7 +39,7 @@ export const CapaNosotros: React.FC<CapaNosotrosProps> = ({ onSelectCapa }) => {
     <div className="max-w-5xl mx-auto py-12 px-4 sm:px-6 space-y-16">
       
       {/* Encabezado de la Capa */}
-      <div className="border-b border-slate-200 pb-8 space-y-2">
+      <div className="border-b border-slate-400 pb-8 space-y-2">
         <span className="font-mono text-xs font-bold text-amber-600 uppercase tracking-wider block">
           Capa 02 · Identidad Institucional
         </span>
@@ -49,7 +49,7 @@ export const CapaNosotros: React.FC<CapaNosotrosProps> = ({ onSelectCapa }) => {
         <p className="text-amber-800 text-base font-semibold italic">
           “La visión que necesitas para vivir como sueñas”
         </p>
-        <p className="text-sm text-slate-600">
+        <p className="text-sm text-slate-700">
           Historia, misión, visión, valores y modelo de trabajo ecosistémico de NIVAL Sciences.
         </p>
       </div>
@@ -68,11 +68,11 @@ export const CapaNosotros: React.FC<CapaNosotrosProps> = ({ onSelectCapa }) => {
           <span>1. Concepto Institucional</span>
         </h2>
         
-        <div className="bg-[#f4f6f9] rounded-2xl p-6 sm:p-8 border border-slate-300 space-y-4 text-slate-700 leading-relaxed text-sm sm:text-base">
+        <div className="bg-[#dde3ec] rounded-2xl p-6 sm:p-8 border border-slate-400 space-y-4 text-slate-800 leading-relaxed text-sm sm:text-base">
           <p>
             <strong>NIVAL Sciences</strong> es una organización orientada al desarrollo de soluciones integrales de salud, asesoría y gestión del conocimiento. Su actividad articula servicios diagnósticos, prevención, acompañamiento y asesoría a personas naturales y empresas, formación, capacitación e innovación tecnológica.
           </p>
-          <div className="p-4 rounded-xl bg-[#e8ecf2] border border-slate-300 text-slate-800 font-medium">
+          <div className="p-4 rounded-xl bg-[#cbd5e1] border border-slate-400 text-slate-900 font-medium">
             El laboratorio clínico constituye su primera unidad operativa, pero no representa el límite de la organización. NIVAL se proyecta como un ecosistema capaz de integrar diferentes servicios y soluciones para responder a las necesidades de individuos, organizaciones e instituciones.
           </div>
         </div>
@@ -82,30 +82,30 @@ export const CapaNosotros: React.FC<CapaNosotrosProps> = ({ onSelectCapa }) => {
       <section className="grid grid-cols-1 md:grid-cols-2 gap-8">
         
         {/* Misión */}
-        <div className="bg-[#f4f6f9] rounded-2xl p-6 sm:p-8 border border-slate-300 space-y-4 flex flex-col justify-between">
+        <div className="bg-[#dde3ec] rounded-2xl p-6 sm:p-8 border border-slate-400 space-y-4 flex flex-col justify-between">
           <div className="space-y-3">
-            <div className="w-10 h-10 rounded-xl bg-sky-100 text-sky-800 flex items-center justify-center border border-sky-200">
+            <div className="w-10 h-10 rounded-xl bg-sky-100 text-sky-800 flex items-center justify-center border border-sky-300">
               <Target className="w-5 h-5" />
             </div>
             <h3 className="text-lg font-bold text-slate-950">
               2. Misión
             </h3>
-            <p className="text-sm text-slate-700 leading-relaxed">
+            <p className="text-sm text-slate-800 leading-relaxed">
               Desarrollar y ofrecer soluciones integrales mediante servicios diagnósticos confiables, asesoría especializada a personas naturales y empresas, programas de prevención, formación científica e innovación tecnológica; integrando conocimiento, talento humano y herramientas digitales para facilitar decisiones oportunas, fortalecer capacidades y contribuir al bienestar individual, organizacional y colectivo.
             </p>
           </div>
         </div>
 
         {/* Visión */}
-        <div className="bg-[#f4f6f9] rounded-2xl p-6 sm:p-8 border border-slate-300 space-y-4 flex flex-col justify-between">
+        <div className="bg-[#dde3ec] rounded-2xl p-6 sm:p-8 border border-slate-400 space-y-4 flex flex-col justify-between">
           <div className="space-y-3">
-            <div className="w-10 h-10 rounded-xl bg-amber-100 text-amber-800 flex items-center justify-center border border-amber-200">
+            <div className="w-10 h-10 rounded-xl bg-amber-100 text-amber-800 flex items-center justify-center border border-amber-300">
               <Eye className="w-5 h-5" />
             </div>
             <h3 className="text-lg font-bold text-slate-950">
               3. Visión
             </h3>
-            <p className="text-sm text-slate-700 leading-relaxed">
+            <p className="text-sm text-slate-800 leading-relaxed">
               Ser una organización referente en el desarrollo de un ecosistema integral de salud y soluciones especializadas, reconocido por su excelencia científica, capacidad de asesoría, innovación tecnológica y compromiso con la prevención, la formación y el bienestar de las personas y las organizaciones.
             </p>
           </div>
@@ -136,11 +136,11 @@ export const CapaNosotros: React.FC<CapaNosotrosProps> = ({ onSelectCapa }) => {
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">
           {valores.map((v, i) => (
-            <div key={i} className="p-5 rounded-2xl bg-[#f4f6f9] border border-slate-300 flex flex-col justify-between">
+            <div key={i} className="p-5 rounded-2xl bg-[#dde3ec] border border-slate-400 flex flex-col justify-between">
               <div>
                 <div className="mb-3">{v.icon}</div>
                 <h4 className="text-sm font-bold text-slate-950">{v.nombre}</h4>
-                <p className="text-xs text-slate-600 mt-1.5 leading-relaxed">{v.descripcion}</p>
+                <p className="text-xs text-slate-700 mt-1.5 leading-relaxed">{v.descripcion}</p>
               </div>
             </div>
           ))}
@@ -154,29 +154,29 @@ export const CapaNosotros: React.FC<CapaNosotrosProps> = ({ onSelectCapa }) => {
           <span>6. Modelo de Trabajo Ecosistémico</span>
         </h2>
 
-        <div className="bg-[#f4f6f9] rounded-2xl p-6 sm:p-8 border border-slate-300 space-y-4 text-sm text-slate-700 leading-relaxed">
+        <div className="bg-[#dde3ec] rounded-2xl p-6 sm:p-8 border border-slate-400 space-y-4 text-sm text-slate-800 leading-relaxed">
           <p>
             El modelo de trabajo de NIVAL Sciences no opera como unidades aisladas. Se articula bajo un principio de <strong>continuidad asistencial e informativa</strong>:
           </p>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4 pt-2">
-            <div className="p-4 rounded-xl bg-[#e8ecf2] border border-slate-300">
+            <div className="p-4 rounded-xl bg-[#cbd5e1] border border-slate-400">
               <h4 className="font-bold text-slate-950 text-xs uppercase mb-1">Interoperabilidad</h4>
-              <p className="text-xs text-slate-600">
+              <p className="text-xs text-slate-700">
                 La información clínica diagnóstica alimenta de forma segura las pautas de prevención y las asesorías especializadas.
               </p>
             </div>
 
-            <div className="p-4 rounded-xl bg-[#e8ecf2] border border-slate-300">
+            <div className="p-4 rounded-xl bg-[#cbd5e1] border border-slate-400">
               <h4 className="font-bold text-slate-950 text-xs uppercase mb-1">Doble Verificación</h4>
-              <p className="text-xs text-slate-600">
+              <p className="text-xs text-slate-700">
                 Aseguramiento de la confiabilidad analítica en procesos críticos antes de emitir cualquier dictamen o informe.
               </p>
             </div>
 
-            <div className="p-4 rounded-xl bg-[#e8ecf2] border border-slate-300">
+            <div className="p-4 rounded-xl bg-[#cbd5e1] border border-slate-400">
               <h4 className="font-bold text-slate-950 text-xs uppercase mb-1">Orientación Integral</h4>
-              <p className="text-xs text-slate-600">
+              <p className="text-xs text-slate-700">
                 Respuestas adaptadas tanto para la persona y su familia como para comités de salud ocupacional de empresas.
               </p>
             </div>
@@ -185,7 +185,7 @@ export const CapaNosotros: React.FC<CapaNosotrosProps> = ({ onSelectCapa }) => {
       </section>
 
       {/* Navegación al final de la capa */}
-      <div className="pt-8 border-t border-slate-300 flex justify-between items-center text-xs">
+      <div className="pt-8 border-t border-slate-400 flex justify-between items-center text-xs">
         <button
           onClick={() => {
             onSelectCapa('inicio');

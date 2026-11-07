@@ -39,7 +39,7 @@ export const CapaInicio: React.FC<CapaInicioProps> = ({ onSelectCapa }) => {
           {/* Columna de Contenido Institucional y Slogan (7 cols) */}
           <div className="lg:col-span-7 space-y-6 text-left">
             
-            <div className="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-slate-100 border border-slate-200 text-slate-700 text-xs font-semibold">
+            <div className="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-[#bcc7d5] border border-slate-400 text-slate-800 text-xs font-semibold">
               <span className="w-2 h-2 rounded-full bg-amber-500"></span>
               <span className="uppercase tracking-wider font-mono text-[10px]">Capa 01 · Presentación Institucional</span>
             </div>
@@ -50,23 +50,23 @@ export const CapaInicio: React.FC<CapaInicioProps> = ({ onSelectCapa }) => {
             </h1>
 
             {/* Subtítulo Oficial */}
-            <p className="text-lg sm:text-xl font-medium text-slate-700 leading-snug">
+            <p className="text-lg sm:text-xl font-medium text-slate-800 leading-snug">
               Ecosistema integral de salud, asesoría, prevención, formación e innovación.
             </p>
 
             {/* Cuarteto Fundacional */}
-            <div className="flex flex-wrap items-center gap-2 text-xs font-bold tracking-widest text-slate-600">
-              <span className="bg-slate-100 px-3 py-1.5 rounded-lg border border-slate-200">CIENCIA</span>
-              <span className="text-slate-400">·</span>
-              <span className="bg-slate-100 px-3 py-1.5 rounded-lg border border-slate-200">SALUD</span>
-              <span className="text-slate-400">·</span>
-              <span className="bg-slate-100 px-3 py-1.5 rounded-lg border border-slate-200">CONOCIMIENTO</span>
-              <span className="text-slate-400">·</span>
-              <span className="bg-slate-100 px-3 py-1.5 rounded-lg border border-slate-200">INNOVACIÓN</span>
+            <div className="flex flex-wrap items-center gap-2 text-xs font-bold tracking-widest text-slate-700">
+              <span className="bg-[#bcc7d5] px-3 py-1.5 rounded-lg border border-slate-400">CIENCIA</span>
+              <span className="text-slate-500">·</span>
+              <span className="bg-[#bcc7d5] px-3 py-1.5 rounded-lg border border-slate-400">SALUD</span>
+              <span className="text-slate-500">·</span>
+              <span className="bg-[#bcc7d5] px-3 py-1.5 rounded-lg border border-slate-400">CONOCIMIENTO</span>
+              <span className="text-slate-500">·</span>
+              <span className="bg-[#bcc7d5] px-3 py-1.5 rounded-lg border border-slate-400">INNOVACIÓN</span>
             </div>
 
             {/* Premisa Central */}
-            <div className="bg-[#f4f6f9] border-l-4 border-amber-500 rounded-2xl p-5 sm:p-6 shadow-2xs border border-slate-300">
+            <div className="bg-[#dde3ec] border-l-4 border-amber-500 rounded-2xl p-5 sm:p-6 shadow-2xs border border-slate-400">
               <p className="text-sm sm:text-base text-slate-800 leading-relaxed">
                 <strong className="font-semibold text-slate-950">NIVAL Sciences no espera a que las personas enfermen para acercarse a ellas.</strong> Trabaja también para que las personas y las organizaciones comprendan mejor sus necesidades, conozcan sus riesgos, accedan a información confiable y puedan tomar decisiones oportunas.
               </p>
@@ -95,27 +95,27 @@ export const CapaInicio: React.FC<CapaInicioProps> = ({ onSelectCapa }) => {
         </div>
 
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3">
-          <div className="p-4 rounded-xl bg-[#f4f6f9] border border-slate-300 shadow-2xs text-center">
+          <div className="p-4 rounded-xl bg-[#dde3ec] border border-slate-400 shadow-2xs text-center">
             <span className="block font-bold text-slate-900 text-sm">El diagnóstico</span>
             <span className="text-xs text-slate-600 mt-1 block">aporta información</span>
           </div>
-          <div className="p-4 rounded-xl bg-[#f4f6f9] border border-slate-300 shadow-2xs text-center">
+          <div className="p-4 rounded-xl bg-[#dde3ec] border border-slate-400 shadow-2xs text-center">
             <span className="block font-bold text-slate-900 text-sm">La prevención</span>
             <span className="text-xs text-slate-600 mt-1 block">ayuda a anticiparse</span>
           </div>
-          <div className="p-4 rounded-xl bg-[#f4f6f9] border border-slate-300 shadow-2xs text-center">
+          <div className="p-4 rounded-xl bg-[#dde3ec] border border-slate-400 shadow-2xs text-center">
             <span className="block font-bold text-slate-900 text-sm">La asesoría</span>
             <span className="text-xs text-slate-600 mt-1 block">transforma en soluciones</span>
           </div>
-          <div className="p-4 rounded-xl bg-[#f4f6f9] border border-slate-300 shadow-2xs text-center">
+          <div className="p-4 rounded-xl bg-[#dde3ec] border border-slate-400 shadow-2xs text-center">
             <span className="block font-bold text-slate-900 text-sm">La formación</span>
             <span className="text-xs text-slate-600 mt-1 block">desarrolla capacidades</span>
           </div>
-          <div className="p-4 rounded-xl bg-[#f4f6f9] border border-slate-300 shadow-2xs text-center">
+          <div className="p-4 rounded-xl bg-[#dde3ec] border border-slate-400 shadow-2xs text-center">
             <span className="block font-bold text-slate-900 text-sm">La tecnología</span>
             <span className="text-xs text-slate-600 mt-1 block">conecta y facilita</span>
           </div>
-          <div className="p-4 rounded-xl bg-[#f4f6f9] border border-slate-300 shadow-2xs text-center">
+          <div className="p-4 rounded-xl bg-[#dde3ec] border border-slate-400 shadow-2xs text-center">
             <span className="block font-bold text-slate-900 text-sm">La innovación</span>
             <span className="text-xs text-slate-600 mt-1 block">permite evolucionar</span>
           </div>
@@ -124,12 +124,12 @@ export const CapaInicio: React.FC<CapaInicioProps> = ({ onSelectCapa }) => {
 
       {/* Directorio de Acceso a las Principales Soluciones (Las 8 capas siguientes) */}
       <section className="max-w-6xl mx-auto px-4 sm:px-6 pt-6">
-        <div className="border-t border-slate-300 pt-10">
+        <div className="border-t border-slate-400 pt-10">
           <div className="max-w-2xl mb-8">
             <h2 className="text-2xl font-bold text-slate-950 tracking-tight">
               Estructura Institucional y Soluciones
             </h2>
-            <p className="text-slate-600 text-sm mt-1">
+            <p className="text-slate-700 text-sm mt-1">
               Acceso directo a las capas estratégicas definidas en la proyección de NIVAL Sciences:
             </p>
           </div>
@@ -142,15 +142,15 @@ export const CapaInicio: React.FC<CapaInicioProps> = ({ onSelectCapa }) => {
                   onSelectCapa(capa.id);
                   window.scrollTo({ top: 0, behavior: 'smooth' });
                 }}
-                className="text-left p-6 rounded-2xl bg-[#f4f6f9] border border-slate-300 hover:border-slate-500 hover:shadow-md transition-all duration-200 flex flex-col justify-between group cursor-pointer"
+                className="text-left p-6 rounded-2xl bg-[#dde3ec] border border-slate-400 hover:border-slate-600 hover:shadow-md transition-all duration-200 flex flex-col justify-between group cursor-pointer"
               >
                 <div>
                   <div className="flex items-center justify-between mb-4">
-                    <span className="font-mono text-xs font-bold text-slate-500 group-hover:text-amber-600 transition-colors">
+                    <span className="font-mono text-xs font-bold text-slate-600 group-hover:text-amber-700 transition-colors">
                       Capa {capa.number}
                     </span>
-                    <div className="p-2 rounded-lg bg-[#e8ecf2] border border-slate-300">
-                      {layerIcons[capa.id] || <FileText className="w-5 h-5 text-slate-600" />}
+                    <div className="p-2 rounded-lg bg-[#cbd5e1] border border-slate-400">
+                      {layerIcons[capa.id] || <FileText className="w-5 h-5 text-slate-700" />}
                     </div>
                   </div>
 
@@ -163,7 +163,7 @@ export const CapaInicio: React.FC<CapaInicioProps> = ({ onSelectCapa }) => {
                   </p>
                 </div>
 
-                <div className="mt-5 pt-3 border-t border-slate-300/80 flex items-center justify-between text-xs font-semibold text-slate-700 group-hover:text-amber-600 transition-colors">
+                <div className="mt-5 pt-3 border-t border-slate-400/80 flex items-center justify-between text-xs font-semibold text-slate-800 group-hover:text-amber-700 transition-colors">
                   <span>Acceder a esta capa</span>
                   <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
                 </div>

@@ -42,14 +42,14 @@ export const CapaAsesoriaPersonas: React.FC<CapaAsesoriaPersonasProps> = ({ onSe
     <div className="max-w-5xl mx-auto py-12 px-4 sm:px-6 space-y-16">
       
       {/* Encabezado */}
-      <div className="border-b border-slate-300 pb-8">
+      <div className="border-b border-slate-400 pb-8">
         <span className="font-mono text-xs font-bold text-amber-600 uppercase tracking-wider block mb-1">
           Capa 05 · Acompañamiento Individual
         </span>
         <h1 className="text-3xl sm:text-4xl font-extrabold text-slate-950 tracking-tight">
           Asesoría para Personas
         </h1>
-        <p className="text-base text-slate-600 mt-2">
+        <p className="text-base text-slate-700 mt-2">
           Servicios de orientación, acompañamiento especializado y rutas de atención para la salud personal y familiar.
         </p>
       </div>
@@ -62,7 +62,7 @@ export const CapaAsesoriaPersonas: React.FC<CapaAsesoriaPersonasProps> = ({ onSe
       />
 
       {/* Concepto Central */}
-      <section className="bg-[#f4f6f9] rounded-2xl p-6 sm:p-8 border border-slate-300 space-y-4 text-sm sm:text-base text-slate-700 leading-relaxed">
+      <section className="bg-[#dde3ec] rounded-2xl p-6 sm:p-8 border border-slate-400 space-y-4 text-sm sm:text-base text-slate-800 leading-relaxed">
         <div className="flex items-center space-x-2 text-slate-900 font-bold text-sm uppercase tracking-wider">
           <UserCheck className="w-4 h-4 text-amber-600" />
           <span>El Valor de la Orientación Profesional</span>
@@ -82,21 +82,21 @@ export const CapaAsesoriaPersonas: React.FC<CapaAsesoriaPersonasProps> = ({ onSe
             <span className="w-2.5 h-2.5 bg-amber-500 rounded-full"></span>
             <span>Servicios de Acompañamiento Disponibles</span>
           </h2>
-          <p className="text-xs sm:text-sm text-slate-600 mt-1">
+          <p className="text-xs sm:text-sm text-slate-700 mt-1">
             Líneas de asesoría individual desarrolladas dentro de las competencias profesionales aplicables:
           </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {serviciosAsesoria.map((servicio, idx) => (
-            <div key={idx} className="bg-[#f4f6f9] rounded-2xl border border-slate-300 p-6 sm:p-7 space-y-3">
-              <div className="w-10 h-10 rounded-xl bg-[#e8ecf2] border border-slate-300 flex items-center justify-center">
+            <div key={idx} className="bg-[#dde3ec] rounded-2xl border border-slate-400 p-6 sm:p-7 space-y-3">
+              <div className="w-10 h-10 rounded-xl bg-[#cbd5e1] border border-slate-400 flex items-center justify-center">
                 {servicio.icono}
               </div>
               <h3 className="text-base font-bold text-slate-950">
                 {servicio.titulo}
               </h3>
-              <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
+              <p className="text-xs sm:text-sm text-slate-700 leading-relaxed">
                 {servicio.descripcion}
               </p>
             </div>
@@ -105,18 +105,18 @@ export const CapaAsesoriaPersonas: React.FC<CapaAsesoriaPersonasProps> = ({ onSe
       </section>
 
       {/* Principio de Delimitación y Responsabilidad */}
-      <section className="bg-[#e8ecf2] rounded-2xl p-6 sm:p-8 border border-slate-300 space-y-3 text-xs sm:text-sm">
+      <section className="bg-[#cbd5e1] rounded-2xl p-6 sm:p-8 border border-slate-400 space-y-3 text-xs sm:text-sm">
         <div className="flex items-center space-x-2 text-slate-900 font-bold uppercase tracking-wider text-xs">
           <ShieldAlert className="w-4 h-4 text-amber-600" />
           <span>Marco Ético y Responsabilidad Profesional</span>
         </div>
-        <p className="text-slate-600 leading-relaxed">
+        <p className="text-slate-800 leading-relaxed">
           Los servicios de asesoría a personas naturales se ofrecen dentro del marco legal sanitario correspondiente. La orientación tiene carácter <strong>educativo, preventivo y de canalización</strong>, diferenciándose con total claridad de los actos médicos prescriptivos y diagnósticos individuales regulados, los cuales competen exclusivamente a los médicos tratantes habilitados.
         </p>
       </section>
 
       {/* Navegación al final de la capa */}
-      <div className="pt-8 border-t border-slate-300 flex justify-between items-center text-xs">
+      <div className="pt-8 border-t border-slate-400 flex justify-between items-center text-xs">
         <button
           onClick={() => {
             onSelectCapa('prevencion');

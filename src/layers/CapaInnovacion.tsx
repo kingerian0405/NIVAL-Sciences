@@ -46,14 +46,14 @@ export const CapaInnovacion: React.FC<CapaInnovacionProps> = ({ onSelectCapa }) 
     <div className="max-w-5xl mx-auto py-12 px-4 sm:px-6 space-y-16">
       
       {/* Encabezado */}
-      <div className="border-b border-slate-300 pb-8">
+      <div className="border-b border-slate-400 pb-8">
         <span className="font-mono text-xs font-bold text-amber-600 uppercase tracking-wider block mb-1">
           Capa 08 · Transformación Digital
         </span>
         <h1 className="text-3xl sm:text-4xl font-extrabold text-slate-950 tracking-tight">
           Innovación y Tecnología
         </h1>
-        <p className="text-base text-slate-600 mt-2">
+        <p className="text-base text-slate-700 mt-2">
           Microaplicaciones, herramientas digitales, investigación aplicada y proyectos institucionales en evolución.
         </p>
       </div>
@@ -66,7 +66,7 @@ export const CapaInnovacion: React.FC<CapaInnovacionProps> = ({ onSelectCapa }) 
       />
 
       {/* Filosofía de la Tecnología e Innovación */}
-      <section className="bg-[#f4f6f9] rounded-2xl p-6 sm:p-8 border border-slate-300 space-y-4 text-sm sm:text-base text-slate-700 leading-relaxed">
+      <section className="bg-[#dde3ec] rounded-2xl p-6 sm:p-8 border border-slate-400 space-y-4 text-sm sm:text-base text-slate-800 leading-relaxed">
         <div className="flex items-center space-x-2 text-slate-900 font-bold text-sm uppercase tracking-wider">
           <Cpu className="w-4 h-4 text-sky-700" />
           <span>La Tecnología al Servicio del Bienestar</span>
@@ -86,25 +86,25 @@ export const CapaInnovacion: React.FC<CapaInnovacionProps> = ({ onSelectCapa }) 
             <span className="w-2.5 h-2.5 bg-amber-500 rounded-full"></span>
             <span>Microaplicaciones y Herramientas Digitales</span>
           </h2>
-          <p className="text-xs sm:text-sm text-slate-600 mt-1">
+          <p className="text-xs sm:text-sm text-slate-700 mt-1">
             Soluciones en desarrollo y despliegue dentro del ecosistema tecnológico:
           </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {herramientas.map((h, i) => (
-            <div key={i} className="bg-[#f4f6f9] rounded-2xl border border-slate-300 p-6 sm:p-7 space-y-3 flex flex-col justify-between">
+            <div key={i} className="bg-[#dde3ec] rounded-2xl border border-slate-400 p-6 sm:p-7 space-y-3 flex flex-col justify-between">
               <div>
                 <div className="flex items-center justify-between text-[11px] mb-1">
-                  <span className="font-mono text-slate-400 font-bold">0{i + 1}</span>
-                  <span className="font-semibold text-sky-800 bg-sky-50 px-2 py-0.5 rounded-md border border-sky-100">
+                  <span className="font-mono text-slate-500 font-bold">0{i + 1}</span>
+                  <span className="font-semibold text-sky-900 bg-sky-100 px-2 py-0.5 rounded-md border border-sky-300">
                     {h.estado}
                   </span>
                 </div>
                 <h3 className="text-base font-bold text-slate-950">
                   {h.titulo}
                 </h3>
-                <p className="text-xs sm:text-sm text-slate-600 mt-1.5 leading-relaxed">
+                <p className="text-xs sm:text-sm text-slate-700 mt-1.5 leading-relaxed">
                   {h.descripcion}
                 </p>
               </div>
@@ -120,7 +120,7 @@ export const CapaInnovacion: React.FC<CapaInnovacionProps> = ({ onSelectCapa }) 
             <span className="w-2.5 h-2.5 bg-amber-500 rounded-full"></span>
             <span>Metas Institucionales por Etapas (Sección 8)</span>
           </h2>
-          <p className="text-xs sm:text-sm text-slate-600 mt-1">
+          <p className="text-xs sm:text-sm text-slate-700 mt-1">
             Hoja de ruta institucional para la consolidación, expansión e integración del ecosistema:
           </p>
         </div>
@@ -136,11 +136,11 @@ export const CapaInnovacion: React.FC<CapaInnovacionProps> = ({ onSelectCapa }) 
                 className={`p-4 rounded-xl border text-left cursor-pointer transition-all ${
                   isSelected
                     ? 'bg-slate-900 text-white border-slate-900 shadow-xs'
-                    : 'bg-[#f4f6f9] text-slate-800 border-slate-300 hover:border-slate-400'
+                    : 'bg-[#dde3ec] text-slate-900 border-slate-400 hover:border-slate-600'
                 }`}
               >
                 <span className={`text-[11px] font-bold uppercase tracking-wider block ${
-                  isSelected ? 'text-amber-400' : 'text-slate-500'
+                  isSelected ? 'text-amber-400' : 'text-slate-600'
                 }`}>
                   {stage.stage} · {stage.period}
                 </span>
@@ -153,33 +153,33 @@ export const CapaInnovacion: React.FC<CapaInnovacionProps> = ({ onSelectCapa }) 
         </div>
 
         {/* Detalle de Hitos de la Etapa Seleccionada */}
-        <div className="bg-[#f4f6f9] rounded-2xl border border-slate-300 p-6 sm:p-8 space-y-4">
-          <div className="flex items-center justify-between border-b border-slate-100 pb-4">
+        <div className="bg-[#dde3ec] rounded-2xl border border-slate-400 p-6 sm:p-8 space-y-4">
+          <div className="flex items-center justify-between border-b border-slate-300 pb-4">
             <div>
-              <span className="text-xs font-bold text-slate-400 uppercase tracking-wider font-mono">
+              <span className="text-xs font-bold text-slate-500 uppercase tracking-wider font-mono">
                 {ROADMAP_STAGES[activeStage].period}
               </span>
               <h3 className="text-lg font-bold text-slate-950">
                 {ROADMAP_STAGES[activeStage].title}
               </h3>
             </div>
-            <span className="text-xs text-slate-500 hidden sm:inline">
+            <span className="text-xs text-slate-600 hidden sm:inline">
               {ROADMAP_STAGES[activeStage].milestones.length} metas programadas
             </span>
           </div>
 
-          <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
+          <p className="text-xs sm:text-sm text-slate-700 leading-relaxed">
             {ROADMAP_STAGES[activeStage].description}
           </p>
 
           <div className="pt-2">
-            <h5 className="text-[11px] font-bold uppercase text-slate-400 mb-3">
+            <h5 className="text-[11px] font-bold uppercase text-slate-500 mb-3">
               Hitos estratégicos a cumplir:
             </h5>
             <ul className="space-y-2">
               {ROADMAP_STAGES[activeStage].milestones.map((m, i) => (
-                <li key={i} className="flex items-start space-x-2 text-xs sm:text-sm text-slate-700">
-                  <CheckCircle2 className="w-4 h-4 text-emerald-600 mt-0.5 shrink-0" />
+                <li key={i} className="flex items-start space-x-2 text-xs sm:text-sm text-slate-800">
+                  <CheckCircle2 className="w-4 h-4 text-emerald-700 mt-0.5 shrink-0" />
                   <span>{m}</span>
                 </li>
               ))}
@@ -189,7 +189,7 @@ export const CapaInnovacion: React.FC<CapaInnovacionProps> = ({ onSelectCapa }) 
       </section>
 
       {/* Navegación al final de la capa */}
-      <div className="pt-8 border-t border-slate-200 flex justify-between items-center text-xs">
+      <div className="pt-8 border-t border-slate-400 flex justify-between items-center text-xs">
         <button
           onClick={() => {
             onSelectCapa('formacion');

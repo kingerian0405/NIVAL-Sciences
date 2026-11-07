@@ -36,7 +36,7 @@ export const InstitutionalFooter: React.FC<InstitutionalFooterProps> = ({ onSele
           
           {/* Columna Marca (5 cols) */}
           <div className="md:col-span-5 space-y-4">
-            <div className="flex items-center space-x-3 bg-[#f4f6f9] p-2.5 rounded-xl w-fit">
+            <div className="flex items-center space-x-3 bg-white/95 p-2 rounded-xl border border-slate-400 w-fit">
               <img 
                 src={`${import.meta.env.BASE_URL}logo-nival-official.jpg`} 
                 alt="NIVAL Sciences" 

@@ -53,7 +53,7 @@ export const CapaPrevencion: React.FC<CapaPrevencionProps> = ({ onSelectCapa }) 
     <div className="max-w-5xl mx-auto py-12 px-4 sm:px-6 space-y-16">
       
       {/* Encabezado */}
-      <div className="border-b border-slate-300 pb-8 space-y-1.5">
+      <div className="border-b border-slate-400 pb-8 space-y-1.5">
         <span className="font-mono text-xs font-bold text-amber-600 uppercase tracking-wider block">
           Capa 04 · Eje Estratégico
         </span>
@@ -63,7 +63,7 @@ export const CapaPrevencion: React.FC<CapaPrevencionProps> = ({ onSelectCapa }) 
         <p className="text-amber-800 text-sm font-semibold italic">
           “La visión que necesitas para vivir como sueñas”
         </p>
-        <p className="text-base text-slate-600">
+        <p className="text-base text-slate-700">
           Programas preventivos, jornadas de salud integrales y recursos para el autocuidado continuo.
         </p>
       </div>
@@ -76,9 +76,9 @@ export const CapaPrevencion: React.FC<CapaPrevencionProps> = ({ onSelectCapa }) 
       />
 
       {/* Filosofía de la Prevención */}
-      <section className="bg-[#f4f6f9] rounded-2xl p-6 sm:p-8 border border-slate-300 space-y-4 text-sm sm:text-base text-slate-700 leading-relaxed">
+      <section className="bg-[#dde3ec] rounded-2xl p-6 sm:p-8 border border-slate-400 space-y-4 text-sm sm:text-base text-slate-800 leading-relaxed">
         <div className="flex items-center space-x-2 text-slate-900 font-bold text-sm uppercase tracking-wider">
-          <ShieldCheck className="w-4 h-4 text-emerald-600" />
+          <ShieldCheck className="w-4 h-4 text-emerald-700" />
           <span>El Enfoque Proactivo NIVAL</span>
         </div>
         <p>
@@ -96,36 +96,36 @@ export const CapaPrevencion: React.FC<CapaPrevencionProps> = ({ onSelectCapa }) 
             <span className="w-2.5 h-2.5 bg-amber-500 rounded-full"></span>
             <span>Programas, Jornadas y Recursos</span>
           </h2>
-          <p className="text-xs sm:text-sm text-slate-600 mt-1">
+          <p className="text-xs sm:text-sm text-slate-700 mt-1">
             Los tres componentes operativos del alcance institucional en prevención:
           </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {programas.map((prog, idx) => (
-            <div key={idx} className="bg-[#f4f6f9] rounded-2xl border border-slate-300 p-6 flex flex-col justify-between">
+            <div key={idx} className="bg-[#dde3ec] rounded-2xl border border-slate-400 p-6 flex flex-col justify-between">
               <div>
-                <span className="text-[11px] font-bold text-amber-700 uppercase tracking-wider block mb-1">
+                <span className="text-[11px] font-bold text-amber-800 uppercase tracking-wider block mb-1">
                   Componente 0{idx + 1}
                 </span>
                 <h3 className="text-base font-bold text-slate-950 leading-snug">
                   {prog.titulo}
                 </h3>
-                <p className="text-xs font-medium text-slate-500 mt-1">
+                <p className="text-xs font-semibold text-slate-600 mt-1">
                   {prog.subtitulo}
                 </p>
-                <p className="text-xs text-slate-600 mt-3 leading-relaxed">
+                <p className="text-xs text-slate-700 mt-3 leading-relaxed">
                   {prog.descripcion}
                 </p>
 
-                <div className="mt-4 pt-4 border-t border-slate-200">
-                  <h4 className="text-[11px] font-bold uppercase text-slate-400 mb-2">
+                <div className="mt-4 pt-4 border-t border-slate-300">
+                  <h4 className="text-[11px] font-bold uppercase text-slate-500 mb-2">
                     Acciones clave:
                   </h4>
                   <ul className="space-y-2">
                     {prog.items.map((item, i) => (
-                      <li key={i} className="flex items-start space-x-2 text-xs text-slate-700">
-                        <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600 mt-0.5 shrink-0" />
+                      <li key={i} className="flex items-start space-x-2 text-xs text-slate-800">
+                        <CheckCircle2 className="w-3.5 h-3.5 text-emerald-700 mt-0.5 shrink-0" />
                         <span>{item}</span>
                       </li>
                     ))}
@@ -170,7 +170,7 @@ export const CapaPrevencion: React.FC<CapaPrevencionProps> = ({ onSelectCapa }) 
       </section>
 
       {/* Navegación al final de la capa */}
-      <div className="pt-8 border-t border-slate-200 flex justify-between items-center text-xs">
+      <div className="pt-8 border-t border-slate-400 flex justify-between items-center text-xs">
         <button
           onClick={() => {
             onSelectCapa('laboratorio');

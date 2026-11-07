@@ -27,14 +27,14 @@ export const CapaFormacion: React.FC<CapaFormacionProps> = ({ onSelectCapa }) =>
     <div className="max-w-5xl mx-auto py-12 px-4 sm:px-6 space-y-16">
       
       {/* Encabezado */}
-      <div className="border-b border-slate-300 pb-8">
+      <div className="border-b border-slate-400 pb-8">
         <span className="font-mono text-xs font-bold text-amber-600 uppercase tracking-wider block mb-1">
           Capa 07 · Gestión del Conocimiento
         </span>
         <h1 className="text-3xl sm:text-4xl font-extrabold text-slate-950 tracking-tight">
           Formación y Capacitación
         </h1>
-        <p className="text-base text-slate-600 mt-2">
+        <p className="text-base text-slate-700 mt-2">
           Cursos, talleres técnicos, seminarios de actualización científica, calendario académico y proyección del campus digital.
         </p>
       </div>
@@ -47,7 +47,7 @@ export const CapaFormacion: React.FC<CapaFormacionProps> = ({ onSelectCapa }) =>
       />
 
       {/* Filosofía del Pilar de Formación */}
-      <section className="bg-[#f4f6f9] rounded-2xl p-6 sm:p-8 border border-slate-300 space-y-4 text-sm sm:text-base text-slate-700 leading-relaxed">
+      <section className="bg-[#dde3ec] rounded-2xl p-6 sm:p-8 border border-slate-400 space-y-4 text-sm sm:text-base text-slate-800 leading-relaxed">
         <div className="flex items-center space-x-2 text-slate-900 font-bold text-sm uppercase tracking-wider">
           <GraduationCap className="w-4 h-4 text-violet-700" />
           <span>Desarrollo de Capacidades Colectivas</span>
@@ -68,7 +68,7 @@ export const CapaFormacion: React.FC<CapaFormacionProps> = ({ onSelectCapa }) =>
               <span className="w-2.5 h-2.5 bg-amber-500 rounded-full"></span>
               <span>Catálogo de Cursos y Talleres</span>
             </h2>
-            <p className="text-xs sm:text-sm text-slate-600 mt-1">
+            <p className="text-xs sm:text-sm text-slate-700 mt-1">
               Programas diseñados para fortalecer el rigor analítico y la cultura de prevención:
             </p>
           </div>
@@ -82,7 +82,7 @@ export const CapaFormacion: React.FC<CapaFormacionProps> = ({ onSelectCapa }) =>
                 className={`px-3 py-1.5 rounded-lg text-xs font-semibold cursor-pointer transition-colors ${
                   filter === item
                     ? 'bg-slate-900 text-white'
-                    : 'bg-[#f4f6f9] text-slate-700 hover:bg-slate-200 border border-slate-300'
+                    : 'bg-[#dde3ec] text-slate-800 hover:bg-[#bcc7d5] border border-slate-400'
                 }`}
               >
                 {item === 'todos' ? 'Todos' : item}
@@ -93,13 +93,13 @@ export const CapaFormacion: React.FC<CapaFormacionProps> = ({ onSelectCapa }) =>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {filtered.map((course) => (
-            <div key={course.id} className="bg-[#f4f6f9] rounded-2xl border border-slate-300 p-6 flex flex-col justify-between">
+            <div key={course.id} className="bg-[#dde3ec] rounded-2xl border border-slate-400 p-6 flex flex-col justify-between">
               <div>
                 <div className="flex items-center justify-between mb-3 text-[11px]">
-                  <span className="font-bold text-violet-800 bg-violet-50 px-2 py-0.5 rounded-md border border-violet-100">
+                  <span className="font-bold text-violet-900 bg-violet-100 px-2 py-0.5 rounded-md border border-violet-200">
                     {course.targetAudience}
                   </span>
-                  <span className="text-slate-500 font-medium">
+                  <span className="text-slate-600 font-semibold">
                     {course.modality}
                   </span>
                 </div>
@@ -108,23 +108,23 @@ export const CapaFormacion: React.FC<CapaFormacionProps> = ({ onSelectCapa }) =>
                   {course.title}
                 </h3>
 
-                <p className="text-xs text-slate-600 mt-2 leading-relaxed">
+                <p className="text-xs text-slate-700 mt-2 leading-relaxed">
                   {course.description}
                 </p>
 
-                <div className="mt-4 pt-4 border-t border-slate-200">
-                  <div className="text-xs text-slate-700 font-medium mb-3 flex items-center space-x-1.5">
-                    <Calendar className="w-3.5 h-3.5 text-slate-400" />
+                <div className="mt-4 pt-4 border-t border-slate-300">
+                  <div className="text-xs text-slate-800 font-medium mb-3 flex items-center space-x-1.5">
+                    <Calendar className="w-3.5 h-3.5 text-slate-500" />
                     <span>Duración: {course.duration}</span>
                   </div>
 
-                  <h5 className="text-[11px] font-bold uppercase text-slate-400 mb-2">
+                  <h5 className="text-[11px] font-bold uppercase text-slate-500 mb-2">
                     Ejes temáticos:
                   </h5>
                   <ul className="space-y-1.5">
                     {course.topics.map((topic, i) => (
-                      <li key={i} className="flex items-start space-x-2 text-xs text-slate-700">
-                        <CheckCircle2 className="w-3.5 h-3.5 text-violet-600 mt-0.5 shrink-0" />
+                      <li key={i} className="flex items-start space-x-2 text-xs text-slate-800">
+                        <CheckCircle2 className="w-3.5 h-3.5 text-violet-700 mt-0.5 shrink-0" />
                         <span>{topic}</span>
                       </li>
                     ))}
@@ -165,7 +165,7 @@ export const CapaFormacion: React.FC<CapaFormacionProps> = ({ onSelectCapa }) =>
       </section>
 
       {/* Navegación al final de la capa */}
-      <div className="pt-8 border-t border-slate-300 flex justify-between items-center text-xs">
+      <div className="pt-8 border-t border-slate-400 flex justify-between items-center text-xs">
         <button
           onClick={() => {
             onSelectCapa('soluciones-empresas');

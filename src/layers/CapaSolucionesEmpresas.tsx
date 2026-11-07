@@ -59,14 +59,14 @@ export const CapaSolucionesEmpresas: React.FC<CapaSolucionesEmpresasProps> = ({ 
     <div className="max-w-5xl mx-auto py-12 px-4 sm:px-6 space-y-16">
       
       {/* Encabezado */}
-      <div className="border-b border-slate-300 pb-8">
+      <div className="border-b border-slate-400 pb-8">
         <span className="font-mono text-xs font-bold text-amber-600 uppercase tracking-wider block mb-1">
           Capa 06 · Soluciones B2B
         </span>
         <h1 className="text-3xl sm:text-4xl font-extrabold text-slate-950 tracking-tight">
           Soluciones para Empresas
         </h1>
-        <p className="text-base text-slate-600 mt-2">
+        <p className="text-base text-slate-700 mt-2">
           Asesoría corporativa, programas de salud laboral, capacitación y jornadas de evaluación in-situ.
         </p>
       </div>
@@ -79,7 +79,7 @@ export const CapaSolucionesEmpresas: React.FC<CapaSolucionesEmpresasProps> = ({ 
       />
 
       {/* Concepto Institucional B2B */}
-      <section className="bg-[#f4f6f9] rounded-2xl p-6 sm:p-8 border border-slate-300 space-y-4 text-sm sm:text-base text-slate-700 leading-relaxed">
+      <section className="bg-[#dde3ec] rounded-2xl p-6 sm:p-8 border border-slate-400 space-y-4 text-sm sm:text-base text-slate-800 leading-relaxed">
         <div className="flex items-center space-x-2 text-slate-900 font-bold text-sm uppercase tracking-wider">
           <Building2 className="w-4 h-4 text-indigo-700" />
           <span>Alineación Estratégica con la Productividad</span>
@@ -96,30 +96,30 @@ export const CapaSolucionesEmpresas: React.FC<CapaSolucionesEmpresasProps> = ({ 
             <span className="w-2.5 h-2.5 bg-amber-500 rounded-full"></span>
             <span>Líneas de Solución Corporativa</span>
           </h2>
-          <p className="text-xs sm:text-sm text-slate-600 mt-1">
+          <p className="text-xs sm:text-sm text-slate-700 mt-1">
             Componentes estructurados para apoyar a instituciones, pymes y corporaciones:
           </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {lineasEmpresas.map((linea, idx) => (
-            <div key={idx} className="bg-[#f4f6f9] rounded-2xl border border-slate-300 p-6 sm:p-7 space-y-4 flex flex-col justify-between">
+            <div key={idx} className="bg-[#dde3ec] rounded-2xl border border-slate-400 p-6 sm:p-7 space-y-4 flex flex-col justify-between">
               <div>
                 <h3 className="text-base font-bold text-slate-950">
                   {linea.titulo}
                 </h3>
-                <p className="text-xs sm:text-sm text-slate-600 mt-1.5 leading-relaxed">
+                <p className="text-xs sm:text-sm text-slate-700 mt-1.5 leading-relaxed">
                   {linea.descripcion}
                 </p>
 
-                <div className="mt-4 pt-4 border-t border-slate-200">
-                  <h4 className="text-[11px] font-bold uppercase text-slate-400 mb-2">
+                <div className="mt-4 pt-4 border-t border-slate-300">
+                  <h4 className="text-[11px] font-bold uppercase text-slate-500 mb-2">
                     Alcances del servicio:
                   </h4>
                   <ul className="space-y-2">
                     {linea.items.map((item, i) => (
-                      <li key={i} className="flex items-start space-x-2 text-xs text-slate-700">
-                        <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600 mt-0.5 shrink-0" />
+                      <li key={i} className="flex items-start space-x-2 text-xs text-slate-800">
+                        <CheckCircle2 className="w-3.5 h-3.5 text-emerald-700 mt-0.5 shrink-0" />
                         <span>{item}</span>
                       </li>
                     ))}
@@ -160,7 +160,7 @@ export const CapaSolucionesEmpresas: React.FC<CapaSolucionesEmpresasProps> = ({ 
       </section>
 
       {/* Navegación al final de la capa */}
-      <div className="pt-8 border-t border-slate-300 flex justify-between items-center text-xs">
+      <div className="pt-8 border-t border-slate-400 flex justify-between items-center text-xs">
         <button
           onClick={() => {
             onSelectCapa('asesoria-personas');

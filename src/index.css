@@ -4,13 +4,13 @@
   html {
     scroll-behavior: smooth;
     font-family: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-    background-color: #e8ecf2;
-    color: #1e293b;
+    background-color: #cbd5e1;
+    color: #0f172a;
   }
 
   body {
-    background-color: #e8ecf2;
-    color: #1e293b;
+    background-color: #cbd5e1;
+    color: #0f172a;
     @apply antialiased selection:bg-amber-400 selection:text-slate-900;
   }
 }
