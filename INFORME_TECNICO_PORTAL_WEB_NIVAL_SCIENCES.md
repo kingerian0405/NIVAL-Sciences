@@ -194,11 +194,7 @@ El portal se articula en torno a las 9 capas operativas descritas en la **Secci�
 * **Objetivo estratégico**: Exponer el roadmap de desarrollo tecnológico, microaplicaciones y proyectos de investigación de NIVAL Sciences.
 * **Componentes técnicos destacados**:
   1. **Directorio de Soluciones Digitales y Estado de Madurez**: Muestra plataformas en producción (Portal Institucional), en consolidación (Microaplicaciones preventivas), en desarrollo (Interoperabilidad de informes) y en proyección (Investigación aplicada).
-  2. **Roadmap Interactivo de Metas a 36 Meses (Sección 8 del Plan Rector)**:
-     * *Etapa 1 (0 a 12 meses)*: Consolidación del laboratorio clínico, estandarización de procesos y despliegue del portal web.
-     * *Etapa 2 (12 a 24 meses)*: Expansión de servicios, puesta en marcha del campus digital y convenios corporativos de alcance regional.
-     * *Etapa 3 (24 a 36 meses)*: Integración plena del ecosistema, microaplicaciones avanzadas y proyectos de investigación colaborativa.
-     * Selector dinámico que actualiza los hitos específicos al interactuar con cada etapa.
+  2. **Ecosistema Tecnológico de Salud**: Plataformas interactivas orientadas a la autoevaluación, interoperabilidad diagnóstica y soporte a pacientes y empresas.
 
 ---
 
@@ -280,3 +276,4 @@ El portal web institucional de **NIVAL Sciences** se encuentra en estado **100% 
 
 ---
 *Documento elaborado para NIVAL Sciences. Todos los derechos reservados.*
+

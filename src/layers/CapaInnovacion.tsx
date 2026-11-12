@@ -1,15 +1,5 @@
-import React, { useState } from 'react';
-import { 
-  Cpu, 
-  FlaskConical, 
-  Layers, 
-  Calendar, 
-  CheckCircle2, 
-  ArrowRight,
-  Sparkles,
-  Network
-} from 'lucide-react';
-import { ROADMAP_STAGES } from '../data/ecosystemData';
+import React from 'react';
+import { Cpu } from 'lucide-react';
 import { ImagePlaceholder } from '../components/ImagePlaceholder';
 
 interface CapaInnovacionProps {
@@ -17,8 +7,6 @@ interface CapaInnovacionProps {
 }
 
 export const CapaInnovacion: React.FC<CapaInnovacionProps> = ({ onSelectCapa }) => {
-  const [activeStage, setActiveStage] = useState<number>(0);
-
   const herramientas = [
     {
       titulo: 'Portal Institucional y Gestión Digital',
@@ -110,81 +98,6 @@ export const CapaInnovacion: React.FC<CapaInnovacionProps> = ({ onSelectCapa }) 
               </div>
             </div>
           ))}
-        </div>
-      </section>
-
-      {/* Metas Institucionales por Etapas (Roadmap 0 - 36 meses) */}
-      <section className="space-y-6">
-        <div>
-          <h2 className="text-xl font-bold text-slate-950 flex items-center space-x-2">
-            <span className="w-2.5 h-2.5 bg-amber-500 rounded-full"></span>
-            <span>Metas Institucionales por Etapas (Sección 8)</span>
-          </h2>
-          <p className="text-xs sm:text-sm text-slate-700 mt-1">
-            Hoja de ruta institucional para la consolidación, expansión e integración del ecosistema:
-          </p>
-        </div>
-
-        {/* Selector de Etapa */}
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
-          {ROADMAP_STAGES.map((stage, idx) => {
-            const isSelected = activeStage === idx;
-            return (
-              <button
-                key={idx}
-                onClick={() => setActiveStage(idx)}
-                className={`p-4 rounded-xl border text-left cursor-pointer transition-all ${
-                  isSelected
-                    ? 'bg-slate-900 text-white border-slate-900 shadow-xs'
-                    : 'bg-[#dde3ec] text-slate-900 border-slate-400 hover:border-slate-600'
-                }`}
-              >
-                <span className={`text-[11px] font-bold uppercase tracking-wider block ${
-                  isSelected ? 'text-amber-400' : 'text-slate-600'
-                }`}>
-                  {stage.stage} · {stage.period}
-                </span>
-                <h4 className="font-bold text-sm mt-1">
-                  {stage.title}
-                </h4>
-              </button>
-            );
-          })}
-        </div>
-
-        {/* Detalle de Hitos de la Etapa Seleccionada */}
-        <div className="bg-[#dde3ec] rounded-2xl border border-slate-400 p-6 sm:p-8 space-y-4">
-          <div className="flex items-center justify-between border-b border-slate-300 pb-4">
-            <div>
-              <span className="text-xs font-bold text-slate-500 uppercase tracking-wider font-mono">
-                {ROADMAP_STAGES[activeStage].period}
-              </span>
-              <h3 className="text-lg font-bold text-slate-950">
-                {ROADMAP_STAGES[activeStage].title}
-              </h3>
-            </div>
-            <span className="text-xs text-slate-600 hidden sm:inline">
-              {ROADMAP_STAGES[activeStage].milestones.length} metas programadas
-            </span>
-          </div>
-
-          <p className="text-xs sm:text-sm text-slate-700 leading-relaxed">
-            {ROADMAP_STAGES[activeStage].description}
-          </p>
-
-          <div className="pt-2">
-            <h5 className="text-[11px] font-bold uppercase text-slate-500 mb-3">
-              Hitos estratégicos a cumplir:
-            </h5>
-            <ul className="space-y-2">
-              {ROADMAP_STAGES[activeStage].milestones.map((m, i) => (
-                <li key={i} className="flex items-start space-x-2 text-xs sm:text-sm text-slate-800">
-                  <CheckCircle2 className="w-4 h-4 text-emerald-700 mt-0.5 shrink-0" />
-                  <span>{m}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
         </div>
       </section>
 

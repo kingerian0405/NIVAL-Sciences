@@ -108,7 +108,7 @@ por internet.
 CAPA 08 · INNOVACION Y TECNOLOGIA
 Muestra como NIVAL utiliza la tecnologia para conectar sus servicios. Explica el 
 portal web, el desarrollo de herramientas digitales para orientar a las 
-personas y la hoja de ruta de crecimiento planificada para los proximos 3 años.
+personas y los proyectos de innovacion cientifica en evolucion.
 
 CAPA 09 · CONTACTO Y ATENCION
 El punto de comunicacion oficial. Muestra la direccion fisica, lineas de 
@@ -151,3 +151,4 @@ permite navegar por todas las capas con total fluidez.
 ================================================================================
 Fin del documento explicativo.
 ================================================================================
+
