@@ -1,7 +1,9 @@
 export interface LabTest {
   id: string;
   name: string;
-  category: 'rutina' | 'metabolico' | 'hormonal' | 'cardiovascular' | 'preventivo' | 'ocupacional' | 'inmunologia';
+  abbreviation?: string;
+  price?: string;
+  category: string;
   categoryLabel: string;
   description: string;
   sampleType: string;

@@ -26,21 +26,28 @@ export const CapaLaboratorio: React.FC<CapaLaboratorioProps> = ({ onSelectCapa }
   const [activeTest, setActiveTest] = useState<LabTest | null>(LAB_TESTS[0]);
 
   const categories = [
-    { id: 'todos', label: 'Todos los Perfiles' },
-    { id: 'preventivo', label: 'Perfiles Preventivos' },
-    { id: 'rutina', label: 'Rutina & Hematología' },
-    { id: 'metabolico', label: 'Metabolismo & Diabetes' },
-    { id: 'cardiovascular', label: 'Cardiovascular & Lípidos' },
-    { id: 'hormonal', label: 'Hormonal & Tiroides' },
-    { id: 'ocupacional', label: 'Ocupacional & Empresas' }
+    { id: 'todos', label: 'Todos los Exámenes' },
+    { id: 'quimica', label: 'Química Sanguínea' },
+    { id: 'hormonas', label: 'Hormonas' },
+    { id: 'serologia', label: 'Serología' },
+    { id: 'orina', label: 'Orina' },
+    { id: 'inmunologia', label: 'Inmunología' },
+    { id: 'hematologia', label: 'Hematología' },
+    { id: 'coagulacion', label: 'Coagulación' },
+    { id: 'heces', label: 'Heces & Copro' },
+    { id: 'marcadores', label: 'Marcadores Tumorales' },
+    { id: 'especiales', label: 'Especiales' }
   ];
 
   const filteredTests = LAB_TESTS.filter(t => {
     const matchCat = selectedCategory === 'todos' || t.category === selectedCategory;
-    const matchSearch = search.trim() === '' || 
-      t.name.toLowerCase().includes(search.toLowerCase()) ||
-      t.description.toLowerCase().includes(search.toLowerCase()) ||
-      t.recommendedFor.toLowerCase().includes(search.toLowerCase());
+    const q = search.trim().toLowerCase();
+    const matchSearch = q === '' || 
+      t.name.toLowerCase().includes(q) ||
+      (t.abbreviation && t.abbreviation.toLowerCase().includes(q)) ||
+      t.description.toLowerCase().includes(q) ||
+      t.recommendedFor.toLowerCase().includes(q) ||
+      t.categoryLabel.toLowerCase().includes(q);
     return matchCat && matchSearch;
   });
 
@@ -108,25 +115,39 @@ export const CapaLaboratorio: React.FC<CapaLaboratorioProps> = ({ onSelectCapa }
               type="text"
               value={search}
               onChange={(e) => setSearch(e.target.value)}
-              placeholder="Buscar por nombre de prueba o parámetro (ej. Perfil 20, Glicemia, Tiroides, Lipídico...)"
+              placeholder="Buscar por nombre, sigla o parámetro (ej. Hematología, HC, Glicemia, TSH, PSA, EGO, Calcio...)"
               className="w-full pl-10 pr-4 py-2.5 rounded-xl bg-[#dde3ec] border border-slate-400 text-xs sm:text-sm text-slate-900 focus:outline-hidden focus:border-slate-600"
             />
           </div>
 
           <div className="flex items-center overflow-x-auto gap-1.5 pb-1 no-scrollbar">
-            {categories.map((cat) => (
-              <button
-                key={cat.id}
-                onClick={() => setSelectedCategory(cat.id)}
-                className={`px-3 py-1.5 rounded-lg text-xs font-semibold whitespace-nowrap cursor-pointer transition-colors ${
-                  selectedCategory === cat.id
-                    ? 'bg-slate-900 text-white'
-                    : 'bg-[#dde3ec] text-slate-800 hover:bg-[#bcc7d5] border border-slate-400'
-                }`}
-              >
-                {cat.label}
-              </button>
-            ))}
+            {categories.map((cat) => {
+              const count = cat.id === 'todos' 
+                ? LAB_TESTS.length 
+                : LAB_TESTS.filter(t => t.category === cat.id).length;
+              return (
+                <button
+                  key={cat.id}
+                  onClick={() => setSelectedCategory(cat.id)}
+                  className={`px-3 py-1.5 rounded-lg text-xs font-semibold whitespace-nowrap cursor-pointer transition-colors flex items-center space-x-1.5 ${
+                    selectedCategory === cat.id
+                      ? 'bg-slate-900 text-white'
+                      : 'bg-[#dde3ec] text-slate-800 hover:bg-[#bcc7d5] border border-slate-400'
+                  }`}
+                >
+                  <span>{cat.label}</span>
+                  <span className={`text-[10px] px-1.5 py-0.2 rounded-full font-mono ${
+                    selectedCategory === cat.id ? 'bg-amber-500 text-slate-950 font-bold' : 'bg-slate-300 text-slate-700'
+                  }`}>
+                    {count}
+                  </span>
+                </button>
+              );
+            })}
+          </div>
+
+          <div className="text-[11px] text-slate-600 font-medium">
+            Mostrando <strong>{filteredTests.length}</strong> de <strong>{LAB_TESTS.length}</strong> exámenes en catálogo oficial
           </div>
         </div>
 
@@ -134,7 +155,7 @@ export const CapaLaboratorio: React.FC<CapaLaboratorioProps> = ({ onSelectCapa }
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
           
           {/* Columna Izquierda: Lista de Exámenes (5 cols) */}
-          <div className="lg:col-span-5 space-y-2 max-h-[520px] overflow-y-auto pr-1">
+          <div className="lg:col-span-5 space-y-2 max-h-[580px] overflow-y-auto pr-1">
             {filteredTests.map((test) => {
               const isSelected = activeTest?.id === test.id;
               return (
@@ -147,23 +168,37 @@ export const CapaLaboratorio: React.FC<CapaLaboratorioProps> = ({ onSelectCapa }
                       : 'bg-[#dde3ec] text-slate-900 border border-slate-400 hover:border-slate-600'
                   }`}
                 >
-                  <div className="flex items-center justify-between text-[11px] mb-1">
-                    <span className={isSelected ? 'text-amber-400 font-semibold' : 'text-slate-600'}>
+                  <div className="flex items-center justify-between text-[11px] mb-1.5 gap-2">
+                    <span className={`truncate ${isSelected ? 'text-amber-400 font-semibold' : 'text-slate-600'}`}>
                       {test.categoryLabel}
+                    </span>
+                    {test.price && (
+                      <span className={`font-mono font-bold text-xs shrink-0 px-2 py-0.5 rounded ${
+                        isSelected 
+                          ? 'bg-amber-400/20 text-amber-300 border border-amber-400/30' 
+                          : 'bg-[#cbd5e1] text-slate-900 border border-slate-400'
+                      }`}>
+                        {test.price}
+                      </span>
+                    )}
+                  </div>
+                  <h4 className="font-bold text-sm leading-snug">
+                    {test.name}
+                  </h4>
+                  <div className="flex items-center justify-between text-[11px] mt-2 pt-2 border-t border-slate-400/30">
+                    <span className={`font-mono font-semibold ${isSelected ? 'text-amber-300' : 'text-slate-700'}`}>
+                      {test.abbreviation ? `[${test.abbreviation}]` : ''}
                     </span>
                     <span className={isSelected ? 'text-slate-300' : 'text-slate-600'}>
                       {test.fastingHours > 0 ? `${test.fastingHours}h ayuno` : 'Sin ayuno'}
                     </span>
                   </div>
-                  <h4 className="font-bold text-sm leading-snug">
-                    {test.name}
-                  </h4>
                 </div>
               );
             })}
             {filteredTests.length === 0 && (
               <div className="p-6 text-center text-xs text-slate-600 bg-[#dde3ec] rounded-xl border border-slate-400">
-                No se encontraron pruebas coincidentes.
+                No se encontraron pruebas coincidentes con "{search}".
               </div>
             )}
           </div>
@@ -171,14 +206,51 @@ export const CapaLaboratorio: React.FC<CapaLaboratorioProps> = ({ onSelectCapa }
           {/* Columna Derecha: Ficha Técnica y Preparación al Paciente (7 cols) */}
           <div className="lg:col-span-7">
             {activeTest ? (
-              <div className="bg-[#dde3ec] rounded-2xl border border-slate-400 p-6 sm:p-7 space-y-6">
-                <div>
-                  <span className="text-[11px] font-bold uppercase tracking-wider text-amber-900 bg-amber-100 px-2.5 py-1 rounded-md border border-amber-300">
-                    {activeTest.categoryLabel}
-                  </span>
-                  <h3 className="text-xl font-bold text-slate-950 mt-2">
+              <div className="bg-[#dde3ec] rounded-2xl border border-slate-400 p-6 sm:p-7 space-y-5">
+                <div className="space-y-3">
+                  <div className="flex flex-wrap items-center gap-2">
+                    <span className="text-[11px] font-bold uppercase tracking-wider text-amber-900 bg-amber-100 px-2.5 py-1 rounded-md border border-amber-300">
+                      {activeTest.categoryLabel}
+                    </span>
+                    {activeTest.abbreviation && (
+                      <span className="text-[11px] font-mono font-bold text-slate-800 bg-[#cbd5e1] px-2.5 py-1 rounded-md border border-slate-400">
+                        Siglas: {activeTest.abbreviation}
+                      </span>
+                    )}
+                  </div>
+                  
+                  <h3 className="text-xl sm:text-2xl font-bold text-slate-950">
                     {activeTest.name}
                   </h3>
+
+                  {/* Tarifa Oficial NIVAL */}
+                  {activeTest.price && (
+                    <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 p-3.5 rounded-xl bg-[#cbd5e1] border border-slate-400">
+                      <div>
+                        <span className="text-[10px] uppercase font-bold tracking-wider text-slate-600 block">
+                          Tarifa Oficial del Examen
+                        </span>
+                        <div className="flex items-baseline space-x-1.5 mt-0.5">
+                          <span className="text-2xl font-black font-mono text-slate-950">
+                            {activeTest.price}
+                          </span>
+                          <span className="text-[11px] text-slate-600 font-semibold">
+                            USD
+                          </span>
+                        </div>
+                      </div>
+                      <button
+                        onClick={() => {
+                          onSelectCapa('contacto');
+                          window.scrollTo({ top: 0, behavior: 'smooth' });
+                        }}
+                        className="px-4 py-2 rounded-lg bg-slate-950 hover:bg-slate-800 text-white text-xs font-bold transition-all shadow-xs cursor-pointer text-center"
+                      >
+                        Consultar / Agendar este Examen &rarr;
+                      </button>
+                    </div>
+                  )}
+
                   <p className="text-xs sm:text-sm text-slate-700 mt-1 leading-relaxed">
                     {activeTest.description}
                   </p>
