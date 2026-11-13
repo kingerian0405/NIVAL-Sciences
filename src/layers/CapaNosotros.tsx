@@ -1,5 +1,5 @@
 import React from 'react';
-import { Target, Eye, ShieldCheck, Layers, Award, Lightbulb, Zap, HeartHandshake, CheckCircle2 } from 'lucide-react';
+import { Target, Telescope, ShieldCheck, Layers, Award, Lightbulb, Zap, HeartHandshake, CheckCircle2 } from 'lucide-react';
 import { ImagePlaceholder } from '../components/ImagePlaceholder';
 
 interface CapaNosotrosProps {
@@ -82,30 +82,30 @@ export const CapaNosotros: React.FC<CapaNosotrosProps> = ({ onSelectCapa }) => {
       <section className="grid grid-cols-1 md:grid-cols-2 gap-8">
         
         {/* Misión */}
-        <div className="bg-[#dde3ec] rounded-2xl p-6 sm:p-8 border border-slate-400 space-y-4 flex flex-col justify-between">
+        <div className="bg-[#c29431] text-slate-950 rounded-2xl p-6 sm:p-8 border border-[#a87f27] shadow-sm space-y-4 flex flex-col justify-between">
           <div className="space-y-3">
-            <div className="w-10 h-10 rounded-xl bg-sky-100 text-sky-800 flex items-center justify-center border border-sky-300">
+            <div className="w-10 h-10 rounded-xl bg-slate-950/15 text-slate-950 flex items-center justify-center border border-slate-950/20">
               <Target className="w-5 h-5" />
             </div>
-            <h3 className="text-lg font-bold text-slate-950">
+            <h3 className="text-lg font-extrabold text-slate-950">
               2. Misión
             </h3>
-            <p className="text-sm text-slate-800 leading-relaxed">
+            <p className="text-sm text-slate-950 leading-relaxed font-medium">
               Desarrollar y ofrecer soluciones integrales mediante servicios diagnósticos confiables, asesoría especializada a personas naturales y empresas, programas de prevención, formación científica e innovación tecnológica; integrando conocimiento, talento humano y herramientas digitales para facilitar decisiones oportunas, fortalecer capacidades y contribuir al bienestar individual, organizacional y colectivo.
             </p>
           </div>
         </div>
 
         {/* Visión */}
-        <div className="bg-[#dde3ec] rounded-2xl p-6 sm:p-8 border border-slate-400 space-y-4 flex flex-col justify-between">
+        <div className="bg-[#c29431] text-slate-950 rounded-2xl p-6 sm:p-8 border border-[#a87f27] shadow-sm space-y-4 flex flex-col justify-between">
           <div className="space-y-3">
-            <div className="w-10 h-10 rounded-xl bg-amber-100 text-amber-800 flex items-center justify-center border border-amber-300">
-              <Eye className="w-5 h-5" />
+            <div className="w-10 h-10 rounded-xl bg-slate-950/15 text-slate-950 flex items-center justify-center border border-slate-950/20">
+              <Telescope className="w-5 h-5" />
             </div>
-            <h3 className="text-lg font-bold text-slate-950">
+            <h3 className="text-lg font-extrabold text-slate-950">
               3. Visión
             </h3>
-            <p className="text-sm text-slate-800 leading-relaxed">
+            <p className="text-sm text-slate-950 leading-relaxed font-medium">
               Ser una organización referente en el desarrollo de un ecosistema integral de salud y soluciones especializadas, reconocido por su excelencia científica, capacidad de asesoría, innovación tecnológica y compromiso con la prevención, la formación y el bienestar de las personas y las organizaciones.
             </p>
           </div>

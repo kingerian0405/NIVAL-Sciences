@@ -144,26 +144,26 @@ export const CapaPrevencion: React.FC<CapaPrevencionProps> = ({ onSelectCapa }) 
           <span>Detección Oportuna de Factores de Riesgo</span>
         </h2>
 
-        <div className="bg-slate-900 text-white rounded-2xl p-6 sm:p-8 space-y-4 text-xs sm:text-sm leading-relaxed">
-          <p className="text-slate-200">
+        <div className="bg-[#c29431] text-slate-950 rounded-2xl p-6 sm:p-8 space-y-4 text-xs sm:text-sm leading-relaxed border border-[#a87f27] shadow-sm">
+          <p className="text-slate-950 font-medium">
             Los programas preventivos de NIVAL Sciences ponen especial atención en factores de riesgo modificables que con frecuencia cursan de forma asintomática:
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-3 pt-2">
-            <div className="p-3.5 rounded-xl bg-slate-800 border border-slate-700">
-              <span className="font-bold text-amber-400 block mb-1">Riesgo Glucémico</span>
-              <span className="text-xs text-slate-300">Resistencia a la insulina y prediabetes asintomática.</span>
+            <div className="p-3.5 rounded-xl bg-slate-950/15 border border-slate-950/20">
+              <span className="font-extrabold text-slate-950 block mb-1">Riesgo Glucémico</span>
+              <span className="text-xs text-slate-900 font-medium">Resistencia a la insulina y prediabetes asintomática.</span>
             </div>
-            <div className="p-3.5 rounded-xl bg-slate-800 border border-slate-700">
-              <span className="font-bold text-sky-400 block mb-1">Riesgo Lipídico</span>
-              <span className="text-xs text-slate-300">Aterogénesis y desequilibrio entre fracciones de colesterol.</span>
+            <div className="p-3.5 rounded-xl bg-slate-950/15 border border-slate-950/20">
+              <span className="font-extrabold text-slate-950 block mb-1">Riesgo Lipídico</span>
+              <span className="text-xs text-slate-900 font-medium">Aterogénesis y desequilibrio entre fracciones de colesterol.</span>
             </div>
-            <div className="p-3.5 rounded-xl bg-slate-800 border border-slate-700">
-              <span className="font-bold text-emerald-400 block mb-1">Riesgo Renal y Hepático</span>
-              <span className="text-xs text-slate-300">Sobrecarga metabólica, esteatosis y filtración glomerular.</span>
+            <div className="p-3.5 rounded-xl bg-slate-950/15 border border-slate-950/20">
+              <span className="font-extrabold text-slate-950 block mb-1">Riesgo Renal y Hepático</span>
+              <span className="text-xs text-slate-900 font-medium">Sobrecarga metabólica, esteatosis y filtración glomerular.</span>
             </div>
-            <div className="p-3.5 rounded-xl bg-slate-800 border border-slate-700">
-              <span className="font-bold text-violet-400 block mb-1">Riesgo Funcional</span>
-              <span className="text-xs text-slate-300">Déficits vitamínicos y alteraciones subclínicas del tiroides.</span>
+            <div className="p-3.5 rounded-xl bg-slate-950/15 border border-slate-950/20">
+              <span className="font-extrabold text-slate-950 block mb-1">Riesgo Funcional</span>
+              <span className="text-xs text-slate-900 font-medium">Déficits vitamínicos y alteraciones subclínicas del tiroides.</span>
             </div>
           </div>
         </div>

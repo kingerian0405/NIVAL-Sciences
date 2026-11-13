@@ -132,29 +132,29 @@ export const CapaSolucionesEmpresas: React.FC<CapaSolucionesEmpresasProps> = ({ 
       </section>
 
       {/* Indicadores de Gestión Corporativa (Sección 9) */}
-      <section className="bg-slate-900 text-white rounded-2xl p-6 sm:p-8 space-y-4">
-        <h3 className="text-base font-bold uppercase tracking-wider text-amber-400">
+      <section className="bg-[#c29431] text-slate-950 rounded-2xl p-6 sm:p-8 space-y-4 border border-[#a87f27] shadow-sm">
+        <h3 className="text-base font-extrabold uppercase tracking-wider text-slate-950">
           Compromiso con Indicadores de Gestión
         </h3>
-        <p className="text-xs sm:text-sm text-slate-300 leading-relaxed">
+        <p className="text-xs sm:text-sm text-slate-900 leading-relaxed font-medium">
           NIVAL Sciences monitorea el impacto de sus soluciones corporativas mediante métricas objetivas orientadas a la mejora continua:
         </p>
         <div className="grid grid-cols-1 sm:grid-cols-4 gap-3 pt-2 text-center text-xs">
-          <div className="p-3 rounded-xl bg-slate-800 border border-slate-700">
-            <span className="block font-bold text-white text-sm">Empresas</span>
-            <span className="text-slate-400 text-[11px] mt-0.5 block">Atención individualizada y seguimiento</span>
+          <div className="p-3 rounded-xl bg-slate-950/15 border border-slate-950/20">
+            <span className="block font-extrabold text-slate-950 text-sm">Empresas</span>
+            <span className="text-slate-900 text-[11px] mt-0.5 block font-medium">Atención individualizada y seguimiento</span>
           </div>
-          <div className="p-3 rounded-xl bg-slate-800 border border-slate-700">
-            <span className="block font-bold text-white text-sm">Proyectos</span>
-            <span className="text-slate-400 text-[11px] mt-0.5 block">Ejecución rigurosa en fechas acordadas</span>
+          <div className="p-3 rounded-xl bg-slate-950/15 border border-slate-950/20">
+            <span className="block font-extrabold text-slate-950 text-sm">Proyectos</span>
+            <span className="text-slate-900 text-[11px] mt-0.5 block font-medium">Ejecución rigurosa en fechas acordadas</span>
           </div>
-          <div className="p-3 rounded-xl bg-slate-800 border border-slate-700">
-            <span className="block font-bold text-white text-sm">Programas</span>
-            <span className="text-slate-400 text-[11px] mt-0.5 block">Implementación técnica sin disrupciones</span>
+          <div className="p-3 rounded-xl bg-slate-950/15 border border-slate-950/20">
+            <span className="block font-extrabold text-slate-950 text-sm">Programas</span>
+            <span className="text-slate-900 text-[11px] mt-0.5 block font-medium">Implementación técnica sin disrupciones</span>
           </div>
-          <div className="p-3 rounded-xl bg-slate-800 border border-slate-700">
-            <span className="block font-bold text-white text-sm">Continuidad</span>
-            <span className="text-slate-400 text-[11px] mt-0.5 block">Alianzas y convenios sostenibles</span>
+          <div className="p-3 rounded-xl bg-slate-950/15 border border-slate-950/20">
+            <span className="block font-extrabold text-slate-950 text-sm">Continuidad</span>
+            <span className="text-slate-900 text-[11px] mt-0.5 block font-medium">Alianzas y convenios sostenibles</span>
           </div>
         </div>
       </section>

@@ -131,13 +131,13 @@ export const CapaLaboratorio: React.FC<CapaLaboratorioProps> = ({ onSelectCapa }
                   onClick={() => setSelectedCategory(cat.id)}
                   className={`px-3 py-1.5 rounded-lg text-xs font-semibold whitespace-nowrap cursor-pointer transition-colors flex items-center space-x-1.5 ${
                     selectedCategory === cat.id
-                      ? 'bg-slate-900 text-white'
+                      ? 'bg-[#c29431] text-slate-950 font-bold shadow-xs'
                       : 'bg-[#dde3ec] text-slate-800 hover:bg-[#bcc7d5] border border-slate-400'
                   }`}
                 >
                   <span>{cat.label}</span>
                   <span className={`text-[10px] px-1.5 py-0.2 rounded-full font-mono ${
-                    selectedCategory === cat.id ? 'bg-amber-500 text-slate-950 font-bold' : 'bg-slate-300 text-slate-700'
+                    selectedCategory === cat.id ? 'bg-slate-950/20 text-slate-950 font-bold' : 'bg-slate-300 text-slate-700'
                   }`}>
                     {count}
                   </span>
@@ -164,18 +164,18 @@ export const CapaLaboratorio: React.FC<CapaLaboratorioProps> = ({ onSelectCapa }
                   onClick={() => setActiveTest(test)}
                   className={`p-4 rounded-xl border text-left cursor-pointer transition-all ${
                     isSelected
-                      ? 'bg-slate-900 text-white border-slate-900 shadow-xs'
+                      ? 'bg-[#c29431] text-slate-950 border-[#a87f27] shadow-sm'
                       : 'bg-[#dde3ec] text-slate-900 border border-slate-400 hover:border-slate-600'
                   }`}
                 >
                   <div className="flex items-center justify-between text-[11px] mb-1.5 gap-2">
-                    <span className={`truncate ${isSelected ? 'text-amber-400 font-semibold' : 'text-slate-600'}`}>
+                    <span className={`truncate ${isSelected ? 'text-slate-800 font-bold' : 'text-slate-600'}`}>
                       {test.categoryLabel}
                     </span>
                     {test.price && (
                       <span className={`font-mono font-bold text-xs shrink-0 px-2 py-0.5 rounded ${
                         isSelected 
-                          ? 'bg-amber-400/20 text-amber-300 border border-amber-400/30' 
+                          ? 'bg-slate-950/15 text-slate-800 border border-slate-950/20' 
                           : 'bg-[#cbd5e1] text-slate-900 border border-slate-400'
                       }`}>
                         {test.price}
@@ -186,10 +186,10 @@ export const CapaLaboratorio: React.FC<CapaLaboratorioProps> = ({ onSelectCapa }
                     {test.name}
                   </h4>
                   <div className="flex items-center justify-between text-[11px] mt-2 pt-2 border-t border-slate-400/30">
-                    <span className={`font-mono font-semibold ${isSelected ? 'text-amber-300' : 'text-slate-700'}`}>
+                    <span className={`font-mono font-semibold ${isSelected ? 'text-slate-800' : 'text-slate-700'}`}>
                       {test.abbreviation ? `[${test.abbreviation}]` : ''}
                     </span>
-                    <span className={isSelected ? 'text-slate-300' : 'text-slate-600'}>
+                    <span className={isSelected ? 'text-slate-800 font-medium' : 'text-slate-600'}>
                       {test.fastingHours > 0 ? `${test.fastingHours}h ayuno` : 'Sin ayuno'}
                     </span>
                   </div>
@@ -244,7 +244,7 @@ export const CapaLaboratorio: React.FC<CapaLaboratorioProps> = ({ onSelectCapa }
                           onSelectCapa('contacto');
                           window.scrollTo({ top: 0, behavior: 'smooth' });
                         }}
-                        className="px-4 py-2 rounded-lg bg-slate-950 hover:bg-slate-800 text-white text-xs font-bold transition-all shadow-xs cursor-pointer text-center"
+                        className="px-4 py-2 rounded-lg bg-[#c29431] hover:bg-[#b08428] text-slate-950 text-xs font-bold transition-all shadow-xs cursor-pointer text-center"
                       >
                         Consultar / Agendar este Examen &rarr;
                       </button>

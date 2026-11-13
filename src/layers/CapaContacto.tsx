@@ -141,7 +141,7 @@ export const CapaContacto: React.FC<CapaContactoProps> = ({ onSelectCapa }) => {
                 onClick={() => setTipoGestion('servicio')}
                 className={`py-2 px-2.5 rounded-xl text-xs font-semibold text-center cursor-pointer transition-colors ${
                   tipoGestion === 'servicio'
-                    ? 'bg-slate-900 text-white'
+                    ? 'bg-[#c29431] text-slate-950 font-bold shadow-xs'
                     : 'bg-[#bcc7d5] text-slate-800 hover:bg-slate-400'
                 }`}
               >
@@ -153,7 +153,7 @@ export const CapaContacto: React.FC<CapaContactoProps> = ({ onSelectCapa }) => {
                 onClick={() => setTipoGestion('empresa')}
                 className={`py-2 px-2.5 rounded-xl text-xs font-semibold text-center cursor-pointer transition-colors ${
                   tipoGestion === 'empresa'
-                    ? 'bg-slate-900 text-white'
+                    ? 'bg-[#c29431] text-slate-950 font-bold shadow-xs'
                     : 'bg-[#bcc7d5] text-slate-800 hover:bg-slate-400'
                 }`}
               >
@@ -165,7 +165,7 @@ export const CapaContacto: React.FC<CapaContactoProps> = ({ onSelectCapa }) => {
                 onClick={() => setTipoGestion('alianza')}
                 className={`py-2 px-2.5 rounded-xl text-xs font-semibold text-center cursor-pointer transition-colors ${
                   tipoGestion === 'alianza'
-                    ? 'bg-slate-900 text-white'
+                    ? 'bg-[#c29431] text-slate-950 font-bold shadow-xs'
                     : 'bg-[#bcc7d5] text-slate-800 hover:bg-slate-400'
                 }`}
               >
@@ -265,9 +265,9 @@ export const CapaContacto: React.FC<CapaContactoProps> = ({ onSelectCapa }) => {
 
                 <button
                   type="submit"
-                  className="w-full py-3 px-4 rounded-xl bg-slate-900 hover:bg-slate-800 text-white font-bold text-xs sm:text-sm transition-colors cursor-pointer flex items-center justify-center space-x-2"
+                  className="w-full py-3 px-4 rounded-xl bg-[#c29431] hover:bg-[#b08428] text-slate-950 font-bold text-xs sm:text-sm transition-colors cursor-pointer flex items-center justify-center space-x-2 shadow-xs"
                 >
-                  <Send className="w-4 h-4 text-amber-400" />
+                  <Send className="w-4 h-4 text-slate-950" />
                   <span>Enviar Comunicación Institucional</span>
                 </button>
               </form>

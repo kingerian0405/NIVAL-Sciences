@@ -81,7 +81,7 @@ export const CapaFormacion: React.FC<CapaFormacionProps> = ({ onSelectCapa }) =>
                 onClick={() => setFilter(item)}
                 className={`px-3 py-1.5 rounded-lg text-xs font-semibold cursor-pointer transition-colors ${
                   filter === item
-                    ? 'bg-slate-900 text-white'
+                    ? 'bg-[#c29431] text-slate-950 font-bold shadow-xs'
                     : 'bg-[#dde3ec] text-slate-800 hover:bg-[#bcc7d5] border border-slate-400'
                 }`}
               >
@@ -137,27 +137,27 @@ export const CapaFormacion: React.FC<CapaFormacionProps> = ({ onSelectCapa }) =>
       </section>
 
       {/* Proyección del Campus Digital */}
-      <section className="bg-slate-900 text-white rounded-2xl p-6 sm:p-8 space-y-4">
+      <section className="bg-[#c29431] text-slate-950 rounded-2xl p-6 sm:p-8 space-y-4 border border-[#a87f27] shadow-sm">
         <div className="flex items-center space-x-3">
-          <div className="p-2.5 rounded-xl bg-violet-500/20 text-violet-300 border border-violet-400/30">
+          <div className="p-2.5 rounded-xl bg-slate-950/15 text-slate-950 border border-slate-950/20">
             <Laptop className="w-6 h-6" />
           </div>
           <div>
-            <span className="text-[11px] font-bold uppercase tracking-wider text-amber-400">
+            <span className="text-[11px] font-bold uppercase tracking-wider text-slate-900">
               Proyección Institucional · Etapa de Expansión
             </span>
-            <h3 className="text-xl font-bold text-white">
+            <h3 className="text-xl font-extrabold text-slate-950">
               Campus Digital NIVAL Sciences
             </h3>
           </div>
         </div>
 
-        <p className="text-xs sm:text-sm text-slate-300 leading-relaxed max-w-4xl">
+        <p className="text-xs sm:text-sm text-slate-900 leading-relaxed max-w-4xl font-medium">
           El campus digital integrará módulos educativos virtuales, repositorio científico de acceso abierto, guías clínicas estandarizadas y recursos interactivos de formación continua para colaboradores y profesionales de la salud.
         </p>
 
-        <div className="pt-2 border-t border-slate-800 flex items-start space-x-2 text-[11px] text-slate-400">
-          <ShieldAlert className="w-4 h-4 text-amber-400 shrink-0 mt-0.5" />
+        <div className="pt-2 border-t border-slate-950/20 flex items-start space-x-2 text-[11px] text-slate-900">
+          <ShieldAlert className="w-4 h-4 text-slate-950 shrink-0 mt-0.5" />
           <span>
             <strong>Criterio normativo:</strong> Conforme al documento de Identidad Estratégica, las certificaciones y acreditaciones formales se emitirán únicamente cuando exista la autorización legal o alianza académica correspondiente.
           </span>
