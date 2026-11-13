@@ -132,7 +132,7 @@ export const CapaSolucionesEmpresas: React.FC<CapaSolucionesEmpresasProps> = ({ 
       </section>
 
       {/* Indicadores de Gestión Corporativa (Sección 9) */}
-      <section className="bg-[#c29431] text-slate-950 rounded-2xl p-6 sm:p-8 space-y-4 border border-[#a87f27] shadow-sm">
+      <section className="bg-nival-gold text-slate-950 rounded-2xl p-6 sm:p-8 space-y-4 border border-nival-gold shadow-sm">
         <h3 className="text-base font-extrabold uppercase tracking-wider text-slate-950">
           Compromiso con Indicadores de Gestión
         </h3>

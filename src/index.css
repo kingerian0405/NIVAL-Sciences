@@ -1,5 +1,38 @@
 @import "tailwindcss";
 
+/* ==========================================================================
+   CONFIGURACIÓN DE COLOR DORADO INSTITUCIONAL NIVAL
+   Para cambiar el tono dorado en todas las capas de la página web,
+   solo debes modificar el valor de --nival-gold aquí abajo:
+   ========================================================================== */
+:root {
+  --nival-gold: #c29431;        /* <- EDITA ESTE COLOR HEXADECIMAL PRINCIPAL */
+  --nival-gold-hover: #b08428;  /* <- Color al pasar el cursor (hover) */
+  --nival-gold-border: #a87f27; /* <- Color para bordes de tarjetas doradas */
+}
+
+@theme {
+  --color-nival-gold: var(--nival-gold);
+  --color-nival-gold-hover: var(--nival-gold-hover);
+  --color-nival-gold-border: var(--nival-gold-border);
+}
+
+.bg-nival-gold {
+  background-color: var(--nival-gold) !important;
+}
+
+.hover\:bg-nival-gold-hover:hover {
+  background-color: var(--nival-gold-hover) !important;
+}
+
+.border-nival-gold {
+  border-color: var(--nival-gold-border) !important;
+}
+
+.text-nival-gold {
+  color: var(--nival-gold) !important;
+}
+
 @layer base {
   html {
     scroll-behavior: smooth;

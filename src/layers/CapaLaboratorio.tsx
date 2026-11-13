@@ -131,7 +131,7 @@ export const CapaLaboratorio: React.FC<CapaLaboratorioProps> = ({ onSelectCapa }
                   onClick={() => setSelectedCategory(cat.id)}
                   className={`px-3 py-1.5 rounded-lg text-xs font-semibold whitespace-nowrap cursor-pointer transition-colors flex items-center space-x-1.5 ${
                     selectedCategory === cat.id
-                      ? 'bg-[#c29431] text-slate-950 font-bold shadow-xs'
+                      ? 'bg-nival-gold text-slate-950 font-bold shadow-xs'
                       : 'bg-[#dde3ec] text-slate-800 hover:bg-[#bcc7d5] border border-slate-400'
                   }`}
                 >
@@ -164,7 +164,7 @@ export const CapaLaboratorio: React.FC<CapaLaboratorioProps> = ({ onSelectCapa }
                   onClick={() => setActiveTest(test)}
                   className={`p-4 rounded-xl border text-left cursor-pointer transition-all ${
                     isSelected
-                      ? 'bg-[#c29431] text-slate-950 border-[#a87f27] shadow-sm'
+                      ? 'bg-nival-gold text-slate-950 border-nival-gold shadow-sm'
                       : 'bg-[#dde3ec] text-slate-900 border border-slate-400 hover:border-slate-600'
                   }`}
                 >
@@ -244,7 +244,7 @@ export const CapaLaboratorio: React.FC<CapaLaboratorioProps> = ({ onSelectCapa }
                           onSelectCapa('contacto');
                           window.scrollTo({ top: 0, behavior: 'smooth' });
                         }}
-                        className="px-4 py-2 rounded-lg bg-[#c29431] hover:bg-[#b08428] text-slate-950 text-xs font-bold transition-all shadow-xs cursor-pointer text-center"
+                        className="px-4 py-2 rounded-lg bg-nival-gold hover:bg-nival-gold-hover text-slate-950 text-xs font-bold transition-all shadow-xs cursor-pointer text-center"
                       >
                         Consultar / Agendar este Examen &rarr;
                       </button>

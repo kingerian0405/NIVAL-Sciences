@@ -144,7 +144,7 @@ export const CapaPrevencion: React.FC<CapaPrevencionProps> = ({ onSelectCapa }) 
           <span>Detección Oportuna de Factores de Riesgo</span>
         </h2>
 
-        <div className="bg-[#c29431] text-slate-950 rounded-2xl p-6 sm:p-8 space-y-4 text-xs sm:text-sm leading-relaxed border border-[#a87f27] shadow-sm">
+        <div className="bg-nival-gold text-slate-950 rounded-2xl p-6 sm:p-8 space-y-4 text-xs sm:text-sm leading-relaxed border border-nival-gold shadow-sm">
           <p className="text-slate-950 font-medium">
             Los programas preventivos de NIVAL Sciences ponen especial atención en factores de riesgo modificables que con frecuencia cursan de forma asintomática:
           </p>

@@ -81,7 +81,7 @@ export const CapaFormacion: React.FC<CapaFormacionProps> = ({ onSelectCapa }) =>
                 onClick={() => setFilter(item)}
                 className={`px-3 py-1.5 rounded-lg text-xs font-semibold cursor-pointer transition-colors ${
                   filter === item
-                    ? 'bg-[#c29431] text-slate-950 font-bold shadow-xs'
+                    ? 'bg-nival-gold text-slate-950 font-bold shadow-xs'
                     : 'bg-[#dde3ec] text-slate-800 hover:bg-[#bcc7d5] border border-slate-400'
                 }`}
               >
@@ -137,7 +137,7 @@ export const CapaFormacion: React.FC<CapaFormacionProps> = ({ onSelectCapa }) =>
       </section>
 
       {/* Proyección del Campus Digital */}
-      <section className="bg-[#c29431] text-slate-950 rounded-2xl p-6 sm:p-8 space-y-4 border border-[#a87f27] shadow-sm">
+      <section className="bg-nival-gold text-slate-950 rounded-2xl p-6 sm:p-8 space-y-4 border border-nival-gold shadow-sm">
         <div className="flex items-center space-x-3">
           <div className="p-2.5 rounded-xl bg-slate-950/15 text-slate-950 border border-slate-950/20">
             <Laptop className="w-6 h-6" />

@@ -82,7 +82,7 @@ export const CapaNosotros: React.FC<CapaNosotrosProps> = ({ onSelectCapa }) => {
       <section className="grid grid-cols-1 md:grid-cols-2 gap-8">
         
         {/* Misión */}
-        <div className="bg-[#c29431] text-slate-950 rounded-2xl p-6 sm:p-8 border border-[#a87f27] shadow-sm space-y-4 flex flex-col justify-between">
+        <div className="bg-nival-gold text-slate-950 rounded-2xl p-6 sm:p-8 border border-nival-gold shadow-sm space-y-4 flex flex-col justify-between">
           <div className="space-y-3">
             <div className="w-10 h-10 rounded-xl bg-slate-950/15 text-slate-950 flex items-center justify-center border border-slate-950/20">
               <Target className="w-5 h-5" />
@@ -97,7 +97,7 @@ export const CapaNosotros: React.FC<CapaNosotrosProps> = ({ onSelectCapa }) => {
         </div>
 
         {/* Visión */}
-        <div className="bg-[#c29431] text-slate-950 rounded-2xl p-6 sm:p-8 border border-[#a87f27] shadow-sm space-y-4 flex flex-col justify-between">
+        <div className="bg-nival-gold text-slate-950 rounded-2xl p-6 sm:p-8 border border-nival-gold shadow-sm space-y-4 flex flex-col justify-between">
           <div className="space-y-3">
             <div className="w-10 h-10 rounded-xl bg-slate-950/15 text-slate-950 flex items-center justify-center border border-slate-950/20">
               <Telescope className="w-5 h-5" />
