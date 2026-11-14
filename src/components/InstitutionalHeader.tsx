@@ -46,7 +46,7 @@ export const InstitutionalHeader: React.FC<InstitutionalHeaderProps> = ({
           >
             <div className="bg-white px-2.5 py-1 rounded-xl border border-slate-200 shadow-2xs">
               <img 
-                src={`${import.meta.env.BASE_URL}logo-nival-official.jpg`} 
+                src={`${import.meta.env.BASE_URL}Nival.jpeg`} 
                 alt="NIVAL Sciences" 
                 className="h-10 sm:h-12 w-auto object-contain rounded-md"
               />

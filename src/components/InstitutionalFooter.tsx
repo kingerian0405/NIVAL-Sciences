@@ -38,7 +38,7 @@ export const InstitutionalFooter: React.FC<InstitutionalFooterProps> = ({ onSele
           <div className="md:col-span-5 space-y-4">
             <div className="flex items-center space-x-3 bg-white/95 p-2 rounded-xl border border-slate-400 w-fit">
               <img 
-                src={`${import.meta.env.BASE_URL}logo-nival-official.jpg`} 
+                src={`${import.meta.env.BASE_URL}Nival.jpeg`} 
                 alt="NIVAL Sciences" 
                 className="h-10 w-auto object-contain rounded-md"
               />

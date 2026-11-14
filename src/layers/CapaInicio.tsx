@@ -43,7 +43,7 @@ export const CapaInicio: React.FC<CapaInicioProps> = ({ onSelectCapa }) => {
   };
 
   return (
-    <div className="w-full bg-[#f8fafc] text-slate-900">
+    <div className="w-full bg-nival-main text-slate-900">
       
       {/* SECCIÓN 1: HERO CON IMAGEN DE FONDO (fondo.jpeg) */}
       <section 
@@ -63,7 +63,7 @@ export const CapaInicio: React.FC<CapaInicioProps> = ({ onSelectCapa }) => {
 
             {/* Franja de Enfoque Institucional Dorada */}
             <div>
-              <span className="inline-block bg-[#eeb510] text-slate-950 text-xs sm:text-sm font-bold px-3 py-1.5 rounded shadow-2xs">
+              <span className="inline-block bg-nival-gold text-slate-950 text-xs sm:text-sm font-bold px-3 py-1.5 rounded shadow-2xs">
                 Salud integral con visión preventiva, tecnologia y acompañamiento profesional
               </span>
             </div>
@@ -80,7 +80,7 @@ export const CapaInicio: React.FC<CapaInicioProps> = ({ onSelectCapa }) => {
                   onSelectCapa('contacto');
                   window.scrollTo({ top: 0, behavior: 'smooth' });
                 }}
-                className="px-6 py-2.5 rounded-lg bg-[#eeb510] hover:bg-[#dca30a] text-slate-950 font-extrabold text-xs sm:text-sm shadow-xs transition-all cursor-pointer"
+                className="px-6 py-2.5 rounded-lg bg-nival-gold hover:bg-nival-gold-hover text-slate-950 font-extrabold text-xs sm:text-sm shadow-xs transition-all cursor-pointer"
               >
                 Solicitar atención
               </button>
@@ -92,7 +92,7 @@ export const CapaInicio: React.FC<CapaInicioProps> = ({ onSelectCapa }) => {
 
 
       {/* SECCIÓN 2: NUESTROS VALORES */}
-      <section className="relative bg-[#f0f4f9] py-16 sm:py-20 px-4 sm:px-6 border-b border-slate-300 overflow-hidden">
+      <section className="relative bg-nival-section-alt py-16 sm:py-20 px-4 sm:px-6 border-b border-slate-300 overflow-hidden">
         
         {/* Fondo decorativo geométrico sutil */}
         <div className="absolute inset-0 flex items-center justify-center opacity-40 pointer-events-none">
@@ -112,7 +112,7 @@ export const CapaInicio: React.FC<CapaInicioProps> = ({ onSelectCapa }) => {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-3.5 sm:gap-4 mt-10 text-left">
             
             {/* Calidad */}
-            <div className="bg-[#eeb510] rounded-xl p-4 sm:p-5 text-slate-950 flex flex-col justify-between shadow-xs">
+            <div className="bg-nival-gold rounded-xl p-4 sm:p-5 text-slate-950 flex flex-col justify-between shadow-xs">
               <div>
                 <div className="w-7 h-7 rounded-full bg-slate-950/15 flex items-center justify-center mb-3 text-slate-950">
                   <Award className="w-4 h-4" />
@@ -120,14 +120,14 @@ export const CapaInicio: React.FC<CapaInicioProps> = ({ onSelectCapa }) => {
                 <h3 className="font-extrabold text-sm text-slate-950 mb-1.5">
                   Calidad
                 </h3>
-                <p className="text-[11px] sm:text-xs text-slate-900 leading-relaxed">
+                <p className="text-[11px] sm:text-xs text-slate-900 leading-relaxed font-medium">
                   Rigor técnico, controles analíticos estrictos y mejora continua en todos los procesos.
                 </p>
               </div>
             </div>
 
             {/* Confiabilidad */}
-            <div className="bg-[#eeb510] rounded-xl p-4 sm:p-5 text-slate-950 flex flex-col justify-between shadow-xs">
+            <div className="bg-nival-gold rounded-xl p-4 sm:p-5 text-slate-950 flex flex-col justify-between shadow-xs">
               <div>
                 <div className="w-7 h-7 rounded-full bg-slate-950/15 flex items-center justify-center mb-3 text-slate-950">
                   <ShieldCheck className="w-4 h-4" />
@@ -135,14 +135,14 @@ export const CapaInicio: React.FC<CapaInicioProps> = ({ onSelectCapa }) => {
                 <h3 className="font-extrabold text-sm text-slate-950 mb-1.5">
                   Confiabilidad
                 </h3>
-                <p className="text-[11px] sm:text-xs text-slate-900 leading-relaxed">
+                <p className="text-[11px] sm:text-xs text-slate-900 leading-relaxed font-medium">
                   Doble verificación, trazabilidad y veracidad técnica en cada resultado y asesoría.
                 </p>
               </div>
             </div>
 
             {/* Eficiencia */}
-            <div className="bg-[#eeb510] rounded-xl p-4 sm:p-5 text-slate-950 flex flex-col justify-between shadow-xs">
+            <div className="bg-nival-gold rounded-xl p-4 sm:p-5 text-slate-950 flex flex-col justify-between shadow-xs">
               <div>
                 <div className="w-7 h-7 rounded-full bg-slate-950/15 flex items-center justify-center mb-3 text-slate-950">
                   <Clock className="w-4 h-4" />
@@ -150,14 +150,14 @@ export const CapaInicio: React.FC<CapaInicioProps> = ({ onSelectCapa }) => {
                 <h3 className="font-extrabold text-sm text-slate-950 mb-1.5">
                   Eficiencia
                 </h3>
-                <p className="text-[11px] sm:text-xs text-slate-900 leading-relaxed">
+                <p className="text-[11px] sm:text-xs text-slate-900 leading-relaxed font-medium">
                   Agilidad operativa, tiempos óptimos de respuesta y accesibilidad a servicios.
                 </p>
               </div>
             </div>
 
             {/* Innovación */}
-            <div className="bg-[#eeb510] rounded-xl p-4 sm:p-5 text-slate-950 flex flex-col justify-between shadow-xs">
+            <div className="bg-nival-gold rounded-xl p-4 sm:p-5 text-slate-950 flex flex-col justify-between shadow-xs">
               <div>
                 <div className="w-7 h-7 rounded-full bg-slate-950/15 flex items-center justify-center mb-3 text-slate-950">
                   <Lightbulb className="w-4 h-4" />
@@ -165,14 +165,14 @@ export const CapaInicio: React.FC<CapaInicioProps> = ({ onSelectCapa }) => {
                 <h3 className="font-extrabold text-sm text-slate-950 mb-1.5">
                   Innovación
                 </h3>
-                <p className="text-[11px] sm:text-xs text-slate-900 leading-relaxed">
+                <p className="text-[11px] sm:text-xs text-slate-900 leading-relaxed font-medium">
                   Herramientas digitales, microaplicaciones y metodologías fundamentadas en la ciencia.
                 </p>
               </div>
             </div>
 
             {/* Responsabilidad */}
-            <div className="bg-[#eeb510] rounded-xl p-4 sm:p-5 text-slate-950 flex flex-col justify-between shadow-xs">
+            <div className="bg-nival-gold rounded-xl p-4 sm:p-5 text-slate-950 flex flex-col justify-between shadow-xs">
               <div>
                 <div className="w-7 h-7 rounded-full bg-slate-950/15 flex items-center justify-center mb-3 text-slate-950">
                   <HeartHandshake className="w-4 h-4" />
@@ -180,7 +180,7 @@ export const CapaInicio: React.FC<CapaInicioProps> = ({ onSelectCapa }) => {
                 <h3 className="font-extrabold text-sm text-slate-950 mb-1.5">
                   Responsabilidad
                 </h3>
-                <p className="text-[11px] sm:text-xs text-slate-900 leading-relaxed">
+                <p className="text-[11px] sm:text-xs text-slate-900 leading-relaxed font-medium">
                   Compromiso ético, respeto normativo, protección de datos y confidencialidad médica.
                 </p>
               </div>
@@ -193,7 +193,7 @@ export const CapaInicio: React.FC<CapaInicioProps> = ({ onSelectCapa }) => {
 
 
       {/* SECCIÓN 3: PREVENIR TAMBIEN ES CUIDAR */}
-      <section className="bg-[#f8fafc] py-16 sm:py-20 px-4 sm:px-6 border-b border-slate-300">
+      <section className="bg-nival-section-light py-16 sm:py-20 px-4 sm:px-6 border-b border-slate-300">
         <div className="max-w-4xl mx-auto space-y-6 text-left">
           
           <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-950 tracking-tight">
@@ -217,7 +217,7 @@ export const CapaInicio: React.FC<CapaInicioProps> = ({ onSelectCapa }) => {
                 onSelectCapa('prevencion');
                 window.scrollTo({ top: 0, behavior: 'smooth' });
               }}
-              className="px-6 py-2.5 rounded-lg bg-[#26272b] hover:bg-slate-800 text-white font-bold text-xs sm:text-sm shadow-xs transition-all cursor-pointer"
+              className="px-6 py-2.5 rounded-lg bg-nival-dark hover:bg-slate-800 text-white font-bold text-xs sm:text-sm shadow-xs transition-all cursor-pointer"
             >
               Descubrir más
             </button>
@@ -228,7 +228,7 @@ export const CapaInicio: React.FC<CapaInicioProps> = ({ onSelectCapa }) => {
 
 
       {/* SECCIÓN 4: SOLUCIONES CORPORATIVAS CON IMPACTO MEDIBLE */}
-      <section className="bg-[#26272b] py-20 px-4 sm:px-6 text-white border-b border-slate-800">
+      <section className="bg-nival-dark py-20 px-4 sm:px-6 text-white border-b border-slate-800">
         <div className="max-w-6xl mx-auto text-center space-y-10">
           
           <div>
@@ -243,7 +243,7 @@ export const CapaInicio: React.FC<CapaInicioProps> = ({ onSelectCapa }) => {
           {/* 4 Tarjetas Doradas Corporativas */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 text-left">
             
-            <div className="bg-[#eeb510] rounded-xl p-5 text-slate-950 flex flex-col justify-between shadow-md">
+            <div className="bg-nival-gold rounded-xl p-5 text-slate-950 flex flex-col justify-between shadow-md">
               <div>
                 <h3 className="font-extrabold text-sm text-slate-950 mb-2">
                   Asesoría y Consultoría
@@ -254,7 +254,7 @@ export const CapaInicio: React.FC<CapaInicioProps> = ({ onSelectCapa }) => {
               </div>
             </div>
 
-            <div className="bg-[#eeb510] rounded-xl p-5 text-slate-950 flex flex-col justify-between shadow-md">
+            <div className="bg-nival-gold rounded-xl p-5 text-slate-950 flex flex-col justify-between shadow-md">
               <div>
                 <h3 className="font-extrabold text-sm text-slate-950 mb-2">
                   Programas de Prevención
@@ -265,7 +265,7 @@ export const CapaInicio: React.FC<CapaInicioProps> = ({ onSelectCapa }) => {
               </div>
             </div>
 
-            <div className="bg-[#eeb510] rounded-xl p-5 text-slate-950 flex flex-col justify-between shadow-md">
+            <div className="bg-nival-gold rounded-xl p-5 text-slate-950 flex flex-col justify-between shadow-md">
               <div>
                 <h3 className="font-extrabold text-sm text-slate-950 mb-2">
                   Jornadas de Salud In-Company
@@ -276,7 +276,7 @@ export const CapaInicio: React.FC<CapaInicioProps> = ({ onSelectCapa }) => {
               </div>
             </div>
 
-            <div className="bg-[#eeb510] rounded-xl p-5 text-slate-950 flex flex-col justify-between shadow-md">
+            <div className="bg-nival-gold rounded-xl p-5 text-slate-950 flex flex-col justify-between shadow-md">
               <div>
                 <h3 className="font-extrabold text-sm text-slate-950 mb-2">
                   Capacitación para Colaboradores
@@ -306,7 +306,7 @@ export const CapaInicio: React.FC<CapaInicioProps> = ({ onSelectCapa }) => {
 
 
       {/* SECCIÓN 5: FORMACIÓN QUE TRANSFORMA Y DESARROLLA CAPACIDADES */}
-      <section className="bg-[#f0f4f9] py-20 px-4 sm:px-6 border-b border-slate-300">
+      <section className="bg-nival-section-alt py-20 px-4 sm:px-6 border-b border-slate-300">
         <div className="max-w-6xl mx-auto">
           
           <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-950 text-center tracking-tight mb-12">
@@ -331,7 +331,7 @@ export const CapaInicio: React.FC<CapaInicioProps> = ({ onSelectCapa }) => {
                     onSelectCapa('formacion');
                     window.scrollTo({ top: 0, behavior: 'smooth' });
                   }}
-                  className="px-6 py-2.5 rounded-lg bg-[#eeb510] hover:bg-[#dca30a] text-slate-950 font-extrabold text-xs sm:text-sm shadow-xs transition-all cursor-pointer"
+                  className="px-6 py-2.5 rounded-lg bg-nival-gold hover:bg-nival-gold-hover text-slate-950 font-extrabold text-xs sm:text-sm shadow-xs transition-all cursor-pointer"
                 >
                   Mas información
                 </button>
@@ -343,7 +343,7 @@ export const CapaInicio: React.FC<CapaInicioProps> = ({ onSelectCapa }) => {
               
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
                 {/* Para Profesionales */}
-                <div className="bg-[#dfe4ef] rounded-xl p-4 sm:p-5 border border-slate-300/40 text-slate-950 shadow-2xs">
+                <div className="bg-nival-card-tint rounded-xl p-4 sm:p-5 border border-slate-300/40 text-slate-950 shadow-2xs">
                   <h3 className="font-bold text-xs text-slate-950 mb-1.5">
                     Para Profesionales
                   </h3>
@@ -353,7 +353,7 @@ export const CapaInicio: React.FC<CapaInicioProps> = ({ onSelectCapa }) => {
                 </div>
 
                 {/* Para Empresas */}
-                <div className="bg-[#dfe4ef] rounded-xl p-4 sm:p-5 border border-slate-300/40 text-slate-950 shadow-2xs">
+                <div className="bg-nival-card-tint rounded-xl p-4 sm:p-5 border border-slate-300/40 text-slate-950 shadow-2xs">
                   <h3 className="font-bold text-xs text-slate-950 mb-1.5">
                     Para Empresas
                   </h3>
@@ -365,7 +365,7 @@ export const CapaInicio: React.FC<CapaInicioProps> = ({ onSelectCapa }) => {
 
               {/* Para la Comunidad (centrado abajo) */}
               <div className="flex justify-center">
-                <div className="w-full sm:w-3/4 bg-[#dfe4ef] rounded-xl p-4 sm:p-5 border border-slate-300/40 text-slate-950 shadow-2xs">
+                <div className="w-full sm:w-3/4 bg-nival-card-tint rounded-xl p-4 sm:p-5 border border-slate-300/40 text-slate-950 shadow-2xs">
                   <h3 className="font-bold text-xs text-slate-950 mb-1.5">
                     Para la Comunidad
                   </h3>
@@ -384,7 +384,7 @@ export const CapaInicio: React.FC<CapaInicioProps> = ({ onSelectCapa }) => {
 
 
       {/* SECCIÓN 6: LA TECNOLOGÍA AL SERVICIO DEL BIENESTAR */}
-      <section className="bg-[#f8fafc] py-20 px-4 sm:px-6">
+      <section className="bg-nival-section-light py-20 px-4 sm:px-6">
         <div className="max-w-6xl mx-auto">
           
           <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-950 text-center tracking-tight mb-12">
@@ -395,7 +395,7 @@ export const CapaInicio: React.FC<CapaInicioProps> = ({ onSelectCapa }) => {
             
             {/* Tarjeta Interactiva Dorada (7 cols) */}
             <div className="lg:col-span-7">
-              <div className="bg-[#eeb510] rounded-2xl p-6 sm:p-8 text-slate-950 relative shadow-md flex flex-col justify-between min-h-[220px]">
+              <div className="bg-nival-gold rounded-2xl p-6 sm:p-8 text-slate-950 relative shadow-md flex flex-col justify-between min-h-[220px]">
                 
                 {/* Contenido Principal con Controles Laterales */}
                 <div className="flex items-start justify-between gap-3">
@@ -439,7 +439,7 @@ export const CapaInicio: React.FC<CapaInicioProps> = ({ onSelectCapa }) => {
                     ))}
                   </div>
 
-                  <span className="bg-[#26272b] text-white text-[10px] font-bold px-3 py-1 rounded-sm shadow-xs uppercase tracking-wider">
+                  <span className="bg-nival-dark text-white text-[10px] font-bold px-3 py-1 rounded-sm shadow-xs uppercase tracking-wider">
                     {techSlides[currentTechSlide].badge}
                   </span>
                 </div>

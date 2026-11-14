@@ -1,22 +1,49 @@
 @import "tailwindcss";
 
 /* ==========================================================================
-   CONFIGURACIÓN DE COLOR DORADO INSTITUCIONAL NIVAL
-   Para cambiar el tono dorado en todas las capas de la página web,
-   solo debes modificar el valor de --nival-gold aquí abajo:
+   PALETA INSTITUCIONAL NIVAL SCIENCES
+   Aquí puedes modificar fácilmente todos los colores de fondo y acentos
+   de toda la página web. Los cambios se reflejarán inmediatamente en
+   todas las capas y componentes:
    ========================================================================== */
 :root {
-  --nival-gold: #eeb510;        /* <- COLOR DORADO INSTITUCIONAL NIVAL (según diseño PDF) */
-  --nival-gold-hover: #dca30a;  /* <- Color al pasar el cursor (hover) */
-  --nival-gold-border: #caa00f; /* <- Color para bordes de tarjetas doradas */
+  /* 1. Color Dorado Institucional (según diseño PDF oficial) */
+  --nival-gold: #eeb510;            /* Dorado institucional principal (letra V, botones, tarjetas destacadas) */
+  --nival-gold-hover: #dca30a;      /* Dorado al pasar el cursor (hover) */
+  --nival-gold-border: #caa00f;     /* Borde para elementos dorados */
+
+  /* 2. Fondos Principales de Página y Secciones */
+  --nival-bg-main: #ffffff;          /* Fondo base principal de toda la página */
+  --nival-bg-section-light: #f8fafc; /* Fondo de secciones claras (estilo Capa Inicio) */
+  --nival-bg-section-alt: #f0f4f9;   /* Fondo de secciones alternadas con suave tinte de descanso visual */
+  
+  /* 3. Fondos de Tarjetas y Contenedores */
+  --nival-bg-card: #ffffff;          /* Fondo de tarjetas principales */
+  --nival-bg-card-soft: #f8fafc;     /* Fondo de tarjetas secundarias o sub-paneles */
+  --nival-bg-card-tint: #dfe4ef;     /* Fondo de tarjetas con tinte institucional (como en cursos Inicio) */
+
+  /* 4. Fondos Oscuros de Cabecera, Footer y Bloques de Alto Impacto */
+  --nival-bg-dark: #26272b;          /* Fondo carbón oscuro institucional (usado en bloques destacados de Inicio) */
+  --nival-bg-dark-accent: #0f172a;   /* Fondo azul oscuro profundo (barra superior y footer) */
+  --nival-bg-darker: #020617;        /* Fondo oscuro para base del pie de página */
 }
 
 @theme {
   --color-nival-gold: var(--nival-gold);
   --color-nival-gold-hover: var(--nival-gold-hover);
   --color-nival-gold-border: var(--nival-gold-border);
+  --color-nival-bg-main: var(--nival-bg-main);
+  --color-nival-bg-section-light: var(--nival-bg-section-light);
+  --color-nival-bg-section-alt: var(--nival-bg-section-alt);
+  --color-nival-bg-card: var(--nival-bg-card);
+  --color-nival-bg-card-soft: var(--nival-bg-card-soft);
+  --color-nival-bg-card-tint: var(--nival-bg-card-tint);
+  --color-nival-bg-dark: var(--nival-bg-dark);
+  --color-nival-bg-dark-accent: var(--nival-bg-dark-accent);
+  --color-nival-bg-darker: var(--nival-bg-darker);
 }
 
+/* Clases de utilidad para fácil aplicación */
 .bg-nival-gold {
   background-color: var(--nival-gold) !important;
 }
@@ -33,16 +60,48 @@
   color: var(--nival-gold) !important;
 }
 
+.bg-nival-main {
+  background-color: var(--nival-bg-main) !important;
+}
+
+.bg-nival-section-light {
+  background-color: var(--nival-bg-section-light) !important;
+}
+
+.bg-nival-section-alt {
+  background-color: var(--nival-bg-section-alt) !important;
+}
+
+.bg-nival-card {
+  background-color: var(--nival-bg-card) !important;
+}
+
+.bg-nival-card-soft {
+  background-color: var(--nival-bg-card-soft) !important;
+}
+
+.bg-nival-card-tint {
+  background-color: var(--nival-bg-card-tint) !important;
+}
+
+.bg-nival-dark {
+  background-color: var(--nival-bg-dark) !important;
+}
+
+.bg-nival-dark-accent {
+  background-color: var(--nival-bg-dark-accent) !important;
+}
+
 @layer base {
   html {
     scroll-behavior: smooth;
     font-family: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-    background-color: #ffffff;
+    background-color: var(--nival-bg-main);
     color: #0f172a;
   }
 
   body {
-    background-color: #ffffff;
+    background-color: var(--nival-bg-main);
     color: #0f172a;
     @apply antialiased selection:bg-amber-400 selection:text-slate-900;
   }

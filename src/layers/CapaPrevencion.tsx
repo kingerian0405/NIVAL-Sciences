@@ -7,9 +7,9 @@ import {
   CheckCircle2, 
   Activity, 
   FileCheck,
-  AlertTriangle
+  AlertTriangle,
+  ArrowRight
 } from 'lucide-react';
-import { ImagePlaceholder } from '../components/ImagePlaceholder';
 
 interface CapaPrevencionProps {
   onSelectCapa: (id: string) => void;
@@ -50,126 +50,212 @@ export const CapaPrevencion: React.FC<CapaPrevencionProps> = ({ onSelectCapa }) 
   ];
 
   return (
-    <div className="max-w-5xl mx-auto py-12 px-4 sm:px-6 space-y-16">
+    <div className="w-full bg-nival-main text-slate-900">
       
-      {/* Encabezado */}
-      <div className="border-b border-slate-200 pb-8 space-y-1.5">
-        <span className="text-xs font-bold text-amber-600 uppercase tracking-wider block">
-          Programas de Salud y Prevención
-        </span>
-        <h1 className="text-3xl sm:text-4xl font-extrabold text-slate-950 tracking-tight">
-          Prevención y Calidad de Vida
-        </h1>
-        <p className="text-amber-800 text-sm font-semibold italic">
-          “La visión que necesitas para vivir como sueñas”
-        </p>
-        <p className="text-base text-slate-700">
-          Programas preventivos, jornadas de salud integrales y recursos para el autocuidado continuo.
-        </p>
-      </div>
+      {/* 1. HERO INSTITUCIONAL CON IMAGEN DE FONDO (fondo.jpeg) */}
+      <section 
+        className="relative w-full bg-cover bg-center overflow-hidden border-b border-slate-300"
+        style={{ backgroundImage: `url(${import.meta.env.BASE_URL}fondo.jpeg)` }}
+      >
+        <div className="absolute inset-0 bg-gradient-to-r from-white/95 via-white/85 to-white/40 sm:to-transparent"></div>
 
-      {/* Espacio reservado con fondo gris para Imagen de Fondo de Prevención */}
-      <ImagePlaceholder 
-        label="Espacio reservado para imagen de fondo: Jornadas de Prevención y Salud"
-        sublabel="Atención a personas, jornadas de tamizaje y actividades educativas de promoción del bienestar."
-        className="h-56 sm:h-72"
-      />
+        <div className="relative z-10 max-w-6xl mx-auto px-6 sm:px-10 py-16 sm:py-24 lg:py-28">
+          <div className="max-w-2xl text-left space-y-4">
+            
+            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-950 font-serif leading-[1.14] tracking-tight italic">
+              “La visión que necesitas para vivir como sueñas”
+            </h1>
 
-      {/* Filosofía de la Prevención */}
-      <section className="bg-slate-50 rounded-2xl p-6 sm:p-8 border border-slate-200 space-y-4 text-sm sm:text-base text-slate-800 leading-relaxed shadow-xs">
-        <div className="flex items-center space-x-2 text-slate-900 font-bold text-sm uppercase tracking-wider">
-          <ShieldCheck className="w-4 h-4 text-emerald-700" />
-          <span>El Enfoque Proactivo NIVAL</span>
+            <div>
+              <span className="inline-block bg-nival-gold text-slate-950 text-xs sm:text-sm font-bold px-3 py-1.5 rounded shadow-2xs">
+                Eje Estratégico · Programas de Salud y Prevención
+              </span>
+            </div>
+
+            <p className="text-xs sm:text-sm text-slate-800 leading-relaxed pt-2 font-normal">
+              Concebimos la prevención no como un acto reactivo ante la enfermedad, sino como una herramienta científica para anticiparse a los eventos de salud mediante monitoreo continuo, educación y tamizajes oportunos.
+            </p>
+
+            <div className="pt-4 flex flex-wrap gap-3">
+              <button
+                onClick={() => {
+                  onSelectCapa('contacto');
+                  window.scrollTo({ top: 0, behavior: 'smooth' });
+                }}
+                className="px-6 py-2.5 rounded-lg bg-nival-gold hover:bg-nival-gold-hover text-slate-950 font-extrabold text-xs sm:text-sm shadow-xs transition-all cursor-pointer"
+              >
+                Solicitar Jornada o Chequeo
+              </button>
+
+              <button
+                onClick={() => {
+                  onSelectCapa('laboratorio');
+                  window.scrollTo({ top: 0, behavior: 'smooth' });
+                }}
+                className="px-6 py-2.5 rounded-lg bg-nival-dark hover:bg-slate-800 text-white font-bold text-xs sm:text-sm shadow-xs transition-all cursor-pointer"
+              >
+                Ver Exámenes de Laboratorio
+              </button>
+            </div>
+
+          </div>
         </div>
-        <p>
-          En la medicina convencional suele acudirse a la evaluación analítica únicamente cuando el síntoma ya se ha instaurado. En <strong>NIVAL Sciences</strong> concebimos la prevención como una herramienta para anticiparse a los eventos de salud.
-        </p>
-        <blockquote className="border-l-4 border-amber-500 pl-4 py-1 text-slate-900 font-medium italic">
-          “El diagnóstico aporta información. La prevención ayuda a anticiparse.”
-        </blockquote>
       </section>
 
-      {/* Programas y Recursos */}
-      <section className="space-y-6">
-        <div>
-          <h2 className="text-xl font-bold text-slate-950 flex items-center space-x-2">
-            <span className="w-2.5 h-2.5 bg-amber-500 rounded-full"></span>
-            <span>Programas, Jornadas y Recursos</span>
+      {/* 2. FILOSOFÍA DE PREVENCIÓN: PREVENIR TAMBIÉN ES CUIDAR */}
+      <section className="bg-nival-section-alt py-16 sm:py-20 px-4 sm:px-6 border-b border-slate-300">
+        <div className="max-w-4xl mx-auto space-y-6 text-left">
+          
+          <div className="flex items-center space-x-2 text-slate-900 font-extrabold text-xs uppercase tracking-wider">
+            <ShieldCheck className="w-4 h-4 text-emerald-700" />
+            <span>El Enfoque Proactivo NIVAL</span>
+          </div>
+
+          <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-950 tracking-tight">
+            Prevenir también es cuidar
           </h2>
-          <p className="text-xs sm:text-sm text-slate-700 mt-1">
-            Los tres componentes operativos del alcance institucional en prevención:
+
+          <p className="text-xs sm:text-sm text-slate-700 leading-relaxed">
+            En la medicina convencional suele acudirse a la evaluación analítica únicamente cuando el síntoma ya se ha instaurado. En <strong>NIVAL Sciences</strong> concebimos la prevención como una herramienta esencial para anticiparse a los eventos, identificar factores de riesgo subclínicos y mantener la calidad de vida en el tiempo.
           </p>
+
+          {/* Cuadro destacado de anticipación */}
+          <div className="p-5 sm:p-6 rounded-2xl border border-slate-300/80 bg-nival-card-tint text-slate-950 shadow-2xs">
+            <blockquote className="border-l-4 border-amber-600 pl-4 py-1 text-xs sm:text-sm text-slate-900 font-semibold italic">
+              “El diagnóstico aporta información. La prevención ayuda a anticiparse.”
+            </blockquote>
+          </div>
+
         </div>
+      </section>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          {programas.map((prog, idx) => (
-            <div key={idx} className="bg-slate-50 rounded-2xl border border-slate-200 p-6 flex flex-col justify-between shadow-xs">
-              <div>
-                <span className="text-[11px] font-bold text-amber-800 uppercase tracking-wider block mb-1">
-                  Componente 0{idx + 1}
-                </span>
-                <h3 className="text-base font-bold text-slate-950 leading-snug">
-                  {prog.titulo}
-                </h3>
-                <p className="text-xs font-semibold text-slate-600 mt-1">
-                  {prog.subtitulo}
-                </p>
-                <p className="text-xs text-slate-700 mt-3 leading-relaxed">
-                  {prog.descripcion}
-                </p>
+      {/* 3. PROGRAMAS, JORNADAS Y RECURSOS */}
+      <section className="bg-nival-section-light py-16 sm:py-20 px-4 sm:px-6 border-b border-slate-300">
+        <div className="max-w-6xl mx-auto space-y-10">
+          
+          <div className="text-center max-w-2xl mx-auto">
+            <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-950 tracking-tight">
+              Componentes del Alcance Preventivo
+            </h2>
+            <p className="text-xs sm:text-sm text-slate-600 mt-1.5">
+              Tres frentes de acción integrados para individuos, familias y colectivos
+            </p>
+          </div>
 
-                <div className="mt-4 pt-4 border-t border-slate-200">
-                  <h4 className="text-[11px] font-bold uppercase text-slate-500 mb-2">
-                    Acciones clave:
-                  </h4>
-                  <ul className="space-y-2">
-                    {prog.items.map((item, i) => (
-                      <li key={i} className="flex items-start space-x-2 text-xs text-slate-800">
-                        <CheckCircle2 className="w-3.5 h-3.5 text-emerald-700 mt-0.5 shrink-0" />
-                        <span>{item}</span>
-                      </li>
-                    ))}
-                  </ul>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {programas.map((prog, idx) => (
+              <div key={idx} className="bg-white rounded-2xl border border-slate-200 p-6 sm:p-7 flex flex-col justify-between shadow-xs">
+                <div>
+                  <span className="text-[11px] font-bold text-slate-950 bg-nival-gold px-2.5 py-0.5 rounded-full uppercase tracking-wider inline-block mb-3">
+                    Componente 0{idx + 1}
+                  </span>
+                  <h3 className="text-base font-extrabold text-slate-950 leading-snug">
+                    {prog.titulo}
+                  </h3>
+                  <p className="text-xs font-semibold text-slate-600 mt-1">
+                    {prog.subtitulo}
+                  </p>
+                  <p className="text-xs text-slate-700 mt-3 leading-relaxed">
+                    {prog.descripcion}
+                  </p>
+
+                  <div className="mt-5 pt-4 border-t border-slate-100">
+                    <h4 className="text-[11px] font-bold uppercase text-slate-500 mb-2">
+                      Acciones clave:
+                    </h4>
+                    <ul className="space-y-2">
+                      {prog.items.map((item, i) => (
+                        <li key={i} className="flex items-start space-x-2 text-xs text-slate-800">
+                          <CheckCircle2 className="w-3.5 h-3.5 text-emerald-700 mt-0.5 shrink-0" />
+                          <span>{item}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
                 </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
+
         </div>
       </section>
 
-      {/* Identificación de Factores de Riesgo */}
-      <section className="space-y-4">
-        <h2 className="text-xl font-bold text-slate-950 flex items-center space-x-2">
-          <span className="w-2.5 h-2.5 bg-amber-500 rounded-full"></span>
-          <span>Detección Oportuna de Factores de Riesgo</span>
-        </h2>
-
-        <div className="bg-nival-gold text-slate-950 rounded-2xl p-6 sm:p-8 space-y-4 text-xs sm:text-sm leading-relaxed border border-nival-gold shadow-sm">
-          <p className="text-slate-950 font-medium">
-            Los programas preventivos de NIVAL Sciences ponen especial atención en factores de riesgo modificables que con frecuencia cursan de forma asintomática:
-          </p>
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-3 pt-2">
-            <div className="p-3.5 rounded-xl bg-slate-950/15 border border-slate-950/20">
-              <span className="font-extrabold text-slate-950 block mb-1">Riesgo Glucémico</span>
-              <span className="text-xs text-slate-900 font-medium">Resistencia a la insulina y prediabetes asintomática.</span>
-            </div>
-            <div className="p-3.5 rounded-xl bg-slate-950/15 border border-slate-950/20">
-              <span className="font-extrabold text-slate-950 block mb-1">Riesgo Lipídico</span>
-              <span className="text-xs text-slate-900 font-medium">Aterogénesis y desequilibrio entre fracciones de colesterol.</span>
-            </div>
-            <div className="p-3.5 rounded-xl bg-slate-950/15 border border-slate-950/20">
-              <span className="font-extrabold text-slate-950 block mb-1">Riesgo Renal y Hepático</span>
-              <span className="text-xs text-slate-900 font-medium">Sobrecarga metabólica, esteatosis y filtración glomerular.</span>
-            </div>
-            <div className="p-3.5 rounded-xl bg-slate-950/15 border border-slate-950/20">
-              <span className="font-extrabold text-slate-950 block mb-1">Riesgo Funcional</span>
-              <span className="text-xs text-slate-900 font-medium">Déficits vitamínicos y alteraciones subclínicas del tiroides.</span>
-            </div>
+      {/* 4. IDENTIFICACIÓN DE FACTORES DE RIESGO (SECCIÓN OSCURA CON TARJETAS DORADAS) */}
+      <section className="bg-nival-dark py-16 sm:py-20 px-4 sm:px-6 text-white border-b border-slate-800">
+        <div className="max-w-6xl mx-auto space-y-10 text-center">
+          
+          <div>
+            <span className="text-[11px] uppercase tracking-wider text-amber-400 font-bold block mb-1">
+              Detección Oportuna
+            </span>
+            <h2 className="text-2xl sm:text-3xl font-extrabold text-white tracking-tight">
+              Factores de Riesgo Subclínicos Monitoreados
+            </h2>
+            <p className="text-xs sm:text-sm text-slate-300 max-w-2xl mx-auto mt-2 leading-relaxed">
+              Los programas preventivos de NIVAL Sciences ponen especial atención en condiciones asintomáticas reversibles:
+            </p>
           </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 text-left">
+            
+            <div className="bg-nival-gold text-slate-950 rounded-xl p-5 flex flex-col justify-between shadow-md">
+              <div>
+                <span className="font-mono text-xs font-bold text-slate-800 block mb-1">Eje 01</span>
+                <h3 className="font-black text-sm text-slate-950 mb-2">Riesgo Glucémico</h3>
+                <p className="text-xs text-slate-900 leading-relaxed font-medium">
+                  Resistencia a la insulina, hiperinsulinemia y prediabetes asintomática detectadas antes de daños tisulares.
+                </p>
+              </div>
+            </div>
+
+            <div className="bg-nival-gold text-slate-950 rounded-xl p-5 flex flex-col justify-between shadow-md">
+              <div>
+                <span className="font-mono text-xs font-bold text-slate-800 block mb-1">Eje 02</span>
+                <h3 className="font-black text-sm text-slate-950 mb-2">Riesgo Lipídico</h3>
+                <p className="text-xs text-slate-900 leading-relaxed font-medium">
+                  Aterogénesis temprana, desequilibrio en fracciones de colesterol y triglicéridos elevados.
+                </p>
+              </div>
+            </div>
+
+            <div className="bg-nival-gold text-slate-950 rounded-xl p-5 flex flex-col justify-between shadow-md">
+              <div>
+                <span className="font-mono text-xs font-bold text-slate-800 block mb-1">Eje 03</span>
+                <h3 className="font-black text-sm text-slate-950 mb-2">Riesgo Renal y Hepático</h3>
+                <p className="text-xs text-slate-900 leading-relaxed font-medium">
+                  Sobrecarga metabólica, esteatosis hepática y alteraciones incipientes en la filtración glomerular.
+                </p>
+              </div>
+            </div>
+
+            <div className="bg-nival-gold text-slate-950 rounded-xl p-5 flex flex-col justify-between shadow-md">
+              <div>
+                <span className="font-mono text-xs font-bold text-slate-800 block mb-1">Eje 04</span>
+                <h3 className="font-black text-sm text-slate-950 mb-2">Riesgo Funcional</h3>
+                <p className="text-xs text-slate-900 leading-relaxed font-medium">
+                  Déficits vitamínicos, fatiga crónica metabólica y alteraciones subclínicas tiroideas.
+                </p>
+              </div>
+            </div>
+
+          </div>
+
+          <div className="pt-2">
+            <button
+              onClick={() => {
+                onSelectCapa('contacto');
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+              }}
+              className="px-6 py-2.5 rounded-lg bg-nival-gold hover:bg-nival-gold-hover text-slate-950 font-extrabold text-xs sm:text-sm shadow-xs transition-all cursor-pointer inline-flex items-center space-x-2"
+            >
+              <span>Consultar Perfil Preventivo Recomendado</span>
+              <ArrowRight className="w-4 h-4" />
+            </button>
+          </div>
+
         </div>
       </section>
 
     </div>
   );
 };
-
