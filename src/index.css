@@ -6,9 +6,9 @@
    solo debes modificar el valor de --nival-gold aquí abajo:
    ========================================================================== */
 :root {
-  --nival-gold: #c29431;        /* <- EDITA ESTE COLOR HEXADECIMAL PRINCIPAL */
-  --nival-gold-hover: #b08428;  /* <- Color al pasar el cursor (hover) */
-  --nival-gold-border: #a87f27; /* <- Color para bordes de tarjetas doradas */
+  --nival-gold: #eeb510;        /* <- COLOR DORADO INSTITUCIONAL NIVAL (según diseño PDF) */
+  --nival-gold-hover: #dca30a;  /* <- Color al pasar el cursor (hover) */
+  --nival-gold-border: #caa00f; /* <- Color para bordes de tarjetas doradas */
 }
 
 @theme {
