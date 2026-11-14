@@ -38,16 +38,16 @@ export const InstitutionalHeader: React.FC<InstitutionalHeaderProps> = ({
       {/* Identidad de marca y navegación principal */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between py-3">
-          
+
           {/* Logotipo Oficial NIVAL SCIENCES */}
           <button
             onClick={() => handleNavClick('inicio')}
             className="flex items-center space-x-3 text-left group cursor-pointer focus:outline-hidden"
           >
             <div className="bg-white px-2.5 py-1 rounded-xl border border-slate-200 shadow-2xs">
-              <img 
-                src={`${import.meta.env.BASE_URL}Nival.jpeg`} 
-                alt="NIVAL Sciences" 
+              <img
+                src={`${import.meta.env.BASE_URL}Nival.jpeg`}
+                alt="NIVAL Sciences"
                 className="h-10 sm:h-12 w-auto object-contain rounded-md"
               />
             </div>
@@ -69,11 +69,10 @@ export const InstitutionalHeader: React.FC<InstitutionalHeaderProps> = ({
                 <button
                   key={capa.id}
                   onClick={() => handleNavClick(capa.id)}
-                  className={`px-3 py-1.5 rounded-lg text-xs font-semibold tracking-tight transition-all cursor-pointer ${
-                    isActive
+                  className={`px-3 py-1.5 rounded-lg text-xs font-semibold tracking-tight transition-all cursor-pointer ${isActive
                       ? 'bg-slate-900 text-white shadow-xs'
                       : 'text-slate-700 hover:text-slate-950 hover:bg-slate-100'
-                  }`}
+                    }`}
                 >
                   {capa.shortTitle}
                 </button>
@@ -107,11 +106,10 @@ export const InstitutionalHeader: React.FC<InstitutionalHeaderProps> = ({
               <button
                 key={capa.id}
                 onClick={() => handleNavClick(capa.id)}
-                className={`w-full flex items-center justify-between px-3 py-2.5 rounded-lg text-xs font-medium text-left transition-colors ${
-                  isActive
+                className={`w-full flex items-center justify-between px-3 py-2.5 rounded-lg text-xs font-medium text-left transition-colors ${isActive
                     ? 'bg-slate-900 text-white font-bold'
                     : 'text-slate-700 hover:bg-slate-50'
-                }`}
+                  }`}
               >
                 <span>{capa.title}</span>
                 <ChevronRight className={`w-4 h-4 ${isActive ? 'text-amber-400' : 'text-slate-400'}`} />

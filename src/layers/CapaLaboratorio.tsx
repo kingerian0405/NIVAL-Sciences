@@ -69,7 +69,7 @@ export const CapaLaboratorio: React.FC<CapaLaboratorioProps> = ({ onSelectCapa }
             </h1>
 
             <div>
-              <span className="inline-block bg-nival-gold text-slate-950 text-xs sm:text-sm font-bold px-3 py-1.5 rounded shadow-2xs">
+              <span className="inline-block font-extrabold text-slate-950 text-xs sm:text-sm pb-1.5 border-b-2 sm:border-b-[3px] border-nival-gold tracking-tight">
                 Primera Unidad Operativa · Diagnóstico Clínico Especializado
               </span>
             </div>

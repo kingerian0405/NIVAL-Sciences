@@ -77,7 +77,7 @@ export const CapaSolucionesEmpresas: React.FC<CapaSolucionesEmpresasProps> = ({ 
             </h1>
 
             <div>
-              <span className="inline-block bg-nival-gold text-slate-950 text-xs sm:text-sm font-bold px-3 py-1.5 rounded shadow-2xs">
+              <span className="inline-block font-extrabold text-slate-950 text-xs sm:text-sm pb-1.5 border-b-2 sm:border-b-[3px] border-nival-gold tracking-tight">
                 Salud Corporativa B2B · Continuidad Operativa y Productividad
               </span>
             </div>
@@ -129,7 +129,7 @@ export const CapaSolucionesEmpresas: React.FC<CapaSolucionesEmpresasProps> = ({ 
             En <strong>NIVAL Sciences</strong> concebimos la salud corporativa no como un mero requisito formal de cumplimiento, sino como un pilar estratégico de continuidad y bienestar para la organización. Diseñamos soluciones ajustadas al perfil operativo, número de colaboradores y habilitación de cada empresa.
           </p>
 
-          <div className="p-5 sm:p-6 rounded-2xl border border-slate-300/80 bg-nival-card-tint text-slate-950 shadow-2xs">
+          <div className="p-5 sm:p-6 rounded-r-2xl border border-l-4 border-slate-300 border-l-nival-gold bg-nival-card-tint text-slate-950 shadow-2xs">
             <p className="text-xs sm:text-sm leading-relaxed font-semibold">
               Mínima disrupción en las operaciones diarias, confidencialidad absoluta en la entrega de informes individuales a cada colaborador y dashboards anonimizados consolidados para la gerencia de Talento Humano.
             </p>

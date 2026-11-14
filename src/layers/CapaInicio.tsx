@@ -61,9 +61,9 @@ export const CapaInicio: React.FC<CapaInicioProps> = ({ onSelectCapa }) => {
               “La visión que necesitas para vivir como sueñas”
             </h1>
 
-            {/* Franja de Enfoque Institucional Dorada */}
+            {/* Franja de Enfoque Institucional con Subrayado Dorado */}
             <div>
-              <span className="inline-block bg-nival-gold text-slate-950 text-xs sm:text-sm font-bold px-3 py-1.5 rounded shadow-2xs">
+              <span className="inline-block font-extrabold text-slate-950 text-xs sm:text-sm pb-1.5 border-b-2 sm:border-b-[3px] border-nival-gold tracking-tight">
                 Salud integral con visión preventiva, tecnologia y acompañamiento profesional
               </span>
             </div>
@@ -204,8 +204,8 @@ export const CapaInicio: React.FC<CapaInicioProps> = ({ onSelectCapa }) => {
             Los servicios de Nival cubren evaluaciones preventivas periódicas para asintomáticos (con perfiles metabólicos y de vigilancia cardiovascular según la etapa de vida); jornadas de promoción de la salud orientadas al tamizaje y detección oportuna in-situ en instituciones educativas y empresas; y programas de educación para el autocuidado, que incluyen guías de interpretación de exámenes, pautas preanalíticas y recomendaciones de hábitos saludables basadas en evidencia para fomentar decisiones conscientes.
           </p>
 
-          {/* Cuadro destacado de anticipación */}
-          <div className="p-4 sm:p-5 rounded-xl border border-slate-300 bg-white/80 shadow-2xs">
+          {/* Cuadro destacado de anticipación con línea dorada a la izquierda */}
+          <div className="p-4 sm:p-5 rounded-r-xl border border-l-4 border-slate-300 border-l-nival-gold bg-white shadow-2xs">
             <p className="text-xs sm:text-sm text-slate-800 leading-relaxed font-medium">
               En la medicina convencional suele acudirse a la evaluación analítica únicamente cuando el síntoma ya se ha instaurado. En NIVAL Sciences concebimos la prevención como una herramienta para anticiparse a los eventos
             </p>
@@ -321,8 +321,10 @@ export const CapaInicio: React.FC<CapaInicioProps> = ({ onSelectCapa }) => {
                 En NIVAL Sciences la educación en salud es un motor de transformación. Diseñamos programas formativos dirigidos a tres audiencias clave: profesionales del área de la salud, equipos de trabajo corporativos y la comunidad en general.
               </p>
 
-              <p className="font-bold text-slate-950 text-xs sm:text-sm italic pt-1">
-                “La formación desarrolla capacidades.”
+              <p className="pt-1">
+                <span className="font-extrabold text-slate-950 text-xs sm:text-sm italic border-b-2 border-nival-gold pb-0.5 inline-block">
+                  “La formación desarrolla capacidades.”
+                </span>
               </p>
 
               <div className="pt-4">
@@ -453,8 +455,10 @@ export const CapaInicio: React.FC<CapaInicioProps> = ({ onSelectCapa }) => {
                 En NIVAL Sciences concebimos la transformación digital como un medio esencial para conectar servicios, personas y conocimiento científico, reduciendo barreras de acceso y facilitando decisiones oportunas.
               </p>
 
-              <p className="font-bold text-xs sm:text-sm italic pt-1 text-[#caa00f]">
-                “La tecnología conecta y facilita. La innovación permite evolucionar.”
+              <p className="pt-1">
+                <span className="font-extrabold text-xs sm:text-sm italic border-b-2 border-nival-gold pb-0.5 inline-block text-slate-950">
+                  “La tecnología conecta y facilita. La innovación permite evolucionar.”
+                </span>
               </p>
             </div>
 

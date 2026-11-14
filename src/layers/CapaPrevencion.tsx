@@ -67,7 +67,7 @@ export const CapaPrevencion: React.FC<CapaPrevencionProps> = ({ onSelectCapa }) 
             </h1>
 
             <div>
-              <span className="inline-block bg-nival-gold text-slate-950 text-xs sm:text-sm font-bold px-3 py-1.5 rounded shadow-2xs">
+              <span className="inline-block font-extrabold text-slate-950 text-xs sm:text-sm pb-1.5 border-b-2 sm:border-b-[3px] border-nival-gold tracking-tight">
                 Eje Estratégico · Programas de Salud y Prevención
               </span>
             </div>
@@ -120,9 +120,9 @@ export const CapaPrevencion: React.FC<CapaPrevencionProps> = ({ onSelectCapa }) 
           </p>
 
           {/* Cuadro destacado de anticipación */}
-          <div className="p-5 sm:p-6 rounded-2xl border border-slate-300/80 bg-nival-card-tint text-slate-950 shadow-2xs">
-            <blockquote className="border-l-4 border-amber-600 pl-4 py-1 text-xs sm:text-sm text-slate-900 font-semibold italic">
-              “El diagnóstico aporta información. La prevención ayuda a anticiparse.”
+          <div className="p-5 sm:p-6 rounded-r-2xl border border-l-4 border-slate-300 border-l-nival-gold bg-nival-card-tint text-slate-950 shadow-2xs">
+            <blockquote className="border-l-4 border-nival-gold pl-4 py-1 text-xs sm:text-sm text-slate-900 font-semibold italic">
+              <span className="border-b-2 border-nival-gold pb-0.5 inline-block">“El diagnóstico aporta información. La prevención ayuda a anticiparse.”</span>
             </blockquote>
           </div>
 

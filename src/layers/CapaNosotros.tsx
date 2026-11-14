@@ -52,7 +52,7 @@ export const CapaNosotros: React.FC<CapaNosotrosProps> = ({ onSelectCapa }) => {
             </h1>
 
             <div>
-              <span className="inline-block bg-nival-gold text-slate-950 text-xs sm:text-sm font-bold px-3 py-1.5 rounded shadow-2xs">
+              <span className="inline-block font-extrabold text-slate-950 text-xs sm:text-sm pb-1.5 border-b-2 sm:border-b-[3px] border-nival-gold tracking-tight">
                 Identidad Institucional · Ecosistema Integral de Salud
               </span>
             </div>
@@ -109,8 +109,8 @@ export const CapaNosotros: React.FC<CapaNosotrosProps> = ({ onSelectCapa }) => {
                 <span className="text-[11px] uppercase tracking-wider text-amber-700 font-bold mt-0.5">
                   Ecosistema de Salud y Bienestar
                 </span>
-                <p className="text-xs text-slate-600 mt-2 italic leading-relaxed">
-                  “Ciencia rigurosa, cercanía humana y tecnología al servicio de la vida.”
+                <p className="text-xs text-slate-700 mt-2 italic leading-relaxed">
+                  <span className="border-b border-nival-gold pb-0.5 inline-block">“Ciencia rigurosa, cercanía humana y tecnología al servicio de la vida.”</span>
                 </p>
               </div>
             </div>
@@ -127,7 +127,7 @@ export const CapaNosotros: React.FC<CapaNosotrosProps> = ({ onSelectCapa }) => {
                 <strong>NIVAL Sciences</strong> es una organización orientada al desarrollo de soluciones integrales de salud, asesoría y gestión del conocimiento. Su actividad articula servicios diagnósticos, prevención, acompañamiento y asesoría a personas naturales y empresas, formación, capacitación e innovación tecnológica.
               </p>
               
-              <div className="p-4 sm:p-5 rounded-xl border border-slate-300/80 bg-nival-card-tint text-slate-950 shadow-2xs">
+              <div className="p-4 sm:p-5 rounded-r-xl border border-l-4 border-slate-300 border-l-nival-gold bg-nival-card-tint text-slate-950 shadow-2xs">
                 <p className="text-xs sm:text-sm leading-relaxed font-semibold">
                   El laboratorio clínico constituye su primera unidad operativa, pero no representa el límite de la organización. NIVAL se proyecta como un ecosistema capaz de integrar diferentes servicios y soluciones para responder a las necesidades de individuos, organizaciones e instituciones.
                 </p>

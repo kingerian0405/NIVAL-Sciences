@@ -56,7 +56,7 @@ export const CapaAsesoriaPersonas: React.FC<CapaAsesoriaPersonasProps> = ({ onSe
             </h1>
 
             <div>
-              <span className="inline-block bg-nival-gold text-slate-950 text-xs sm:text-sm font-bold px-3 py-1.5 rounded shadow-2xs">
+              <span className="inline-block font-extrabold text-slate-950 text-xs sm:text-sm pb-1.5 border-b-2 sm:border-b-[3px] border-nival-gold tracking-tight">
                 Acompañamiento Individual · Orientación y Rutas de Salud
               </span>
             </div>
@@ -108,9 +108,9 @@ export const CapaAsesoriaPersonas: React.FC<CapaAsesoriaPersonasProps> = ({ onSe
             En <strong>NIVAL Sciences</strong> entendemos que un informe de laboratorio no debe ser un documento incomprensible entregado sin contexto. La información clínica diagnóstica alcanza su verdadero valor cuando se transforma en orientación clara y decisiones oportunas de cuidado.
           </p>
 
-          <div className="p-5 sm:p-6 rounded-2xl border border-slate-300/80 bg-nival-card-tint text-slate-950 shadow-2xs">
-            <blockquote className="border-l-4 border-amber-600 pl-4 py-1 text-xs sm:text-sm text-slate-900 font-semibold italic">
-              “La asesoría transforma información en orientación y soluciones.”
+          <div className="p-5 sm:p-6 rounded-r-2xl border border-l-4 border-slate-300 border-l-nival-gold bg-nival-card-tint text-slate-950 shadow-2xs">
+            <blockquote className="border-l-4 border-nival-gold pl-4 py-1 text-xs sm:text-sm text-slate-900 font-semibold italic">
+              <span className="border-b-2 border-nival-gold pb-0.5 inline-block">“La asesoría transforma información en orientación y soluciones.”</span>
             </blockquote>
           </div>
 

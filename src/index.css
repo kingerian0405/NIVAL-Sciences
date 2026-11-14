@@ -53,7 +53,15 @@
 }
 
 .border-nival-gold {
-  border-color: var(--nival-gold-border) !important;
+  border-color: var(--nival-gold) !important;
+}
+
+.border-l-nival-gold {
+  border-left-color: var(--nival-gold) !important;
+}
+
+.border-b-nival-gold {
+  border-bottom-color: var(--nival-gold) !important;
 }
 
 .text-nival-gold {
