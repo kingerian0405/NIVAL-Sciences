@@ -119,11 +119,11 @@ export const CapaPrevencion: React.FC<CapaPrevencionProps> = ({ onSelectCapa }) 
             En la medicina convencional suele acudirse a la evaluación analítica únicamente cuando el síntoma ya se ha instaurado. En <strong>NIVAL Sciences</strong> concebimos la prevención como una herramienta esencial para anticiparse a los eventos, identificar factores de riesgo subclínicos y mantener la calidad de vida en el tiempo.
           </p>
 
-          {/* Cuadro destacado de anticipación */}
+          {/* Cuadro destacado de anticipación con barra dorada a la izquierda */}
           <div className="p-5 sm:p-6 rounded-r-2xl border border-l-4 border-slate-300 border-l-nival-gold bg-nival-card-tint text-slate-950 shadow-2xs">
-            <blockquote className="border-l-4 border-nival-gold pl-4 py-1 text-xs sm:text-sm text-slate-900 font-semibold italic">
-              <span className="border-b-2 border-nival-gold pb-0.5 inline-block">“El diagnóstico aporta información. La prevención ayuda a anticiparse.”</span>
-            </blockquote>
+            <p className="text-xs sm:text-sm text-slate-900 font-semibold italic">
+              “El diagnóstico aporta información. La prevención ayuda a anticiparse.”
+            </p>
           </div>
 
         </div>
