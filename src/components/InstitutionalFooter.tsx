@@ -57,21 +57,19 @@ export const InstitutionalFooter: React.FC<InstitutionalFooterProps> = ({ onSele
             </div>
           </div>
 
-          {/* Columna Navegación por Capas (7 cols) */}
+          {/* Columna Navegación (7 cols) */}
           <div className="md:col-span-7">
             <h4 className="text-xs font-bold uppercase tracking-wider text-slate-300 mb-4">
-              Estructura Institucional (Las 9 Capas)
+              Navegación Institucional
             </h4>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs">
               {CAPAS.map((capa) => (
                 <button
                   key={capa.id}
                   onClick={() => handleNav(capa.id)}
                   className="flex items-center space-x-2 text-left py-1 text-slate-300 hover:text-amber-400 transition-colors group cursor-pointer"
                 >
-                  <span className="font-mono text-slate-500 text-[11px] group-hover:text-amber-400">
-                    {capa.number}
-                  </span>
+                  <span className="w-1.5 h-1.5 rounded-full bg-slate-600 group-hover:bg-amber-400 transition-colors"></span>
                   <span>{capa.title}</span>
                 </button>
               ))}

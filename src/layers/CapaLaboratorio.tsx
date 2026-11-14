@@ -55,9 +55,9 @@ export const CapaLaboratorio: React.FC<CapaLaboratorioProps> = ({ onSelectCapa }
     <div className="max-w-5xl mx-auto py-12 px-4 sm:px-6 space-y-16">
       
       {/* Encabezado */}
-      <div className="border-b border-slate-400 pb-8">
-        <span className="font-mono text-xs font-bold text-amber-600 uppercase tracking-wider block mb-1">
-          Capa 03 · Primera Unidad Operativa
+      <div className="border-b border-slate-200 pb-8">
+        <span className="text-xs font-bold text-amber-600 uppercase tracking-wider block mb-1">
+          Servicios Diagnósticos
         </span>
         <h1 className="text-3xl sm:text-4xl font-extrabold text-slate-950 tracking-tight">
           Laboratorio Clínico
@@ -75,20 +75,20 @@ export const CapaLaboratorio: React.FC<CapaLaboratorioProps> = ({ onSelectCapa }
       />
 
       {/* Introducción Operativa */}
-      <section className="bg-[#dde3ec] rounded-2xl p-6 sm:p-8 border border-slate-400 space-y-4 text-sm sm:text-base text-slate-800 leading-relaxed">
+      <section className="bg-slate-50 rounded-2xl p-6 sm:p-8 border border-slate-200 space-y-4 text-sm sm:text-base text-slate-800 leading-relaxed shadow-xs">
         <p>
           El laboratorio clínico constituye la <strong>primera unidad operativa consolidada</strong> de NIVAL Sciences. Nuestro modelo opera bajo un estricto protocolo de <strong>doble verificación analítica</strong> y controles de calidad internos y externos para asegurar confiabilidad en la información que apoya las decisiones de salud.
         </p>
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-2">
-          <div className="p-3.5 rounded-xl bg-[#cbd5e1] border border-slate-400">
+          <div className="p-3.5 rounded-xl bg-white border border-slate-200 shadow-xs">
             <span className="text-xs font-bold text-slate-950 block">Doble Verificación</span>
             <span className="text-xs text-slate-700 mt-0.5 block">Revisión y validación técnica en fases preanalítica y analítica.</span>
           </div>
-          <div className="p-3.5 rounded-xl bg-[#cbd5e1] border border-slate-400">
+          <div className="p-3.5 rounded-xl bg-white border border-slate-200 shadow-xs">
             <span className="text-xs font-bold text-slate-950 block">Trazabilidad Total</span>
             <span className="text-xs text-slate-700 mt-0.5 block">Identificación inequívoca de cada muestra desde la toma hasta el reporte.</span>
           </div>
-          <div className="p-3.5 rounded-xl bg-[#cbd5e1] border border-slate-400">
+          <div className="p-3.5 rounded-xl bg-white border border-slate-200 shadow-xs">
             <span className="text-xs font-bold text-slate-950 block">Confiabilidad Analítica</span>
             <span className="text-xs text-slate-700 mt-0.5 block">Calibración sistemática y controles de precisión clínica.</span>
           </div>
@@ -116,7 +116,7 @@ export const CapaLaboratorio: React.FC<CapaLaboratorioProps> = ({ onSelectCapa }
               value={search}
               onChange={(e) => setSearch(e.target.value)}
               placeholder="Buscar por nombre, sigla o parámetro (ej. Hematología, HC, Glicemia, TSH, PSA, EGO, Calcio...)"
-              className="w-full pl-10 pr-4 py-2.5 rounded-xl bg-[#dde3ec] border border-slate-400 text-xs sm:text-sm text-slate-900 focus:outline-hidden focus:border-slate-600"
+              className="w-full pl-10 pr-4 py-2.5 rounded-xl bg-white border border-slate-200 text-xs sm:text-sm text-slate-900 focus:outline-hidden focus:border-slate-400 shadow-2xs"
             />
           </div>
 
@@ -132,12 +132,12 @@ export const CapaLaboratorio: React.FC<CapaLaboratorioProps> = ({ onSelectCapa }
                   className={`px-3 py-1.5 rounded-lg text-xs font-semibold whitespace-nowrap cursor-pointer transition-colors flex items-center space-x-1.5 ${
                     selectedCategory === cat.id
                       ? 'bg-nival-gold text-slate-950 font-bold shadow-xs'
-                      : 'bg-[#dde3ec] text-slate-800 hover:bg-[#bcc7d5] border border-slate-400'
+                      : 'bg-white text-slate-700 hover:bg-slate-100 border border-slate-200'
                   }`}
                 >
                   <span>{cat.label}</span>
                   <span className={`text-[10px] px-1.5 py-0.2 rounded-full font-mono ${
-                    selectedCategory === cat.id ? 'bg-slate-950/20 text-slate-950 font-bold' : 'bg-slate-300 text-slate-700'
+                    selectedCategory === cat.id ? 'bg-slate-950/20 text-slate-950 font-bold' : 'bg-slate-100 text-slate-600'
                   }`}>
                     {count}
                   </span>
@@ -165,7 +165,7 @@ export const CapaLaboratorio: React.FC<CapaLaboratorioProps> = ({ onSelectCapa }
                   className={`p-4 rounded-xl border text-left cursor-pointer transition-all ${
                     isSelected
                       ? 'bg-nival-gold text-slate-950 border-nival-gold shadow-sm'
-                      : 'bg-[#dde3ec] text-slate-900 border border-slate-400 hover:border-slate-600'
+                      : 'bg-white text-slate-950 border-slate-200 hover:border-slate-400 shadow-2xs'
                   }`}
                 >
                   <div className="flex items-center justify-between text-[11px] mb-1.5 gap-2">
@@ -176,7 +176,7 @@ export const CapaLaboratorio: React.FC<CapaLaboratorioProps> = ({ onSelectCapa }
                       <span className={`font-mono font-bold text-xs shrink-0 px-2 py-0.5 rounded ${
                         isSelected 
                           ? 'bg-slate-950/15 text-slate-800 border border-slate-950/20' 
-                          : 'bg-[#cbd5e1] text-slate-900 border border-slate-400'
+                          : 'bg-slate-100 text-slate-900 border border-slate-200'
                       }`}>
                         {test.price}
                       </span>
@@ -185,7 +185,7 @@ export const CapaLaboratorio: React.FC<CapaLaboratorioProps> = ({ onSelectCapa }
                   <h4 className="font-bold text-sm leading-snug">
                     {test.name}
                   </h4>
-                  <div className="flex items-center justify-between text-[11px] mt-2 pt-2 border-t border-slate-400/30">
+                  <div className="flex items-center justify-between text-[11px] mt-2 pt-2 border-t border-slate-200/60">
                     <span className={`font-mono font-semibold ${isSelected ? 'text-slate-800' : 'text-slate-700'}`}>
                       {test.abbreviation ? `[${test.abbreviation}]` : ''}
                     </span>
@@ -197,7 +197,7 @@ export const CapaLaboratorio: React.FC<CapaLaboratorioProps> = ({ onSelectCapa }
               );
             })}
             {filteredTests.length === 0 && (
-              <div className="p-6 text-center text-xs text-slate-600 bg-[#dde3ec] rounded-xl border border-slate-400">
+              <div className="p-6 text-center text-xs text-slate-600 bg-white rounded-xl border border-slate-200">
                 No se encontraron pruebas coincidentes con "{search}".
               </div>
             )}
@@ -206,14 +206,14 @@ export const CapaLaboratorio: React.FC<CapaLaboratorioProps> = ({ onSelectCapa }
           {/* Columna Derecha: Ficha Técnica y Preparación al Paciente (7 cols) */}
           <div className="lg:col-span-7">
             {activeTest ? (
-              <div className="bg-[#dde3ec] rounded-2xl border border-slate-400 p-6 sm:p-7 space-y-5">
+              <div className="bg-slate-50 rounded-2xl border border-slate-200 p-6 sm:p-7 space-y-5 shadow-xs">
                 <div className="space-y-3">
                   <div className="flex flex-wrap items-center gap-2">
                     <span className="text-[11px] font-bold uppercase tracking-wider text-amber-900 bg-amber-100 px-2.5 py-1 rounded-md border border-amber-300">
                       {activeTest.categoryLabel}
                     </span>
                     {activeTest.abbreviation && (
-                      <span className="text-[11px] font-mono font-bold text-slate-800 bg-[#cbd5e1] px-2.5 py-1 rounded-md border border-slate-400">
+                      <span className="text-[11px] font-mono font-bold text-slate-800 bg-white px-2.5 py-1 rounded-md border border-slate-200">
                         Siglas: {activeTest.abbreviation}
                       </span>
                     )}
@@ -225,7 +225,7 @@ export const CapaLaboratorio: React.FC<CapaLaboratorioProps> = ({ onSelectCapa }
 
                   {/* Tarifa Oficial NIVAL */}
                   {activeTest.price && (
-                    <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 p-3.5 rounded-xl bg-[#cbd5e1] border border-slate-400">
+                    <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 p-3.5 rounded-xl bg-white border border-slate-200 shadow-2xs">
                       <div>
                         <span className="text-[10px] uppercase font-bold tracking-wider text-slate-600 block">
                           Tarifa Oficial del Examen
@@ -257,20 +257,20 @@ export const CapaLaboratorio: React.FC<CapaLaboratorioProps> = ({ onSelectCapa }
                 </div>
 
                 {/* Parámetros Preanalíticos */}
-                <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-1 border-t border-slate-300">
-                  <div className="p-3 rounded-xl bg-[#cbd5e1] border border-slate-400">
+                <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-1 border-t border-slate-200">
+                  <div className="p-3 rounded-xl bg-white border border-slate-200 shadow-2xs">
                     <span className="text-[11px] text-slate-600 font-medium block">Ayuno Requerido</span>
                     <strong className="text-xs text-slate-950 block mt-0.5">
                       {activeTest.fastingHours > 0 ? `${activeTest.fastingHours} horas continuas` : 'No requiere ayuno'}
                     </strong>
                   </div>
-                  <div className="p-3 rounded-xl bg-[#cbd5e1] border border-slate-400">
+                  <div className="p-3 rounded-xl bg-white border border-slate-200 shadow-2xs">
                     <span className="text-[11px] text-slate-600 font-medium block">Tipo de Muestra</span>
                     <strong className="text-xs text-slate-950 block mt-0.5">
                       {activeTest.sampleType}
                     </strong>
                   </div>
-                  <div className="p-3 rounded-xl bg-[#cbd5e1] border border-slate-400">
+                  <div className="p-3 rounded-xl bg-white border border-slate-200 shadow-2xs">
                     <span className="text-[11px] text-slate-600 font-medium block">Tiempo de Entrega</span>
                     <strong className="text-xs text-slate-950 block mt-0.5">
                       {activeTest.turnaroundTime}
@@ -284,7 +284,7 @@ export const CapaLaboratorio: React.FC<CapaLaboratorioProps> = ({ onSelectCapa }
                     <AlertCircle className="w-3.5 h-3.5 text-amber-600" />
                     <span>Indicaciones de Preparación Previa</span>
                   </h4>
-                  <ul className="space-y-1.5 bg-[#cbd5e1] p-4 rounded-xl border border-slate-400 text-xs text-slate-800">
+                  <ul className="space-y-1.5 bg-white p-4 rounded-xl border border-slate-200 text-xs text-slate-800 shadow-2xs">
                     {activeTest.preparationInstructions.map((inst, i) => (
                       <li key={i} className="flex items-start space-x-2">
                         <CheckCircle2 className="w-3.5 h-3.5 text-emerald-700 mt-0.5 shrink-0" />
@@ -299,12 +299,12 @@ export const CapaLaboratorio: React.FC<CapaLaboratorioProps> = ({ onSelectCapa }
                   <h4 className="text-xs font-bold text-slate-950 uppercase tracking-wider mb-1">
                     Aplicación Clínica Sugerida
                   </h4>
-                  <p className="text-xs text-slate-700 bg-[#cbd5e1] p-3 rounded-xl border border-slate-400 leading-relaxed">
+                  <p className="text-xs text-slate-700 bg-white p-3 rounded-xl border border-slate-200 leading-relaxed shadow-2xs">
                     {activeTest.recommendedFor}
                   </p>
                 </div>
 
-                <div className="text-[11px] text-slate-600 border-t border-slate-300 pt-3 flex items-center space-x-2">
+                <div className="text-[11px] text-slate-600 border-t border-slate-200 pt-3 flex items-center space-x-2">
                   <ShieldCheck className="w-4 h-4 text-sky-800 shrink-0" />
                   <span>Procesado bajo el protocolo institucional de validación analítica NIVAL Sciences.</span>
                 </div>
@@ -324,8 +324,8 @@ export const CapaLaboratorio: React.FC<CapaLaboratorioProps> = ({ onSelectCapa }
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {/* Sede Central */}
-          <div className="bg-[#dde3ec] rounded-2xl p-6 sm:p-7 border border-slate-400 space-y-3">
-            <div className="w-10 h-10 rounded-xl bg-[#cbd5e1] text-slate-900 flex items-center justify-center border border-slate-400">
+          <div className="bg-slate-50 rounded-2xl p-6 sm:p-7 border border-slate-200 space-y-3 shadow-xs">
+            <div className="w-10 h-10 rounded-xl bg-white text-slate-900 flex items-center justify-center border border-slate-200 shadow-2xs">
               <MapPin className="w-5 h-5 text-slate-800" />
             </div>
             <h3 className="text-base font-bold text-slate-950">
@@ -341,8 +341,8 @@ export const CapaLaboratorio: React.FC<CapaLaboratorioProps> = ({ onSelectCapa }
           </div>
 
           {/* Toma a Domicilio */}
-          <div className="bg-[#dde3ec] rounded-2xl p-6 sm:p-7 border border-slate-400 space-y-3">
-            <div className="w-10 h-10 rounded-xl bg-amber-100 text-amber-900 flex items-center justify-center border border-amber-300">
+          <div className="bg-slate-50 rounded-2xl p-6 sm:p-7 border border-slate-200 space-y-3 shadow-xs">
+            <div className="w-10 h-10 rounded-xl bg-amber-50 text-amber-900 flex items-center justify-center border border-amber-200 shadow-2xs">
               <Home className="w-5 h-5 text-amber-800" />
             </div>
             <h3 className="text-base font-bold text-slate-950">
@@ -357,29 +357,6 @@ export const CapaLaboratorio: React.FC<CapaLaboratorioProps> = ({ onSelectCapa }
           </div>
         </div>
       </section>
-
-      {/* Navegación al final de la capa */}
-      <div className="pt-8 border-t border-slate-400 flex justify-between items-center text-xs">
-        <button
-          onClick={() => {
-            onSelectCapa('nosotros');
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-          }}
-          className="text-slate-500 hover:text-slate-900 cursor-pointer"
-        >
-          &larr; Capa 02 · Nosotros
-        </button>
-
-        <button
-          onClick={() => {
-            onSelectCapa('prevencion');
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-          }}
-          className="font-bold text-slate-950 hover:text-amber-600 cursor-pointer"
-        >
-          Siguiente: Capa 04 · Prevención y Calidad de Vida &rarr;
-        </button>
-      </div>
 
     </div>
   );

@@ -38,10 +38,10 @@ export const CapaNosotros: React.FC<CapaNosotrosProps> = ({ onSelectCapa }) => {
   return (
     <div className="max-w-5xl mx-auto py-12 px-4 sm:px-6 space-y-16">
       
-      {/* Encabezado de la Capa */}
-      <div className="border-b border-slate-400 pb-8 space-y-2">
-        <span className="font-mono text-xs font-bold text-amber-600 uppercase tracking-wider block">
-          Capa 02 · Identidad Institucional
+      {/* Encabezado */}
+      <div className="border-b border-slate-200 pb-8 space-y-2">
+        <span className="text-xs font-bold text-amber-600 uppercase tracking-wider block">
+          Identidad Institucional
         </span>
         <h1 className="text-3xl sm:text-4xl font-extrabold text-slate-950 tracking-tight">
           Nosotros
@@ -68,11 +68,11 @@ export const CapaNosotros: React.FC<CapaNosotrosProps> = ({ onSelectCapa }) => {
           <span>1. Concepto Institucional</span>
         </h2>
         
-        <div className="bg-[#dde3ec] rounded-2xl p-6 sm:p-8 border border-slate-400 space-y-4 text-slate-800 leading-relaxed text-sm sm:text-base">
+        <div className="bg-slate-50 rounded-2xl p-6 sm:p-8 border border-slate-200 space-y-4 text-slate-800 leading-relaxed text-sm sm:text-base shadow-xs">
           <p>
             <strong>NIVAL Sciences</strong> es una organización orientada al desarrollo de soluciones integrales de salud, asesoría y gestión del conocimiento. Su actividad articula servicios diagnósticos, prevención, acompañamiento y asesoría a personas naturales y empresas, formación, capacitación e innovación tecnológica.
           </p>
-          <div className="p-4 rounded-xl bg-[#cbd5e1] border border-slate-400 text-slate-900 font-medium">
+          <div className="p-4 rounded-xl bg-white border border-slate-200 text-slate-900 font-medium shadow-xs">
             El laboratorio clínico constituye su primera unidad operativa, pero no representa el límite de la organización. NIVAL se proyecta como un ecosistema capaz de integrar diferentes servicios y soluciones para responder a las necesidades de individuos, organizaciones e instituciones.
           </div>
         </div>
@@ -136,7 +136,7 @@ export const CapaNosotros: React.FC<CapaNosotrosProps> = ({ onSelectCapa }) => {
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">
           {valores.map((v, i) => (
-            <div key={i} className="p-5 rounded-2xl bg-[#dde3ec] border border-slate-400 flex flex-col justify-between">
+            <div key={i} className="p-5 rounded-2xl bg-slate-50 border border-slate-200 flex flex-col justify-between shadow-xs hover:border-slate-300 transition-colors">
               <div>
                 <div className="mb-3">{v.icon}</div>
                 <h4 className="text-sm font-bold text-slate-950">{v.nombre}</h4>
@@ -154,27 +154,27 @@ export const CapaNosotros: React.FC<CapaNosotrosProps> = ({ onSelectCapa }) => {
           <span>6. Modelo de Trabajo Ecosistémico</span>
         </h2>
 
-        <div className="bg-[#dde3ec] rounded-2xl p-6 sm:p-8 border border-slate-400 space-y-4 text-sm text-slate-800 leading-relaxed">
+        <div className="bg-slate-50 rounded-2xl p-6 sm:p-8 border border-slate-200 space-y-4 text-sm text-slate-800 leading-relaxed shadow-xs">
           <p>
             El modelo de trabajo de NIVAL Sciences no opera como unidades aisladas. Se articula bajo un principio de <strong>continuidad asistencial e informativa</strong>:
           </p>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4 pt-2">
-            <div className="p-4 rounded-xl bg-[#cbd5e1] border border-slate-400">
+            <div className="p-4 rounded-xl bg-white border border-slate-200 shadow-xs">
               <h4 className="font-bold text-slate-950 text-xs uppercase mb-1">Interoperabilidad</h4>
               <p className="text-xs text-slate-700">
                 La información clínica diagnóstica alimenta de forma segura las pautas de prevención y las asesorías especializadas.
               </p>
             </div>
 
-            <div className="p-4 rounded-xl bg-[#cbd5e1] border border-slate-400">
+            <div className="p-4 rounded-xl bg-white border border-slate-200 shadow-xs">
               <h4 className="font-bold text-slate-950 text-xs uppercase mb-1">Doble Verificación</h4>
               <p className="text-xs text-slate-700">
                 Aseguramiento de la confiabilidad analítica en procesos críticos antes de emitir cualquier dictamen o informe.
               </p>
             </div>
 
-            <div className="p-4 rounded-xl bg-[#cbd5e1] border border-slate-400">
+            <div className="p-4 rounded-xl bg-white border border-slate-200 shadow-xs">
               <h4 className="font-bold text-slate-950 text-xs uppercase mb-1">Orientación Integral</h4>
               <p className="text-xs text-slate-700">
                 Respuestas adaptadas tanto para la persona y su familia como para comités de salud ocupacional de empresas.
@@ -183,29 +183,6 @@ export const CapaNosotros: React.FC<CapaNosotrosProps> = ({ onSelectCapa }) => {
           </div>
         </div>
       </section>
-
-      {/* Navegación al final de la capa */}
-      <div className="pt-8 border-t border-slate-400 flex justify-between items-center text-xs">
-        <button
-          onClick={() => {
-            onSelectCapa('inicio');
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-          }}
-          className="text-slate-500 hover:text-slate-900 cursor-pointer"
-        >
-          &larr; Volver a Presentación Institucional
-        </button>
-
-        <button
-          onClick={() => {
-            onSelectCapa('laboratorio');
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-          }}
-          className="font-bold text-slate-950 hover:text-amber-600 cursor-pointer"
-        >
-          Siguiente: Capa 03 · Laboratorio Clínico &rarr;
-        </button>
-      </div>
 
     </div>
   );

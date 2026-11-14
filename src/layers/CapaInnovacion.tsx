@@ -34,9 +34,9 @@ export const CapaInnovacion: React.FC<CapaInnovacionProps> = ({ onSelectCapa }) 
     <div className="max-w-5xl mx-auto py-12 px-4 sm:px-6 space-y-16">
       
       {/* Encabezado */}
-      <div className="border-b border-slate-400 pb-8">
-        <span className="font-mono text-xs font-bold text-amber-600 uppercase tracking-wider block mb-1">
-          Capa 08 · Transformación Digital
+      <div className="border-b border-slate-200 pb-8">
+        <span className="text-xs font-bold text-amber-600 uppercase tracking-wider block mb-1">
+          Tecnología e Innovación
         </span>
         <h1 className="text-3xl sm:text-4xl font-extrabold text-slate-950 tracking-tight">
           Innovación y Tecnología
@@ -54,7 +54,7 @@ export const CapaInnovacion: React.FC<CapaInnovacionProps> = ({ onSelectCapa }) 
       />
 
       {/* Filosofía de la Tecnología e Innovación */}
-      <section className="bg-[#dde3ec] rounded-2xl p-6 sm:p-8 border border-slate-400 space-y-4 text-sm sm:text-base text-slate-800 leading-relaxed">
+      <section className="bg-slate-50 rounded-2xl p-6 sm:p-8 border border-slate-200 space-y-4 text-sm sm:text-base text-slate-800 leading-relaxed shadow-xs">
         <div className="flex items-center space-x-2 text-slate-900 font-bold text-sm uppercase tracking-wider">
           <Cpu className="w-4 h-4 text-sky-700" />
           <span>La Tecnología al Servicio del Bienestar</span>
@@ -81,7 +81,7 @@ export const CapaInnovacion: React.FC<CapaInnovacionProps> = ({ onSelectCapa }) 
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {herramientas.map((h, i) => (
-            <div key={i} className="bg-[#dde3ec] rounded-2xl border border-slate-400 p-6 sm:p-7 space-y-3 flex flex-col justify-between">
+            <div key={i} className="bg-slate-50 rounded-2xl border border-slate-200 p-6 sm:p-7 space-y-3 flex flex-col justify-between shadow-xs">
               <div>
                 <div className="flex items-center justify-between text-[11px] mb-1">
                   <span className="font-mono text-slate-500 font-bold">0{i + 1}</span>
@@ -100,29 +100,6 @@ export const CapaInnovacion: React.FC<CapaInnovacionProps> = ({ onSelectCapa }) 
           ))}
         </div>
       </section>
-
-      {/* Navegación al final de la capa */}
-      <div className="pt-8 border-t border-slate-400 flex justify-between items-center text-xs">
-        <button
-          onClick={() => {
-            onSelectCapa('formacion');
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-          }}
-          className="text-slate-500 hover:text-slate-900 cursor-pointer"
-        >
-          &larr; Capa 07 · Formación y Capacitación
-        </button>
-
-        <button
-          onClick={() => {
-            onSelectCapa('contacto');
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-          }}
-          className="font-bold text-slate-950 hover:text-amber-600 cursor-pointer"
-        >
-          Siguiente: Capa 09 · Contacto y Atención &rarr;
-        </button>
-      </div>
 
     </div>
   );

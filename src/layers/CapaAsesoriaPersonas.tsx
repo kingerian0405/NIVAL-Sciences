@@ -42,9 +42,9 @@ export const CapaAsesoriaPersonas: React.FC<CapaAsesoriaPersonasProps> = ({ onSe
     <div className="max-w-5xl mx-auto py-12 px-4 sm:px-6 space-y-16">
       
       {/* Encabezado */}
-      <div className="border-b border-slate-400 pb-8">
-        <span className="font-mono text-xs font-bold text-amber-600 uppercase tracking-wider block mb-1">
-          Capa 05 · Acompañamiento Individual
+      <div className="border-b border-slate-200 pb-8">
+        <span className="text-xs font-bold text-amber-600 uppercase tracking-wider block mb-1">
+          Orientación y Acompañamiento
         </span>
         <h1 className="text-3xl sm:text-4xl font-extrabold text-slate-950 tracking-tight">
           Asesoría para Personas
@@ -62,7 +62,7 @@ export const CapaAsesoriaPersonas: React.FC<CapaAsesoriaPersonasProps> = ({ onSe
       />
 
       {/* Concepto Central */}
-      <section className="bg-[#dde3ec] rounded-2xl p-6 sm:p-8 border border-slate-400 space-y-4 text-sm sm:text-base text-slate-800 leading-relaxed">
+      <section className="bg-slate-50 rounded-2xl p-6 sm:p-8 border border-slate-200 space-y-4 text-sm sm:text-base text-slate-800 leading-relaxed shadow-xs">
         <div className="flex items-center space-x-2 text-slate-900 font-bold text-sm uppercase tracking-wider">
           <UserCheck className="w-4 h-4 text-amber-600" />
           <span>El Valor de la Orientación Profesional</span>
@@ -89,8 +89,8 @@ export const CapaAsesoriaPersonas: React.FC<CapaAsesoriaPersonasProps> = ({ onSe
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {serviciosAsesoria.map((servicio, idx) => (
-            <div key={idx} className="bg-[#dde3ec] rounded-2xl border border-slate-400 p-6 sm:p-7 space-y-3">
-              <div className="w-10 h-10 rounded-xl bg-[#cbd5e1] border border-slate-400 flex items-center justify-center">
+            <div key={idx} className="bg-slate-50 rounded-2xl border border-slate-200 p-6 sm:p-7 space-y-3 shadow-xs">
+              <div className="w-10 h-10 rounded-xl bg-white border border-slate-200 flex items-center justify-center shadow-2xs">
                 {servicio.icono}
               </div>
               <h3 className="text-base font-bold text-slate-950">
@@ -105,7 +105,7 @@ export const CapaAsesoriaPersonas: React.FC<CapaAsesoriaPersonasProps> = ({ onSe
       </section>
 
       {/* Principio de Delimitación y Responsabilidad */}
-      <section className="bg-[#cbd5e1] rounded-2xl p-6 sm:p-8 border border-slate-400 space-y-3 text-xs sm:text-sm">
+      <section className="bg-slate-50 rounded-2xl p-6 sm:p-8 border border-slate-200 space-y-3 text-xs sm:text-sm shadow-xs">
         <div className="flex items-center space-x-2 text-slate-900 font-bold uppercase tracking-wider text-xs">
           <ShieldAlert className="w-4 h-4 text-amber-600" />
           <span>Marco Ético y Responsabilidad Profesional</span>
@@ -114,29 +114,6 @@ export const CapaAsesoriaPersonas: React.FC<CapaAsesoriaPersonasProps> = ({ onSe
           Los servicios de asesoría a personas naturales se ofrecen dentro del marco legal sanitario correspondiente. La orientación tiene carácter <strong>educativo, preventivo y de canalización</strong>, diferenciándose con total claridad de los actos médicos prescriptivos y diagnósticos individuales regulados, los cuales competen exclusivamente a los médicos tratantes habilitados.
         </p>
       </section>
-
-      {/* Navegación al final de la capa */}
-      <div className="pt-8 border-t border-slate-400 flex justify-between items-center text-xs">
-        <button
-          onClick={() => {
-            onSelectCapa('prevencion');
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-          }}
-          className="text-slate-500 hover:text-slate-900 cursor-pointer"
-        >
-          &larr; Capa 04 · Prevención y Calidad de Vida
-        </button>
-
-        <button
-          onClick={() => {
-            onSelectCapa('soluciones-empresas');
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-          }}
-          className="font-bold text-slate-950 hover:text-amber-600 cursor-pointer"
-        >
-          Siguiente: Capa 06 · Soluciones para Empresas &rarr;
-        </button>
-      </div>
 
     </div>
   );

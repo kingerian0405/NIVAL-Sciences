@@ -27,9 +27,9 @@ export const CapaFormacion: React.FC<CapaFormacionProps> = ({ onSelectCapa }) =>
     <div className="max-w-5xl mx-auto py-12 px-4 sm:px-6 space-y-16">
       
       {/* Encabezado */}
-      <div className="border-b border-slate-400 pb-8">
-        <span className="font-mono text-xs font-bold text-amber-600 uppercase tracking-wider block mb-1">
-          Capa 07 · Gestión del Conocimiento
+      <div className="border-b border-slate-200 pb-8">
+        <span className="text-xs font-bold text-amber-600 uppercase tracking-wider block mb-1">
+          Educación y Capacitación
         </span>
         <h1 className="text-3xl sm:text-4xl font-extrabold text-slate-950 tracking-tight">
           Formación y Capacitación
@@ -47,7 +47,7 @@ export const CapaFormacion: React.FC<CapaFormacionProps> = ({ onSelectCapa }) =>
       />
 
       {/* Filosofía del Pilar de Formación */}
-      <section className="bg-[#dde3ec] rounded-2xl p-6 sm:p-8 border border-slate-400 space-y-4 text-sm sm:text-base text-slate-800 leading-relaxed">
+      <section className="bg-slate-50 rounded-2xl p-6 sm:p-8 border border-slate-200 space-y-4 text-sm sm:text-base text-slate-800 leading-relaxed shadow-xs">
         <div className="flex items-center space-x-2 text-slate-900 font-bold text-sm uppercase tracking-wider">
           <GraduationCap className="w-4 h-4 text-violet-700" />
           <span>Desarrollo de Capacidades Colectivas</span>
@@ -82,7 +82,7 @@ export const CapaFormacion: React.FC<CapaFormacionProps> = ({ onSelectCapa }) =>
                 className={`px-3 py-1.5 rounded-lg text-xs font-semibold cursor-pointer transition-colors ${
                   filter === item
                     ? 'bg-nival-gold text-slate-950 font-bold shadow-xs'
-                    : 'bg-[#dde3ec] text-slate-800 hover:bg-[#bcc7d5] border border-slate-400'
+                    : 'bg-white text-slate-700 hover:bg-slate-100 border border-slate-200'
                 }`}
               >
                 {item === 'todos' ? 'Todos' : item}
@@ -93,7 +93,7 @@ export const CapaFormacion: React.FC<CapaFormacionProps> = ({ onSelectCapa }) =>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {filtered.map((course) => (
-            <div key={course.id} className="bg-[#dde3ec] rounded-2xl border border-slate-400 p-6 flex flex-col justify-between">
+            <div key={course.id} className="bg-slate-50 rounded-2xl border border-slate-200 p-6 flex flex-col justify-between shadow-xs">
               <div>
                 <div className="flex items-center justify-between mb-3 text-[11px]">
                   <span className="font-bold text-violet-900 bg-violet-100 px-2 py-0.5 rounded-md border border-violet-200">
@@ -112,7 +112,7 @@ export const CapaFormacion: React.FC<CapaFormacionProps> = ({ onSelectCapa }) =>
                   {course.description}
                 </p>
 
-                <div className="mt-4 pt-4 border-t border-slate-300">
+                <div className="mt-4 pt-4 border-t border-slate-200">
                   <div className="text-xs text-slate-800 font-medium mb-3 flex items-center space-x-1.5">
                     <Calendar className="w-3.5 h-3.5 text-slate-500" />
                     <span>Duración: {course.duration}</span>
@@ -163,29 +163,6 @@ export const CapaFormacion: React.FC<CapaFormacionProps> = ({ onSelectCapa }) =>
           </span>
         </div>
       </section>
-
-      {/* Navegación al final de la capa */}
-      <div className="pt-8 border-t border-slate-400 flex justify-between items-center text-xs">
-        <button
-          onClick={() => {
-            onSelectCapa('soluciones-empresas');
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-          }}
-          className="text-slate-500 hover:text-slate-900 cursor-pointer"
-        >
-          &larr; Capa 06 · Soluciones para Empresas
-        </button>
-
-        <button
-          onClick={() => {
-            onSelectCapa('innovacion');
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-          }}
-          className="font-bold text-slate-950 hover:text-amber-600 cursor-pointer"
-        >
-          Siguiente: Capa 08 · Innovación y Tecnología &rarr;
-        </button>
-      </div>
 
     </div>
   );
