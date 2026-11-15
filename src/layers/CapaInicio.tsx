@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { 
   Award, 
   ShieldCheck, 
-  Clock, 
+  Zap, 
   Lightbulb, 
   HeartHandshake,
   ChevronLeft,
@@ -145,7 +145,7 @@ export const CapaInicio: React.FC<CapaInicioProps> = ({ onSelectCapa }) => {
             <div className="bg-nival-gold rounded-xl p-4 sm:p-5 text-slate-950 flex flex-col justify-between shadow-xs">
               <div>
                 <div className="w-8 h-8 rounded-full bg-white flex items-center justify-center mb-3 text-slate-950 shadow-2xs">
-                  <Clock className="w-4 h-4" />
+                  <Zap className="w-4 h-4 text-slate-950" />
                 </div>
                 <h3 className="font-extrabold text-sm text-slate-950 mb-1.5">
                   Eficiencia

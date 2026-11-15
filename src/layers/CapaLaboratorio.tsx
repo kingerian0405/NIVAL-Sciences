@@ -78,20 +78,13 @@ export const CapaLaboratorio: React.FC<CapaLaboratorioProps> = ({ onSelectCapa }
               Servicios analíticos rigurosos, perfiles preventivos integrales, preparación analítica estandarizada y canales de toma presencial y a domicilio bajo el principio rector de doble verificación.
             </p>
 
-            <div className="pt-2 sm:pt-4 flex flex-col sm:flex-row flex-wrap gap-2.5 sm:gap-3">
-              <a
-                href="#catalogo"
-                className="w-full sm:w-auto text-center px-6 py-2.5 rounded-lg bg-nival-gold hover:bg-nival-gold-hover text-slate-950 font-extrabold text-xs sm:text-sm shadow-xs transition-all cursor-pointer inline-block"
-              >
-                Explorar Catálogo ({LAB_TESTS.length} Exámenes)
-              </a>
-
+            <div className="pt-2 sm:pt-4">
               <button
                 onClick={() => {
                   onSelectCapa('contacto');
                   window.scrollTo({ top: 0, behavior: 'smooth' });
                 }}
-                className="w-full sm:w-auto text-center px-6 py-2.5 rounded-lg bg-nival-dark hover:bg-slate-800 text-white font-bold text-xs sm:text-sm shadow-xs transition-all cursor-pointer"
+                className="w-full sm:w-auto text-center px-6 py-2.5 sm:py-3 rounded-lg bg-nival-gold hover:bg-nival-gold-hover text-slate-950 font-extrabold text-xs sm:text-sm shadow-xs transition-all cursor-pointer"
               >
                 Agendar Toma a Domicilio
               </button>
