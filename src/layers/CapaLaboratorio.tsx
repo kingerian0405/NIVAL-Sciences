@@ -61,27 +61,27 @@ export const CapaLaboratorio: React.FC<CapaLaboratorioProps> = ({ onSelectCapa }
       >
         <div className="absolute inset-0 bg-gradient-to-r from-white/95 via-white/85 to-white/40 sm:to-transparent"></div>
 
-        <div className="relative z-10 max-w-6xl mx-auto px-6 sm:px-10 py-16 sm:py-24 lg:py-28">
-          <div className="max-w-2xl text-left space-y-4">
+        <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-10 py-8 sm:py-16 lg:py-20">
+          <div className="max-w-2xl text-left space-y-3 sm:space-y-4">
             
-            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-950 font-serif leading-[1.14] tracking-tight italic">
+            <h1 className="text-2xl sm:text-4xl lg:text-5xl font-extrabold text-slate-950 font-serif leading-tight sm:leading-[1.14] tracking-tight italic">
               “La visión que necesitas para vivir como sueñas”
             </h1>
 
             <div>
-              <span className="inline-block font-extrabold text-slate-950 text-xs sm:text-sm pb-1.5 border-b-2 sm:border-b-[3px] border-nival-gold tracking-tight">
+              <span className="inline-block font-extrabold text-slate-950 text-xs sm:text-sm pb-1 sm:pb-1.5 border-b-2 sm:border-b-[3px] border-nival-gold tracking-tight">
                 Primera Unidad Operativa · Diagnóstico Clínico Especializado
               </span>
             </div>
 
-            <p className="text-xs sm:text-sm text-slate-800 leading-relaxed pt-2 font-normal">
+            <p className="text-xs sm:text-sm text-slate-800 leading-snug sm:leading-relaxed font-normal">
               Servicios analíticos rigurosos, perfiles preventivos integrales, preparación analítica estandarizada y canales de toma presencial y a domicilio bajo el principio rector de doble verificación.
             </p>
 
-            <div className="pt-4 flex flex-wrap gap-3">
+            <div className="pt-2 sm:pt-4 flex flex-col sm:flex-row flex-wrap gap-2.5 sm:gap-3">
               <a
                 href="#catalogo"
-                className="px-6 py-2.5 rounded-lg bg-nival-gold hover:bg-nival-gold-hover text-slate-950 font-extrabold text-xs sm:text-sm shadow-xs transition-all cursor-pointer inline-block"
+                className="w-full sm:w-auto text-center px-6 py-2.5 rounded-lg bg-nival-gold hover:bg-nival-gold-hover text-slate-950 font-extrabold text-xs sm:text-sm shadow-xs transition-all cursor-pointer inline-block"
               >
                 Explorar Catálogo ({LAB_TESTS.length} Exámenes)
               </a>
@@ -91,7 +91,7 @@ export const CapaLaboratorio: React.FC<CapaLaboratorioProps> = ({ onSelectCapa }
                   onSelectCapa('contacto');
                   window.scrollTo({ top: 0, behavior: 'smooth' });
                 }}
-                className="px-6 py-2.5 rounded-lg bg-nival-dark hover:bg-slate-800 text-white font-bold text-xs sm:text-sm shadow-xs transition-all cursor-pointer"
+                className="w-full sm:w-auto text-center px-6 py-2.5 rounded-lg bg-nival-dark hover:bg-slate-800 text-white font-bold text-xs sm:text-sm shadow-xs transition-all cursor-pointer"
               >
                 Agendar Toma a Domicilio
               </button>

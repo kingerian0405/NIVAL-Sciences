@@ -79,13 +79,13 @@ export const InstitutionalFooter: React.FC<InstitutionalFooterProps> = ({ onSele
         </div>
 
         {/* Separador inferior */}
-        <div className="mt-12 pt-8 border-t border-slate-800 flex flex-col sm:flex-row items-center justify-between gap-4 text-[11px] text-slate-500">
+        <div className="mt-10 sm:mt-12 pt-6 sm:pt-8 border-t border-slate-800 flex flex-col sm:flex-row items-center justify-between gap-3 sm:gap-4 text-[11px] text-slate-500 text-center sm:text-left">
           <div>
             &copy; {new Date().getFullYear()} NIVAL Sciences. Todos los derechos reservados.
           </div>
-          <div className="flex items-center space-x-6">
+          <div className="flex flex-wrap items-center justify-center gap-2 sm:gap-4 sm:space-x-6">
             <span>Sede Central de Diagnóstico y Salud</span>
-            <span>•</span>
+            <span className="hidden sm:inline">•</span>
             <button
               onClick={() => handleNav('contacto')}
               className="text-slate-400 hover:text-amber-400"

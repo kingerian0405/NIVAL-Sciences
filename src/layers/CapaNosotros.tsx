@@ -44,30 +44,30 @@ export const CapaNosotros: React.FC<CapaNosotrosProps> = ({ onSelectCapa }) => {
       >
         <div className="absolute inset-0 bg-gradient-to-r from-white/95 via-white/85 to-white/40 sm:to-transparent"></div>
 
-        <div className="relative z-10 max-w-6xl mx-auto px-6 sm:px-10 py-16 sm:py-24 lg:py-28">
-          <div className="max-w-2xl text-left space-y-4">
+        <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-10 py-8 sm:py-16 lg:py-20">
+          <div className="max-w-2xl text-left space-y-3 sm:space-y-4">
             
-            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-950 font-serif leading-[1.14] tracking-tight italic">
+            <h1 className="text-2xl sm:text-4xl lg:text-5xl font-extrabold text-slate-950 font-serif leading-tight sm:leading-[1.14] tracking-tight italic">
               “La visión que necesitas para vivir como sueñas”
             </h1>
 
             <div>
-              <span className="inline-block font-extrabold text-slate-950 text-xs sm:text-sm pb-1.5 border-b-2 sm:border-b-[3px] border-nival-gold tracking-tight">
+              <span className="inline-block font-extrabold text-slate-950 text-xs sm:text-sm pb-1 sm:pb-1.5 border-b-2 sm:border-b-[3px] border-nival-gold tracking-tight">
                 Identidad Institucional · Ecosistema Integral de Salud
               </span>
             </div>
 
-            <p className="text-xs sm:text-sm text-slate-800 leading-relaxed pt-2 font-normal">
+            <p className="text-xs sm:text-sm text-slate-800 leading-snug sm:leading-relaxed font-normal">
               Conoce el propósito fundacional, la visión estratégica y los principios rectores que impulsan a NIVAL Sciences como un ecosistema orientado a articular diagnóstico de alta confiabilidad, asesoría profesional, prevención continua y tecnología médica.
             </p>
 
-            <div className="pt-4 flex flex-wrap gap-3">
+            <div className="pt-2 sm:pt-4 flex flex-col sm:flex-row flex-wrap gap-2.5 sm:gap-3">
               <button
                 onClick={() => {
                   onSelectCapa('laboratorio');
                   window.scrollTo({ top: 0, behavior: 'smooth' });
                 }}
-                className="px-6 py-2.5 rounded-lg bg-nival-gold hover:bg-nival-gold-hover text-slate-950 font-extrabold text-xs sm:text-sm shadow-xs transition-all cursor-pointer"
+                className="w-full sm:w-auto text-center px-6 py-2.5 rounded-lg bg-nival-gold hover:bg-nival-gold-hover text-slate-950 font-extrabold text-xs sm:text-sm shadow-xs transition-all cursor-pointer"
               >
                 Explorar Laboratorio Clínico
               </button>
@@ -77,7 +77,7 @@ export const CapaNosotros: React.FC<CapaNosotrosProps> = ({ onSelectCapa }) => {
                   onSelectCapa('contacto');
                   window.scrollTo({ top: 0, behavior: 'smooth' });
                 }}
-                className="px-6 py-2.5 rounded-lg bg-nival-dark hover:bg-slate-800 text-white font-bold text-xs sm:text-sm shadow-xs transition-all cursor-pointer"
+                className="w-full sm:w-auto text-center px-6 py-2.5 rounded-lg bg-nival-dark hover:bg-slate-800 text-white font-bold text-xs sm:text-sm shadow-xs transition-all cursor-pointer"
               >
                 Contactar a NIVAL
               </button>
@@ -157,8 +157,8 @@ export const CapaNosotros: React.FC<CapaNosotrosProps> = ({ onSelectCapa }) => {
             {/* Misión */}
             <div className="bg-nival-gold text-slate-950 rounded-2xl p-6 sm:p-8 border border-nival-gold shadow-md flex flex-col justify-between">
               <div className="space-y-4">
-                <div className="w-10 h-10 rounded-xl bg-slate-950/15 text-slate-950 flex items-center justify-center border border-slate-950/20">
-                  <Target className="w-5 h-5" />
+                <div className="w-10 h-10 rounded-xl bg-white text-slate-950 flex items-center justify-center shadow-xs">
+                  <Target className="w-5 h-5 text-slate-950" />
                 </div>
                 <h3 className="text-xl font-black text-slate-950 tracking-tight">
                   Misión
@@ -172,8 +172,8 @@ export const CapaNosotros: React.FC<CapaNosotrosProps> = ({ onSelectCapa }) => {
             {/* Visión */}
             <div className="bg-nival-gold text-slate-950 rounded-2xl p-6 sm:p-8 border border-nival-gold shadow-md flex flex-col justify-between">
               <div className="space-y-4">
-                <div className="w-10 h-10 rounded-xl bg-slate-950/15 text-slate-950 flex items-center justify-center border border-slate-950/20">
-                  <Telescope className="w-5 h-5" />
+                <div className="w-10 h-10 rounded-xl bg-white text-slate-950 flex items-center justify-center shadow-xs">
+                  <Telescope className="w-5 h-5 text-slate-950" />
                 </div>
                 <h3 className="text-xl font-black text-slate-950 tracking-tight">
                   Visión
@@ -223,7 +223,7 @@ export const CapaNosotros: React.FC<CapaNosotrosProps> = ({ onSelectCapa }) => {
             {valores.map((v, i) => (
               <div key={i} className="bg-nival-gold rounded-xl p-4 sm:p-5 text-slate-950 flex flex-col justify-between shadow-xs">
                 <div>
-                  <div className="w-7 h-7 rounded-full bg-slate-950/15 flex items-center justify-center mb-3 text-slate-950">
+                  <div className="w-8 h-8 rounded-full bg-white flex items-center justify-center mb-3 text-slate-950 shadow-2xs">
                     {v.icon}
                   </div>
                   <h3 className="font-extrabold text-sm text-slate-950 mb-1.5">
