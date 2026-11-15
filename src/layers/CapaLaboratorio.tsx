@@ -1,14 +1,14 @@
 import React, { useState } from 'react';
-import { 
-  Clock, 
-  Droplet, 
-  Calendar, 
-  AlertCircle, 
-  CheckCircle2, 
-  Search, 
-  MapPin, 
-  Home, 
-  ShieldCheck, 
+import {
+  Clock,
+  Droplet,
+  Calendar,
+  AlertCircle,
+  CheckCircle2,
+  Search,
+  MapPin,
+  Home,
+  ShieldCheck,
   FileText,
   FileCheck2,
   Sparkles
@@ -42,7 +42,7 @@ export const CapaLaboratorio: React.FC<CapaLaboratorioProps> = ({ onSelectCapa }
   const filteredTests = LAB_TESTS.filter(t => {
     const matchCat = selectedCategory === 'todos' || t.category === selectedCategory;
     const q = search.trim().toLowerCase();
-    const matchSearch = q === '' || 
+    const matchSearch = q === '' ||
       t.name.toLowerCase().includes(q) ||
       (t.abbreviation && t.abbreviation.toLowerCase().includes(q)) ||
       t.description.toLowerCase().includes(q) ||
@@ -53,9 +53,9 @@ export const CapaLaboratorio: React.FC<CapaLaboratorioProps> = ({ onSelectCapa }
 
   return (
     <div className="w-full bg-nival-main text-slate-900">
-      
+
       {/* 1. HERO INSTITUCIONAL CON IMAGEN DE FONDO (fondo.jpeg) */}
-      <section 
+      <section
         className="relative w-full bg-cover bg-center overflow-hidden border-b border-slate-300"
         style={{ backgroundImage: `url(${import.meta.env.BASE_URL}fondo.jpeg)` }}
       >
@@ -63,7 +63,7 @@ export const CapaLaboratorio: React.FC<CapaLaboratorioProps> = ({ onSelectCapa }
 
         <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-10 py-8 sm:py-16 lg:py-20">
           <div className="max-w-2xl text-left space-y-3 sm:space-y-4">
-            
+
             <h1 className="text-2xl sm:text-4xl lg:text-5xl font-extrabold text-slate-950 font-serif leading-tight sm:leading-[1.14] tracking-tight italic">
               “La visión que necesitas para vivir como sueñas”
             </h1>
@@ -97,7 +97,7 @@ export const CapaLaboratorio: React.FC<CapaLaboratorioProps> = ({ onSelectCapa }
       {/* 2. INTRODUCCIÓN OPERATIVA: CONFIABILIDAD ANALÍTICA */}
       <section className="bg-nival-section-alt py-14 sm:py-16 px-4 sm:px-6 border-b border-slate-300">
         <div className="max-w-6xl mx-auto space-y-8">
-          
+
           <div className="text-center max-w-3xl mx-auto space-y-2">
             <span className="text-xs font-bold text-amber-700 uppercase tracking-wider block">
               Garantía de Precisión Médica
@@ -111,8 +111,8 @@ export const CapaLaboratorio: React.FC<CapaLaboratorioProps> = ({ onSelectCapa }
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6">
-            
-            <div className="bg-white rounded-2xl p-6 border border-slate-200 shadow-xs space-y-2 flex flex-col justify-between">
+
+            <div className="bg-white rounded-2xl p-6 border shadow-xs space-y-2 flex flex-col justify-between">
               <div>
                 <div className="w-10 h-10 rounded-xl bg-amber-100 text-amber-900 flex items-center justify-center mb-3 border border-amber-200">
                   <ShieldCheck className="w-5 h-5 text-amber-700" />
@@ -126,7 +126,7 @@ export const CapaLaboratorio: React.FC<CapaLaboratorioProps> = ({ onSelectCapa }
               </div>
             </div>
 
-            <div className="bg-white rounded-2xl p-6 border border-slate-200 shadow-xs space-y-2 flex flex-col justify-between">
+            <div className="bg-white rounded-2xl p-6 border shadow-xs space-y-2 flex flex-col justify-between">
               <div>
                 <div className="w-10 h-10 rounded-xl bg-sky-100 text-sky-900 flex items-center justify-center mb-3 border border-sky-200">
                   <FileCheck2 className="w-5 h-5 text-sky-700" />
@@ -140,7 +140,7 @@ export const CapaLaboratorio: React.FC<CapaLaboratorioProps> = ({ onSelectCapa }
               </div>
             </div>
 
-            <div className="bg-white rounded-2xl p-6 border border-slate-200 shadow-xs space-y-2 flex flex-col justify-between">
+            <div className="bg-white rounded-2xl p-6 border shadow-xs space-y-2 flex flex-col justify-between">
               <div>
                 <div className="w-10 h-10 rounded-xl bg-emerald-100 text-emerald-900 flex items-center justify-center mb-3 border border-emerald-200">
                   <Sparkles className="w-5 h-5 text-emerald-700" />
@@ -162,7 +162,7 @@ export const CapaLaboratorio: React.FC<CapaLaboratorioProps> = ({ onSelectCapa }
       {/* 3. CATÁLOGO INTERACTIVO DE SERVICIOS Y PERFILES */}
       <section id="catalogo" className="bg-nival-section-light py-16 sm:py-20 px-4 sm:px-6 border-b border-slate-300">
         <div className="max-w-6xl mx-auto space-y-8">
-          
+
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-4">
             <div>
               <span className="text-xs font-bold text-amber-600 uppercase tracking-wider block mb-1">
@@ -196,23 +196,21 @@ export const CapaLaboratorio: React.FC<CapaLaboratorioProps> = ({ onSelectCapa }
 
             <div className="flex items-center overflow-x-auto gap-1.5 pb-1 no-scrollbar">
               {categories.map((cat) => {
-                const count = cat.id === 'todos' 
-                  ? LAB_TESTS.length 
+                const count = cat.id === 'todos'
+                  ? LAB_TESTS.length
                   : LAB_TESTS.filter(t => t.category === cat.id).length;
                 return (
                   <button
                     key={cat.id}
                     onClick={() => setSelectedCategory(cat.id)}
-                    className={`px-3 py-1.5 rounded-lg text-xs font-semibold whitespace-nowrap cursor-pointer transition-colors flex items-center space-x-1.5 ${
-                      selectedCategory === cat.id
-                        ? 'bg-nival-gold text-slate-950 font-bold shadow-xs'
-                        : 'bg-white text-slate-700 hover:bg-slate-100 border border-slate-200'
-                    }`}
+                    className={`px-3 py-1.5 rounded-lg text-xs font-semibold whitespace-nowrap cursor-pointer transition-colors flex items-center space-x-1.5 ${selectedCategory === cat.id
+                      ? 'bg-nival-gold text-slate-950 font-bold shadow-xs'
+                      : 'bg-white text-slate-700 hover:bg-slate-100 border border-slate-200'
+                      }`}
                   >
                     <span>{cat.label}</span>
-                    <span className={`text-[10px] px-1.5 py-0.2 rounded-full font-mono ${
-                      selectedCategory === cat.id ? 'bg-slate-950/20 text-slate-950 font-bold' : 'bg-slate-100 text-slate-600'
-                    }`}>
+                    <span className={`text-[10px] px-1.5 py-0.2 rounded-full font-mono ${selectedCategory === cat.id ? 'bg-slate-950/20 text-slate-950 font-bold' : 'bg-slate-100 text-slate-600'
+                      }`}>
                       {count}
                     </span>
                   </button>
@@ -223,7 +221,7 @@ export const CapaLaboratorio: React.FC<CapaLaboratorioProps> = ({ onSelectCapa }
 
           {/* Panel Interactivo: Lista y Ficha de Detalle de Preparación */}
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
-            
+
             {/* Columna Izquierda: Lista de Exámenes (5 cols) */}
             <div className="lg:col-span-5 space-y-2 max-h-[620px] overflow-y-auto pr-1">
               {filteredTests.map((test) => {
@@ -232,22 +230,20 @@ export const CapaLaboratorio: React.FC<CapaLaboratorioProps> = ({ onSelectCapa }
                   <div
                     key={test.id}
                     onClick={() => setActiveTest(test)}
-                    className={`p-4 rounded-xl border text-left cursor-pointer transition-all ${
-                      isSelected
-                        ? 'bg-nival-gold text-slate-950 border-nival-gold shadow-sm scale-[1.01]'
-                        : 'bg-white text-slate-950 border-slate-200 hover:border-slate-400 shadow-2xs'
-                    }`}
+                    className={`p-4 rounded-xl border text-left cursor-pointer transition-all ${isSelected
+                      ? 'bg-nival-gold text-slate-950 border-nival-gold shadow-sm scale-[1.01]'
+                      : 'bg-white text-slate-950 border-slate-200 hover:border-slate-400 shadow-2xs'
+                      }`}
                   >
                     <div className="flex items-center justify-between text-[11px] mb-1.5 gap-2">
                       <span className={`truncate ${isSelected ? 'text-slate-800 font-bold' : 'text-slate-600'}`}>
                         {test.categoryLabel}
                       </span>
                       {test.price && (
-                        <span className={`font-mono font-bold text-xs shrink-0 px-2 py-0.5 rounded ${
-                          isSelected 
-                            ? 'bg-slate-950/15 text-slate-800 border border-slate-950/20' 
-                            : 'bg-slate-100 text-slate-900 border border-slate-200'
-                        }`}>
+                        <span className={`font-mono font-bold text-xs shrink-0 px-2 py-0.5 rounded ${isSelected
+                          ? 'bg-slate-950/15 text-slate-800 border border-slate-950/20'
+                          : 'bg-slate-100 text-slate-900 border border-slate-200'
+                          }`}>
                           {test.price}
                         </span>
                       )}
@@ -288,7 +284,7 @@ export const CapaLaboratorio: React.FC<CapaLaboratorioProps> = ({ onSelectCapa }
                         </span>
                       )}
                     </div>
-                    
+
                     <h3 className="text-xl sm:text-2xl font-extrabold text-slate-950 leading-tight">
                       {activeTest.name}
                     </h3>
@@ -389,7 +385,7 @@ export const CapaLaboratorio: React.FC<CapaLaboratorioProps> = ({ onSelectCapa }
       {/* 4. CANALES DE ATENCIÓN DEL LABORATORIO */}
       <section className="bg-nival-section-alt py-16 sm:py-20 px-4 sm:px-6">
         <div className="max-w-6xl mx-auto space-y-8">
-          
+
           <div className="text-center max-w-2xl mx-auto">
             <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-950 tracking-tight">
               Canales de Atención del Laboratorio
@@ -400,7 +396,7 @@ export const CapaLaboratorio: React.FC<CapaLaboratorioProps> = ({ onSelectCapa }
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            
+
             {/* Sede Central */}
             <div className="bg-white rounded-2xl p-6 sm:p-8 border border-slate-200 space-y-4 shadow-xs">
               <div className="w-10 h-10 rounded-xl bg-slate-900 text-amber-400 flex items-center justify-center border border-slate-800">
