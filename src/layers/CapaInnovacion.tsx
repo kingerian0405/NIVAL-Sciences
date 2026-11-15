@@ -100,11 +100,12 @@ export const CapaInnovacion: React.FC<CapaInnovacionProps> = ({ onSelectCapa }) 
             En <strong>NIVAL Sciences</strong> concebimos la transformación digital como un medio esencial para conectar servicios, personas, empresas y conocimiento científico, reduciendo barreras de acceso y facilitando decisiones oportunas.
           </p>
 
-          <div className="p-5 sm:p-6 rounded-r-2xl border border-l-4 border-slate-300 border-l-nival-gold bg-nival-card-tint text-slate-950 shadow-2xs">
-            <blockquote className="border-l-4 border-nival-gold pl-4 py-1 text-xs sm:text-sm text-slate-900 font-semibold italic">
-              <span className="border-b-2 border-nival-gold pb-0.5 inline-block">“La tecnología conecta y facilita. La innovación permite evolucionar.”</span>
-            </blockquote>
-          </div>
+          {/* Lema con subrayado dorado sin encapsulación */}
+          <p className="pt-1">
+            <span className="font-extrabold text-slate-950 text-xs sm:text-sm italic border-b-2 border-nival-gold pb-0.5 inline-block">
+              “La tecnología conecta y facilita. La innovación permite evolucionar.”
+            </span>
+          </p>
 
         </div>
       </section>
