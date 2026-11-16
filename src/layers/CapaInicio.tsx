@@ -63,9 +63,9 @@ export const CapaInicio: React.FC<CapaInicioProps> = ({ onSelectCapa }) => {
               “La visión que necesitas para vivir como sueñas”
             </h1>
 
-            {/* Franja de Enfoque Institucional con Subrayado Dorado */}
+            {/* Franja de Enfoque Institucional con Subrayado Dorado (visible solo en pantallas sm/desktop) */}
             <div>
-              <span className="inline-block font-extrabold text-slate-950 text-sm sm:text-lg pb-1.5 sm:pb-2 border-b-2 sm:border-b-[3px] border-nival-gold tracking-tight">
+              <span className="inline-block font-extrabold text-slate-950 text-sm sm:text-lg pb-0 sm:pb-2 border-b-0 sm:border-b-[3px] border-nival-gold tracking-tight">
                 Salud integral con visión preventiva, tecnología y acompañamiento profesional
               </span>
             </div>
