@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
-import { 
-  Award, 
-  ShieldCheck, 
-  Zap, 
-  Lightbulb, 
+import {
+  Award,
+  ShieldCheck,
+  Zap,
+  Lightbulb,
   HeartHandshake,
   ChevronLeft,
   ChevronRight,
@@ -45,9 +45,9 @@ export const CapaInicio: React.FC<CapaInicioProps> = ({ onSelectCapa }) => {
 
   return (
     <div className="w-full bg-nival-main text-slate-900">
-      
+
       {/* SECCIÓN 1: HERO CON IMAGEN DE FONDO (fondo.jpeg) */}
-      <section 
+      <section
         className="relative w-full bg-cover bg-center overflow-hidden border-b border-slate-300"
         style={{ backgroundImage: `url(${import.meta.env.BASE_URL}fondo.jpeg)` }}
       >
@@ -56,7 +56,7 @@ export const CapaInicio: React.FC<CapaInicioProps> = ({ onSelectCapa }) => {
 
         <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-10 py-8 sm:py-16 lg:py-20">
           <div className="max-w-2xl text-left space-y-3 sm:space-y-4">
-            
+
             {/* Lema Principal Oficial */}
             <h1 className="text-3xl sm:text-4xl lg:text-5xl font-black text-slate-950 font-serif leading-tight sm:leading-[1.14] tracking-tight italic">
               “La visión que necesitas para vivir como sueñas”
@@ -68,11 +68,6 @@ export const CapaInicio: React.FC<CapaInicioProps> = ({ onSelectCapa }) => {
                 Salud integral con visión preventiva, tecnología y acompañamiento profesional
               </span>
             </div>
-
-            {/* Párrafo Descriptivo Institucional (Acortado y con mayor tamaño para máxima legibilidad) */}
-            <p className="text-sm sm:text-base lg:text-lg text-slate-900 leading-relaxed font-medium">
-              Soluciones integrales en diagnóstico clínico, prevención y asesoría especializada. Combinamos rigor científico, tecnología moderna y calidez humana para cuidar de ti, tu familia y tu organización.
-            </p>
 
             {/* Botón de Acción Principal */}
             <div className="pt-2 sm:pt-4">
@@ -110,14 +105,14 @@ export const CapaInicio: React.FC<CapaInicioProps> = ({ onSelectCapa }) => {
 
       {/* SECCIÓN 2: NUESTROS VALORES */}
       <section className="relative bg-nival-section-alt py-10 sm:py-20 px-4 sm:px-6 border-b border-slate-300 overflow-hidden">
-        
+
         {/* Fondo decorativo geométrico sutil */}
         <div className="absolute inset-0 flex items-center justify-center opacity-40 pointer-events-none">
           <div className="w-[680px] h-[340px] bg-gradient-to-b from-white/60 to-transparent transform -skew-y-3 rounded-3xl"></div>
         </div>
 
         <div className="max-w-6xl mx-auto relative z-10 text-center">
-          
+
           <h2 className="text-xl sm:text-3xl font-extrabold text-slate-950 tracking-tight">
             Nuestros valores
           </h2>
@@ -127,7 +122,7 @@ export const CapaInicio: React.FC<CapaInicioProps> = ({ onSelectCapa }) => {
 
           {/* 5 Tarjetas Doradas Horizontales */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-3 sm:gap-4 mt-6 sm:mt-10 text-left">
-            
+
             {/* Calidad */}
             <div className="bg-nival-gold rounded-xl p-4 sm:p-5 text-slate-950 flex flex-col justify-between shadow-xs">
               <div>
@@ -212,7 +207,7 @@ export const CapaInicio: React.FC<CapaInicioProps> = ({ onSelectCapa }) => {
       {/* SECCIÓN 3: PREVENIR TAMBIEN ES CUIDAR */}
       <section className="bg-nival-section-light py-10 sm:py-20 px-4 sm:px-6 border-b border-slate-300">
         <div className="max-w-4xl mx-auto space-y-4 sm:space-y-6 text-left">
-          
+
           <h2 className="text-xl sm:text-3xl font-extrabold text-slate-950 tracking-tight">
             Prevenir tambien es cuidar
           </h2>
@@ -247,7 +242,7 @@ export const CapaInicio: React.FC<CapaInicioProps> = ({ onSelectCapa }) => {
       {/* SECCIÓN 4: SOLUCIONES CORPORATIVAS CON IMPACTO MEDIBLE */}
       <section className="bg-nival-dark py-12 sm:py-20 px-4 sm:px-6 text-white border-b border-slate-800">
         <div className="max-w-6xl mx-auto text-center space-y-6 sm:space-y-10">
-          
+
           <div>
             <h2 className="text-xl sm:text-3xl font-extrabold text-white tracking-tight">
               Soluciones corporativas con impacto medible
@@ -259,7 +254,7 @@ export const CapaInicio: React.FC<CapaInicioProps> = ({ onSelectCapa }) => {
 
           {/* 4 Tarjetas Doradas Corporativas */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 text-left">
-            
+
             <div className="bg-nival-gold rounded-xl p-5 text-slate-950 flex flex-col justify-between shadow-md">
               <div>
                 <h3 className="font-extrabold text-sm text-slate-950 mb-2">
@@ -325,13 +320,13 @@ export const CapaInicio: React.FC<CapaInicioProps> = ({ onSelectCapa }) => {
       {/* SECCIÓN 5: FORMACIÓN QUE TRANSFORMA Y DESARROLLA CAPACIDADES */}
       <section className="bg-nival-section-alt py-12 sm:py-20 px-4 sm:px-6 border-b border-slate-300">
         <div className="max-w-6xl mx-auto">
-          
+
           <h2 className="text-xl sm:text-3xl font-extrabold text-slate-950 text-center tracking-tight mb-8 sm:mb-12">
             Formación que transforma y desarrolla capacidades
           </h2>
 
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-12 items-center">
-            
+
             {/* Columna Izquierda: Mensaje y Acción (5 cols) */}
             <div className="lg:col-span-5 text-left space-y-3 sm:space-y-4">
               <p className="text-xs sm:text-sm text-slate-800 leading-relaxed">
@@ -359,7 +354,7 @@ export const CapaInicio: React.FC<CapaInicioProps> = ({ onSelectCapa }) => {
 
             {/* Columna Derecha: Las 3 Tarjetas Formativas (7 cols) */}
             <div className="lg:col-span-7 space-y-3 sm:space-y-3.5">
-              
+
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
                 {/* Para Profesionales */}
                 <div className="bg-nival-card-tint rounded-xl p-4 sm:p-5 border border-slate-300/40 text-slate-950 shadow-2xs">
@@ -405,20 +400,20 @@ export const CapaInicio: React.FC<CapaInicioProps> = ({ onSelectCapa }) => {
       {/* SECCIÓN 6: LA TECNOLOGÍA AL SERVICIO DEL BIENESTAR */}
       <section className="bg-nival-section-light py-12 sm:py-20 px-4 sm:px-6">
         <div className="max-w-6xl mx-auto">
-          
+
           <h2 className="text-xl sm:text-3xl font-extrabold text-slate-950 text-center tracking-tight mb-8 sm:mb-12">
             La tecnología al servicio del bienestar
           </h2>
 
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-12 items-center">
-            
+
             {/* Tarjeta Interactiva Dorada (7 cols) */}
             <div className="lg:col-span-7">
               <div className="bg-nival-gold rounded-2xl p-5 sm:p-8 text-slate-950 relative shadow-md flex flex-col justify-between min-h-[200px] sm:min-h-[220px]">
-                
+
                 {/* Contenido Principal con Controles Laterales */}
                 <div className="flex items-start justify-between gap-2 sm:gap-3">
-                  <button 
+                  <button
                     onClick={prevTechSlide}
                     aria-label="Anterior"
                     className="p-1 rounded-full hover:bg-slate-950/10 text-slate-950 transition-colors cursor-pointer mt-1 shrink-0"
@@ -435,7 +430,7 @@ export const CapaInicio: React.FC<CapaInicioProps> = ({ onSelectCapa }) => {
                     </p>
                   </div>
 
-                  <button 
+                  <button
                     onClick={nextTechSlide}
                     aria-label="Siguiente"
                     className="p-1 rounded-full hover:bg-slate-950/10 text-slate-950 transition-colors cursor-pointer mt-1 shrink-0"
@@ -448,12 +443,11 @@ export const CapaInicio: React.FC<CapaInicioProps> = ({ onSelectCapa }) => {
                 <div className="flex items-center justify-between pt-4 sm:pt-6 mt-3 sm:mt-4 border-t border-slate-950/10">
                   <div className="flex items-center space-x-1.5 pl-2 sm:pl-6">
                     {techSlides.map((_, i) => (
-                      <span 
-                        key={i} 
+                      <span
+                        key={i}
                         onClick={() => setCurrentTechSlide(i)}
-                        className={`h-2 rounded-full cursor-pointer transition-all ${
-                          i === currentTechSlide ? 'w-5 bg-white' : 'w-2 bg-slate-950/25'
-                        }`}
+                        className={`h-2 rounded-full cursor-pointer transition-all ${i === currentTechSlide ? 'w-5 bg-white' : 'w-2 bg-slate-950/25'
+                          }`}
                       />
                     ))}
                   </div>
