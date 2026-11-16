@@ -7,8 +7,7 @@ import {
   HeartHandshake,
   ChevronLeft,
   ChevronRight,
-  Clock,
-  MessageCircle
+  Clock
 } from 'lucide-react';
 
 interface CapaInicioProps {
@@ -75,8 +74,8 @@ export const CapaInicio: React.FC<CapaInicioProps> = ({ onSelectCapa }) => {
               Soluciones integrales en diagnóstico clínico, prevención y asesoría especializada. Combinamos rigor científico, tecnología moderna y calidez humana para cuidar de ti, tu familia y tu organización.
             </p>
 
-            {/* Botones de Acción: Cita y WhatsApp */}
-            <div className="pt-2 sm:pt-4 flex flex-col sm:flex-row items-stretch sm:items-center gap-3">
+            {/* Botón de Acción Principal */}
+            <div className="pt-2 sm:pt-4">
               <button
                 onClick={() => {
                   onSelectCapa('contacto');
@@ -86,16 +85,6 @@ export const CapaInicio: React.FC<CapaInicioProps> = ({ onSelectCapa }) => {
               >
                 Solicitar atención
               </button>
-
-              <a
-                href="https://wa.me/584129058894?text=Hola%20NIVAL%20Sciences,%20quisiera%20solicitar%20información%20y%20atención"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-full sm:w-auto text-center px-6 py-3 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-sm sm:text-base shadow-xs transition-all flex items-center justify-center space-x-2"
-              >
-                <MessageCircle className="w-5 h-5" />
-                <span>WhatsApp: +58 412 9058894</span>
-              </a>
             </div>
 
             {/* Horarios de Atención Oficiales */}
