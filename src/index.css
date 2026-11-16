@@ -1,31 +1,91 @@
 @import "tailwindcss";
 
 /* ==========================================================================
-   PALETA INSTITUCIONAL NIVAL SCIENCES
-   Aquí puedes modificar fácilmente todos los colores de fondo y acentos
-   de toda la página web. Los cambios se reflejarán inmediatamente en
-   todas las capas y componentes:
+   SISTEMA DE DISEÑO NIVAL SCIENCES
+   1. Colores Institucionales
+   2. Tipografía Global Accesible (+2px mínimo para adultos mayores)
+   3. Ajustes de Tipografía Separados por Capas
    ========================================================================== */
+
 :root {
-  /* 1. Color Dorado Institucional (según diseño PDF oficial) */
-  --nival-gold: #eeb510;            /* Dorado institucional principal (letra V, botones, tarjetas destacadas) */
+  /* --------------------------------------------------------------------------
+     1. PALETA INSTITUCIONAL NIVAL SCIENCES
+     -------------------------------------------------------------------------- */
+  --nival-gold: #eeb510;            /* Dorado institucional principal */
   --nival-gold-hover: #dca30a;      /* Dorado al pasar el cursor (hover) */
   --nival-gold-border: #caa00f;     /* Borde para elementos dorados */
 
-  /* 2. Fondos Principales de Página y Secciones */
   --nival-bg-main: #ffffff;          /* Fondo base principal de toda la página */
-  --nival-bg-section-light: #f8fafc; /* Fondo de secciones claras (estilo Capa Inicio) */
-  --nival-bg-section-alt: #f0f4f9;   /* Fondo de secciones alternadas con suave tinte de descanso visual */
+  --nival-bg-section-light: #f8fafc; /* Fondo de secciones claras */
+  --nival-bg-section-alt: #f0f4f9;   /* Fondo de secciones alternadas */
   
-  /* 3. Fondos de Tarjetas y Contenedores */
   --nival-bg-card: #ffffff;          /* Fondo de tarjetas principales */
-  --nival-bg-card-soft: #f8fafc;     /* Fondo de tarjetas secundarias o sub-paneles */
-  --nival-bg-card-tint: #dfe4ef;     /* Fondo de tarjetas con tinte institucional (como en cursos Inicio) */
+  --nival-bg-card-soft: #f8fafc;     /* Fondo de tarjetas secundarias */
+  --nival-bg-card-tint: #dfe4ef;     /* Fondo de tarjetas con tinte institucional */
 
-  /* 4. Fondos Oscuros de Cabecera, Footer y Bloques de Alto Impacto */
-  --nival-bg-dark: #26272b;          /* Fondo carbón oscuro institucional (usado en bloques destacados de Inicio) */
-  --nival-bg-dark-accent: #0f172a;   /* Fondo azul oscuro profundo (barra superior y footer) */
-  --nival-bg-darker: #020617;        /* Fondo oscuro para base del pie de página */
+  --nival-bg-dark: #26272b;          /* Fondo carbón institucional */
+  --nival-bg-dark-accent: #0f172a;   /* Fondo azul oscuro profundo (top bar / footer) */
+  --nival-bg-darker: #020617;        /* Fondo oscuro para base de footer */
+
+  /* --------------------------------------------------------------------------
+     2. TAMAÑOS GLOBALES DE TEXTO POR DEFECTO (Aumentados mínimo +2px)
+     Garantiza lectura cómoda y descansada para personas de avanzada edad.
+     -------------------------------------------------------------------------- */
+  --nival-font-hero-title: clamp(2.25rem, 5vw, 3.75rem); /* Título grande de cabecera (36px a 60px) */
+  --nival-font-section-title: 2rem;                      /* Títulos de sección h2 (~32px, antes 24-28px) */
+  --nival-font-card-title: 1.25rem;                     /* Títulos de tarjetas h3 (~20px, antes 16-18px) */
+  --nival-font-subtitle: 1.125rem;                      /* Subtítulos de sección (~18px, antes 14-15px) */
+  --nival-font-body: 1.0625rem;                         /* Párrafos principales (~17px, antes 14px) */
+  --nival-font-card-body: 0.9375rem;                    /* Textos de tarjetas (~15px, antes 11-12px) */
+  --nival-font-small: 0.875rem;                         /* Badges, notas y detalles (~14px, antes 10-11px) */
+
+  /* --------------------------------------------------------------------------
+     3. TAMAÑOS PERSONALIZABLES POR CAPA (Modifica aquí individualmente)
+     -------------------------------------------------------------------------- */
+  /* Capa Inicio */
+  --capa-inicio-titulo: var(--nival-font-section-title);
+  --capa-inicio-subtitulo: var(--nival-font-subtitle);
+  --capa-inicio-parrafo: var(--nival-font-body);
+
+  /* Capa Nosotros */
+  --capa-nosotros-titulo: var(--nival-font-section-title);
+  --capa-nosotros-subtitulo: var(--nival-font-subtitle);
+  --capa-nosotros-parrafo: var(--nival-font-body);
+
+  /* Capa Laboratorio */
+  --capa-laboratorio-titulo: var(--nival-font-section-title);
+  --capa-laboratorio-subtitulo: var(--nival-font-subtitle);
+  --capa-laboratorio-parrafo: var(--nival-font-body);
+
+  /* Capa Prevención */
+  --capa-prevencion-titulo: var(--nival-font-section-title);
+  --capa-prevencion-subtitulo: var(--nival-font-subtitle);
+  --capa-prevencion-parrafo: var(--nival-font-body);
+
+  /* Capa Asesoría Especializada Personas */
+  --capa-asesoria-personas-titulo: var(--nival-font-section-title);
+  --capa-asesoria-personas-subtitulo: var(--nival-font-subtitle);
+  --capa-asesoria-personas-parrafo: var(--nival-font-body);
+
+  /* Capa Soluciones Corporativas y Empresas */
+  --capa-soluciones-empresas-titulo: var(--nival-font-section-title);
+  --capa-soluciones-empresas-subtitulo: var(--nival-font-subtitle);
+  --capa-soluciones-empresas-parrafo: var(--nival-font-body);
+
+  /* Capa Educación y Formación */
+  --capa-formacion-titulo: var(--nival-font-section-title);
+  --capa-formacion-subtitulo: var(--nival-font-subtitle);
+  --capa-formacion-parrafo: var(--nival-font-body);
+
+  /* Capa Innovación y Tecnología */
+  --capa-innovacion-titulo: var(--nival-font-section-title);
+  --capa-innovacion-subtitulo: var(--nival-font-subtitle);
+  --capa-innovacion-parrafo: var(--nival-font-body);
+
+  /* Capa Contacto y Atención */
+  --capa-contacto-titulo: var(--nival-font-section-title);
+  --capa-contacto-subtitulo: var(--nival-font-subtitle);
+  --capa-contacto-parrafo: var(--nival-font-body);
 }
 
 @theme {
@@ -41,9 +101,240 @@
   --color-nival-bg-dark: var(--nival-bg-dark);
   --color-nival-bg-dark-accent: var(--nival-bg-dark-accent);
   --color-nival-bg-darker: var(--nival-bg-darker);
+
+  /* ==========================================================================
+     ESCALA TIPOGRÁFICA GLOBAL (Incremento mínimo de +2px en toda la aplicación)
+     ========================================================================== */
+  --text-2xs: 0.8125rem; /* ~13px (antes 10-11px, +2.5px) */
+  --text-2xs--line-height: 1.25rem;
+
+  --text-xs: 0.875rem;   /* ~14px (antes 12px, +2px) */
+  --text-xs--line-height: 1.35rem;
+
+  --text-sm: 1rem;       /* ~16px (antes 14px, +2px) */
+  --text-sm--line-height: 1.5rem;
+
+  --text-base: 1.125rem; /* ~18px (antes 16px, +2px) */
+  --text-base--line-height: 1.75rem;
+
+  --text-lg: 1.25rem;    /* ~20px (antes 18px, +2px) */
+  --text-lg--line-height: 1.75rem;
+
+  --text-xl: 1.375rem;   /* ~22px (antes 20px, +2px) */
+  --text-xl--line-height: 1.875rem;
+
+  --text-2xl: 1.625rem;  /* ~26px (antes 24px, +2px) */
+  --text-2xl--line-height: 2.125rem;
+
+  --text-3xl: 2rem;      /* ~32px (antes 30px, +2px) */
+  --text-3xl--line-height: 2.375rem;
+
+  --text-4xl: 2.375rem;  /* ~38px (antes 36px, +2px) */
+  --text-4xl--line-height: 2.625rem;
+
+  --text-5xl: 3.125rem;  /* ~50px (antes 48px, +2px) */
+  --text-5xl--line-height: 1.15;
+
+  --text-6xl: 3.875rem;  /* ~62px (antes 60px, +2px) */
+  --text-6xl--line-height: 1.1;
 }
 
-/* Clases de utilidad para fácil aplicación */
+/* ==========================================================================
+   ELEVACIÓN DE MICRO-TEXTOS ARBITRARIOS (ACCESIBILIDAD)
+   Convierte textos de 9px, 10px y 11px a tamaños legibles para mayores.
+   ========================================================================== */
+.text-\[9px\], .text-\[10px\] {
+  font-size: 0.8125rem !important; /* ~13px */
+  line-height: 1.25rem !important;
+}
+
+.text-\[11px\] {
+  font-size: 0.875rem !important; /* ~14px */
+  line-height: 1.35rem !important;
+}
+
+/* ==========================================================================
+   CLASES GLOBALES DE TIPOGRAFÍA (Reutilizables en cualquier sección)
+   ========================================================================== */
+.capa-titulo-hero, .nival-titulo-hero {
+  font-size: var(--nival-font-hero-title) !important;
+  line-height: 1.15 !important;
+}
+
+.capa-titulo, .nival-titulo {
+  font-size: var(--nival-font-section-title) !important;
+  line-height: 1.25 !important;
+}
+
+.capa-titulo-tarjeta, .nival-titulo-tarjeta {
+  font-size: var(--nival-font-card-title) !important;
+  line-height: 1.35 !important;
+}
+
+.capa-subtitulo, .nival-subtitulo {
+  font-size: var(--nival-font-subtitle) !important;
+  line-height: 1.45 !important;
+}
+
+.capa-parrafo, .nival-parrafo {
+  font-size: var(--nival-font-body) !important;
+  line-height: 1.65 !important;
+}
+
+.capa-texto-tarjeta, .nival-texto-tarjeta {
+  font-size: var(--nival-font-card-body) !important;
+  line-height: 1.55 !important;
+}
+
+.capa-texto-pequeno, .nival-texto-pequeno {
+  font-size: var(--nival-font-small) !important;
+  line-height: 1.4 !important;
+}
+
+/* ==========================================================================
+   CLASES DE TIPOGRAFÍA SEPARADAS POR CAPA
+   Aquí puedes ajustar cómodamente con clases específicas el tamaño de los
+   títulos, subtítulos y párrafos de cada capa individual:
+   ========================================================================== */
+
+/* --- 1. CAPA INICIO --- */
+.capa-inicio-titulo,
+.capa-inicio .capa-titulo {
+  font-size: var(--capa-inicio-titulo) !important;
+}
+.capa-inicio-subtitulo,
+.capa-inicio .capa-subtitulo {
+  font-size: var(--capa-inicio-subtitulo) !important;
+}
+.capa-inicio-parrafo,
+.capa-inicio .capa-parrafo {
+  font-size: var(--capa-inicio-parrafo) !important;
+  line-height: 1.65 !important;
+}
+
+/* --- 2. CAPA NOSOTROS --- */
+.capa-nosotros-titulo,
+.capa-nosotros .capa-titulo {
+  font-size: var(--capa-nosotros-titulo) !important;
+}
+.capa-nosotros-subtitulo,
+.capa-nosotros .capa-subtitulo {
+  font-size: var(--capa-nosotros-subtitulo) !important;
+}
+.capa-nosotros-parrafo,
+.capa-nosotros .capa-parrafo {
+  font-size: var(--capa-nosotros-parrafo) !important;
+  line-height: 1.65 !important;
+}
+
+/* --- 3. CAPA LABORATORIO --- */
+.capa-laboratorio-titulo,
+.capa-laboratorio .capa-titulo {
+  font-size: var(--capa-laboratorio-titulo) !important;
+}
+.capa-laboratorio-subtitulo,
+.capa-laboratorio .capa-subtitulo {
+  font-size: var(--capa-laboratorio-subtitulo) !important;
+}
+.capa-laboratorio-parrafo,
+.capa-laboratorio .capa-parrafo {
+  font-size: var(--capa-laboratorio-parrafo) !important;
+  line-height: 1.65 !important;
+}
+
+/* --- 4. CAPA PREVENCIÓN --- */
+.capa-prevencion-titulo,
+.capa-prevencion .capa-titulo {
+  font-size: var(--capa-prevencion-titulo) !important;
+}
+.capa-prevencion-subtitulo,
+.capa-prevencion .capa-subtitulo {
+  font-size: var(--capa-prevencion-subtitulo) !important;
+}
+.capa-prevencion-parrafo,
+.capa-prevencion .capa-parrafo {
+  font-size: var(--capa-prevencion-parrafo) !important;
+  line-height: 1.65 !important;
+}
+
+/* --- 5. CAPA ASESORÍA PERSONAS --- */
+.capa-asesoria-personas-titulo,
+.capa-asesoria-personas .capa-titulo {
+  font-size: var(--capa-asesoria-personas-titulo) !important;
+}
+.capa-asesoria-personas-subtitulo,
+.capa-asesoria-personas .capa-subtitulo {
+  font-size: var(--capa-asesoria-personas-subtitulo) !important;
+}
+.capa-asesoria-personas-parrafo,
+.capa-asesoria-personas .capa-parrafo {
+  font-size: var(--capa-asesoria-personas-parrafo) !important;
+  line-height: 1.65 !important;
+}
+
+/* --- 6. CAPA SOLUCIONES EMPRESAS --- */
+.capa-soluciones-empresas-titulo,
+.capa-soluciones-empresas .capa-titulo {
+  font-size: var(--capa-soluciones-empresas-titulo) !important;
+}
+.capa-soluciones-empresas-subtitulo,
+.capa-soluciones-empresas .capa-subtitulo {
+  font-size: var(--capa-soluciones-empresas-subtitulo) !important;
+}
+.capa-soluciones-empresas-parrafo,
+.capa-soluciones-empresas .capa-parrafo {
+  font-size: var(--capa-soluciones-empresas-parrafo) !important;
+  line-height: 1.65 !important;
+}
+
+/* --- 7. CAPA FORMACIÓN --- */
+.capa-formacion-titulo,
+.capa-formacion .capa-titulo {
+  font-size: var(--capa-formacion-titulo) !important;
+}
+.capa-formacion-subtitulo,
+.capa-formacion .capa-subtitulo {
+  font-size: var(--capa-formacion-subtitulo) !important;
+}
+.capa-formacion-parrafo,
+.capa-formacion .capa-parrafo {
+  font-size: var(--capa-formacion-parrafo) !important;
+  line-height: 1.65 !important;
+}
+
+/* --- 8. CAPA INNOVACIÓN --- */
+.capa-innovacion-titulo,
+.capa-innovacion .capa-titulo {
+  font-size: var(--capa-innovacion-titulo) !important;
+}
+.capa-innovacion-subtitulo,
+.capa-innovacion .capa-subtitulo {
+  font-size: var(--capa-innovacion-subtitulo) !important;
+}
+.capa-innovacion-parrafo,
+.capa-innovacion .capa-parrafo {
+  font-size: var(--capa-innovacion-parrafo) !important;
+  line-height: 1.65 !important;
+}
+
+/* --- 9. CAPA CONTACTO --- */
+.capa-contacto-titulo,
+.capa-contacto .capa-titulo {
+  font-size: var(--capa-contacto-titulo) !important;
+}
+.capa-contacto-subtitulo,
+.capa-contacto .capa-subtitulo {
+  font-size: var(--capa-contacto-subtitulo) !important;
+}
+.capa-contacto-parrafo,
+.capa-contacto .capa-parrafo {
+  font-size: var(--capa-contacto-parrafo) !important;
+  line-height: 1.65 !important;
+}
+
+/* ==========================================================================
+   CLASES DE UTILIDAD DE COLOR Y FONDOS
+   ========================================================================== */
 .bg-nival-gold {
   background-color: var(--nival-gold) !important;
 }
@@ -106,6 +397,7 @@
     font-family: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
     background-color: var(--nival-bg-main);
     color: #0f172a;
+    font-size: 16px;
   }
 
   body {

@@ -39,7 +39,7 @@ export const CapaAsesoriaPersonas: React.FC<CapaAsesoriaPersonasProps> = ({ onSe
   ];
 
   return (
-    <div className="w-full bg-nival-main text-slate-900">
+    <div className="w-full bg-nival-main text-slate-900 capa-asesoria-personas">
       
       {/* 1. HERO INSTITUCIONAL CON IMAGEN DE FONDO (fondo.jpeg) */}
       <section 
@@ -51,17 +51,17 @@ export const CapaAsesoriaPersonas: React.FC<CapaAsesoriaPersonasProps> = ({ onSe
         <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-10 py-8 sm:py-16 lg:py-20">
           <div className="max-w-2xl text-left space-y-3 sm:space-y-4">
             
-            <h1 className="text-2xl sm:text-4xl lg:text-5xl font-extrabold text-slate-950 font-serif leading-tight sm:leading-[1.14] tracking-tight italic">
+            <h1 className="text-2xl sm:text-4xl lg:text-5xl font-extrabold text-slate-950 font-serif leading-tight sm:leading-[1.14] tracking-tight italic capa-asesoria-personas-titulo capa-titulo-hero">
               “La visión que necesitas para vivir como sueñas”
             </h1>
 
             <div>
-              <span className="inline-block font-extrabold text-slate-950 text-xs sm:text-sm pb-1 sm:pb-1.5 border-b-2 sm:border-b-[3px] border-nival-gold tracking-tight">
+              <span className="inline-block font-extrabold text-slate-950 text-xs sm:text-sm pb-1 sm:pb-1.5 border-b-2 sm:border-b-[3px] border-nival-gold tracking-tight capa-asesoria-personas-subtitulo capa-subtitulo">
                 Acompañamiento Individual · Orientación y Rutas de Salud
               </span>
             </div>
 
-            <p className="text-xs sm:text-sm text-slate-800 leading-snug sm:leading-relaxed font-normal">
+            <p className="text-xs sm:text-sm text-slate-800 leading-snug sm:leading-relaxed font-normal capa-asesoria-personas-parrafo capa-parrafo">
               Servicios de asesoría personalizada para entender diagnósticos, clarificar requerimientos de laboratorio y definir rutas oportunas de atención para la salud personal y de la familia.
             </p>
 
@@ -100,11 +100,11 @@ export const CapaAsesoriaPersonas: React.FC<CapaAsesoriaPersonasProps> = ({ onSe
             <span>Acompañamiento Cercano y Humano</span>
           </div>
 
-          <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-950 tracking-tight">
+          <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-950 tracking-tight capa-asesoria-personas-titulo capa-titulo">
             El Valor de la Orientación Profesional
           </h2>
 
-          <p className="text-xs sm:text-sm text-slate-700 leading-relaxed">
+          <p className="text-xs sm:text-sm text-slate-700 leading-relaxed capa-asesoria-personas-parrafo capa-parrafo">
             En <strong>NIVAL Sciences</strong> entendemos que un informe de laboratorio no debe ser un documento incomprensible entregado sin contexto. La información clínica diagnóstica alcanza su verdadero valor cuando se transforma en orientación clara y decisiones oportunas de cuidado.
           </p>
 
@@ -123,10 +123,10 @@ export const CapaAsesoriaPersonas: React.FC<CapaAsesoriaPersonasProps> = ({ onSe
         <div className="max-w-6xl mx-auto space-y-10">
           
           <div className="text-center max-w-2xl mx-auto">
-            <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-950 tracking-tight">
+            <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-950 tracking-tight capa-asesoria-personas-titulo capa-titulo">
               Servicios de Acompañamiento Disponibles
             </h2>
-            <p className="text-xs sm:text-sm text-slate-600 mt-1.5">
+            <p className="text-xs sm:text-sm text-slate-600 mt-1.5 capa-asesoria-personas-subtitulo capa-subtitulo">
               Líneas de asesoría individual desarrolladas dentro de las competencias aplicables
             </p>
           </div>

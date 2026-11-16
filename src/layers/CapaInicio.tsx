@@ -45,7 +45,7 @@ export const CapaInicio: React.FC<CapaInicioProps> = ({ onSelectCapa }) => {
   };
 
   return (
-    <div className="w-full bg-nival-main text-slate-900">
+    <div className="w-full bg-nival-main text-slate-900 capa-inicio">
 
       {/* SECCIÓN 1: HERO CON IMAGEN DE FONDO (fondo.jpeg) - PANTALLA COMPLETA */}
       <section
@@ -59,13 +59,13 @@ export const CapaInicio: React.FC<CapaInicioProps> = ({ onSelectCapa }) => {
           <div className="max-w-2xl text-left space-y-4 sm:space-y-6">
 
             {/* Lema Principal Oficial */}
-            <h1 className="text-3xl sm:text-5xl lg:text-6xl font-black text-slate-950 font-serif leading-tight sm:leading-[1.12] tracking-tight italic drop-shadow-2xs">
+            <h1 className="text-3xl sm:text-5xl lg:text-6xl font-black text-slate-950 font-serif leading-tight sm:leading-[1.12] tracking-tight italic drop-shadow-2xs capa-inicio-titulo capa-titulo-hero">
               “La visión que necesitas para vivir como sueñas”
             </h1>
 
             {/* Franja de Enfoque Institucional con Subrayado Dorado (visible solo en pantallas sm/desktop) */}
             <div>
-              <span className="inline-block font-extrabold text-slate-950 text-sm sm:text-lg pb-0 sm:pb-2 border-b-0 sm:border-b-[3px] border-nival-gold tracking-tight">
+              <span className="inline-block font-extrabold text-slate-950 text-sm sm:text-lg pb-0 sm:pb-2 border-b-0 sm:border-b-[3px] border-nival-gold tracking-tight capa-inicio-subtitulo capa-subtitulo">
                 Salud integral con visión preventiva, tecnología y acompañamiento profesional
               </span>
             </div>
@@ -120,10 +120,10 @@ export const CapaInicio: React.FC<CapaInicioProps> = ({ onSelectCapa }) => {
 
         <div className="max-w-6xl mx-auto relative z-10 text-center">
 
-          <h2 className="text-xl sm:text-3xl font-extrabold text-slate-950 tracking-tight">
+          <h2 className="text-xl sm:text-3xl font-extrabold text-slate-950 tracking-tight capa-inicio-titulo capa-titulo">
             Nuestros valores
           </h2>
-          <p className="text-xs sm:text-sm text-slate-600 mt-1 max-w-xl mx-auto">
+          <p className="text-xs sm:text-sm text-slate-600 mt-1 max-w-xl mx-auto capa-inicio-subtitulo capa-subtitulo">
             Un modelo de trabajo basado en interoperabilidad, doble verificación y orientación integral
           </p>
 
@@ -215,11 +215,11 @@ export const CapaInicio: React.FC<CapaInicioProps> = ({ onSelectCapa }) => {
       <section className="bg-nival-section-light py-10 sm:py-20 px-4 sm:px-6 border-b border-slate-300">
         <div className="max-w-4xl mx-auto space-y-4 sm:space-y-6 text-left">
 
-          <h2 className="text-xl sm:text-3xl font-extrabold text-slate-950 tracking-tight">
+          <h2 className="text-xl sm:text-3xl font-extrabold text-slate-950 tracking-tight capa-inicio-titulo capa-titulo">
             Prevenir tambien es cuidar
           </h2>
 
-          <p className="text-xs sm:text-sm text-slate-700 leading-relaxed">
+          <p className="text-xs sm:text-sm text-slate-700 leading-relaxed capa-inicio-parrafo capa-parrafo">
             Los servicios de Nival cubren evaluaciones preventivas periódicas para asintomáticos (con perfiles metabólicos y de vigilancia cardiovascular según la etapa de vida); jornadas de promoción de la salud orientadas al tamizaje y detección oportuna in-situ en instituciones educativas y empresas; y programas de educación para el autocuidado, que incluyen guías de interpretación de exámenes, pautas preanalíticas y recomendaciones de hábitos saludables basadas en evidencia para fomentar decisiones conscientes.
           </p>
 
@@ -251,10 +251,10 @@ export const CapaInicio: React.FC<CapaInicioProps> = ({ onSelectCapa }) => {
         <div className="max-w-6xl mx-auto text-center space-y-6 sm:space-y-10">
 
           <div>
-            <h2 className="text-xl sm:text-3xl font-extrabold text-white tracking-tight">
+            <h2 className="text-xl sm:text-3xl font-extrabold text-white tracking-tight capa-inicio-titulo capa-titulo">
               Soluciones corporativas con impacto medible
             </h2>
-            <p className="text-xs sm:text-sm text-slate-300 max-w-3xl mx-auto leading-relaxed mt-2 sm:mt-3 font-normal">
+            <p className="text-xs sm:text-sm text-slate-300 max-w-3xl mx-auto leading-relaxed mt-2 sm:mt-3 font-normal capa-inicio-parrafo capa-parrafo">
               En NIVAL Sciences concebimos la salud corporativa no como un mero requisito de cumplimiento, sino como un pilar estratégico de continuidad y bienestar. Diseñamos soluciones a la medida del perfil operativo y el número de colaboradores de tu organización, orientadas a reducir el ausentismo y proteger a tu talento.
             </p>
           </div>
@@ -328,7 +328,7 @@ export const CapaInicio: React.FC<CapaInicioProps> = ({ onSelectCapa }) => {
       <section className="bg-nival-section-alt py-12 sm:py-20 px-4 sm:px-6 border-b border-slate-300">
         <div className="max-w-6xl mx-auto">
 
-          <h2 className="text-xl sm:text-3xl font-extrabold text-slate-950 text-center tracking-tight mb-8 sm:mb-12">
+          <h2 className="text-xl sm:text-3xl font-extrabold text-slate-950 text-center tracking-tight mb-8 sm:mb-12 capa-inicio-titulo capa-titulo">
             Formación que transforma y desarrolla capacidades
           </h2>
 
@@ -336,7 +336,7 @@ export const CapaInicio: React.FC<CapaInicioProps> = ({ onSelectCapa }) => {
 
             {/* Columna Izquierda: Mensaje y Acción (5 cols) */}
             <div className="lg:col-span-5 text-left space-y-3 sm:space-y-4">
-              <p className="text-xs sm:text-sm text-slate-800 leading-relaxed">
+              <p className="text-xs sm:text-sm text-slate-800 leading-relaxed capa-inicio-parrafo capa-parrafo">
                 En NIVAL Sciences la educación en salud es un motor de transformación. Diseñamos programas formativos dirigidos a tres audiencias clave: profesionales del área de la salud, equipos de trabajo corporativos y la comunidad en general.
               </p>
 
@@ -408,7 +408,7 @@ export const CapaInicio: React.FC<CapaInicioProps> = ({ onSelectCapa }) => {
       <section className="bg-nival-section-light py-12 sm:py-20 px-4 sm:px-6">
         <div className="max-w-6xl mx-auto">
 
-          <h2 className="text-xl sm:text-3xl font-extrabold text-slate-950 text-center tracking-tight mb-8 sm:mb-12">
+          <h2 className="text-xl sm:text-3xl font-extrabold text-slate-950 text-center tracking-tight mb-8 sm:mb-12 capa-inicio-titulo capa-titulo">
             La tecnología al servicio del bienestar
           </h2>
 
@@ -469,7 +469,7 @@ export const CapaInicio: React.FC<CapaInicioProps> = ({ onSelectCapa }) => {
 
             {/* Columna Derecha: Filosofía Tecnológica NIVAL (5 cols) */}
             <div className="lg:col-span-5 text-left space-y-3 sm:space-y-4">
-              <p className="text-xs sm:text-sm text-slate-800 leading-relaxed font-normal">
+              <p className="text-xs sm:text-sm text-slate-800 leading-relaxed font-normal capa-inicio-parrafo capa-parrafo">
                 En NIVAL Sciences concebimos la transformación digital como un medio esencial para conectar servicios, personas y conocimiento científico, reduciendo barreras de acceso y facilitando decisiones oportunas.
               </p>
 

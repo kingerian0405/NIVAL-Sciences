@@ -24,7 +24,7 @@ export const CapaFormacion: React.FC<CapaFormacionProps> = ({ onSelectCapa }) =>
   );
 
   return (
-    <div className="w-full bg-nival-main text-slate-900">
+    <div className="w-full bg-nival-main text-slate-900 capa-formacion">
       
       {/* 1. HERO INSTITUCIONAL CON IMAGEN DE FONDO (fondo.jpeg) */}
       <section 
@@ -36,17 +36,17 @@ export const CapaFormacion: React.FC<CapaFormacionProps> = ({ onSelectCapa }) =>
         <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-10 py-8 sm:py-16 lg:py-20">
           <div className="max-w-2xl text-left space-y-3 sm:space-y-4">
             
-            <h1 className="text-2xl sm:text-4xl lg:text-5xl font-extrabold text-slate-950 font-serif leading-tight sm:leading-[1.14] tracking-tight italic">
+            <h1 className="text-2xl sm:text-4xl lg:text-5xl font-extrabold text-slate-950 font-serif leading-tight sm:leading-[1.14] tracking-tight italic capa-formacion-titulo capa-titulo-hero">
               “La visión que necesitas para vivir como sueñas”
             </h1>
 
             <div>
-              <span className="inline-block font-extrabold text-slate-950 text-xs sm:text-sm pb-1 sm:pb-1.5 border-b-2 sm:border-b-[3px] border-nival-gold tracking-tight">
+              <span className="inline-block font-extrabold text-slate-950 text-xs sm:text-sm pb-1 sm:pb-1.5 border-b-2 sm:border-b-[3px] border-nival-gold tracking-tight capa-formacion-subtitulo capa-subtitulo">
                 Gestión del Conocimiento · Educación y Capacitación Continua
               </span>
             </div>
 
-            <p className="text-xs sm:text-sm text-slate-800 leading-snug sm:leading-relaxed font-normal">
+            <p className="text-xs sm:text-sm text-slate-800 leading-snug sm:leading-relaxed font-normal capa-formacion-parrafo capa-parrafo">
               Programas de actualización científica, talleres técnicos en control de calidad, capacitación corporativa en prevención y proyección del campus digital formativo.
             </p>
 
@@ -82,11 +82,11 @@ export const CapaFormacion: React.FC<CapaFormacionProps> = ({ onSelectCapa }) =>
             <span>Desarrollo de Capacidades Colectivas</span>
           </div>
 
-          <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-950 tracking-tight">
+          <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-950 tracking-tight capa-formacion-titulo capa-titulo">
             La Educación como Motor de Transformación en Salud
           </h2>
 
-          <p className="text-xs sm:text-sm text-slate-700 leading-relaxed">
+          <p className="text-xs sm:text-sm text-slate-700 leading-relaxed capa-formacion-parrafo capa-parrafo">
             En <strong>NIVAL Sciences</strong> la educación en salud es un motor de transformación. Concebimos programas de formación dirigidos a tres audiencias fundamentales: profesionales del área de la salud, equipos de trabajo corporativos y la comunidad en general.
           </p>
 
@@ -109,10 +109,10 @@ export const CapaFormacion: React.FC<CapaFormacionProps> = ({ onSelectCapa }) =>
               <span className="text-xs font-bold text-amber-600 uppercase tracking-wider block mb-1">
                 Programas Académicos y Prácticos
               </span>
-              <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-950 tracking-tight">
+              <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-950 tracking-tight capa-formacion-titulo capa-titulo">
                 Catálogo Inicial de Cursos y Talleres
               </h2>
-              <p className="text-xs sm:text-sm text-slate-600 mt-1">
+              <p className="text-xs sm:text-sm text-slate-600 mt-1 capa-formacion-subtitulo capa-subtitulo">
                 Diseñados para fortalecer el rigor analítico y la cultura de prevención:
               </p>
             </div>

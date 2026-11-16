@@ -52,7 +52,7 @@ export const CapaLaboratorio: React.FC<CapaLaboratorioProps> = ({ onSelectCapa }
   });
 
   return (
-    <div className="w-full bg-nival-main text-slate-900">
+    <div className="w-full bg-nival-main text-slate-900 capa-laboratorio">
 
       {/* 1. HERO INSTITUCIONAL CON IMAGEN DE FONDO (fondo.jpeg) */}
       <section
@@ -64,17 +64,17 @@ export const CapaLaboratorio: React.FC<CapaLaboratorioProps> = ({ onSelectCapa }
         <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-10 py-8 sm:py-16 lg:py-20">
           <div className="max-w-2xl text-left space-y-3 sm:space-y-4">
 
-            <h1 className="text-2xl sm:text-4xl lg:text-5xl font-extrabold text-slate-950 font-serif leading-tight sm:leading-[1.14] tracking-tight italic">
+            <h1 className="text-2xl sm:text-4xl lg:text-5xl font-extrabold text-slate-950 font-serif leading-tight sm:leading-[1.14] tracking-tight italic capa-laboratorio-titulo capa-titulo-hero">
               “La visión que necesitas para vivir como sueñas”
             </h1>
 
             <div>
-              <span className="inline-block font-extrabold text-slate-950 text-xs sm:text-sm pb-1 sm:pb-1.5 border-b-2 sm:border-b-[3px] border-nival-gold tracking-tight">
+              <span className="inline-block font-extrabold text-slate-950 text-xs sm:text-sm pb-1 sm:pb-1.5 border-b-2 sm:border-b-[3px] border-nival-gold tracking-tight capa-laboratorio-subtitulo capa-subtitulo">
                 Primera Unidad Operativa · Diagnóstico Clínico Especializado
               </span>
             </div>
 
-            <p className="text-xs sm:text-sm text-slate-800 leading-snug sm:leading-relaxed font-normal">
+            <p className="text-xs sm:text-sm text-slate-800 leading-snug sm:leading-relaxed font-normal capa-laboratorio-parrafo capa-parrafo">
               Servicios analíticos rigurosos, perfiles preventivos integrales, preparación analítica estandarizada y canales de toma presencial y a domicilio bajo el principio rector de doble verificación.
             </p>
 
@@ -168,10 +168,10 @@ export const CapaLaboratorio: React.FC<CapaLaboratorioProps> = ({ onSelectCapa }
               <span className="text-xs font-bold text-amber-600 uppercase tracking-wider block mb-1">
                 Baterías Analíticas y Exámenes Individuales
               </span>
-              <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-950 tracking-tight">
+              <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-950 tracking-tight capa-laboratorio-titulo capa-titulo">
                 Catálogo Oficial de Servicios Diagnósticos
               </h2>
-              <p className="text-xs sm:text-sm text-slate-600 mt-1">
+              <p className="text-xs sm:text-sm text-slate-600 mt-1 capa-laboratorio-subtitulo capa-subtitulo">
                 Consulta requisitos preanalíticos, tiempos de entrega y tarifas oficiales:
               </p>
             </div>
@@ -387,10 +387,10 @@ export const CapaLaboratorio: React.FC<CapaLaboratorioProps> = ({ onSelectCapa }
         <div className="max-w-6xl mx-auto space-y-8">
 
           <div className="text-center max-w-2xl mx-auto">
-            <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-950 tracking-tight">
+            <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-950 tracking-tight capa-laboratorio-titulo capa-titulo">
               Canales de Atención del Laboratorio
             </h2>
-            <p className="text-xs sm:text-sm text-slate-600 mt-1.5">
+            <p className="text-xs sm:text-sm text-slate-600 mt-1.5 capa-laboratorio-subtitulo capa-subtitulo">
               Opciones flexibles diseñadas para la máxima comodidad de pacientes y familias
             </p>
           </div>

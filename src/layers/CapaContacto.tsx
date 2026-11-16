@@ -36,7 +36,7 @@ export const CapaContacto: React.FC<CapaContactoProps> = ({ onSelectCapa }) => {
   };
 
   return (
-    <div className="w-full bg-nival-main text-slate-900">
+    <div className="w-full bg-nival-main text-slate-900 capa-contacto">
       
       {/* 1. HERO INSTITUCIONAL CON IMAGEN DE FONDO (fondo.jpeg) */}
       <section 
@@ -48,17 +48,17 @@ export const CapaContacto: React.FC<CapaContactoProps> = ({ onSelectCapa }) => {
         <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-10 py-8 sm:py-16 lg:py-20">
           <div className="max-w-2xl text-left space-y-3 sm:space-y-4">
             
-            <h1 className="text-2xl sm:text-4xl lg:text-5xl font-extrabold text-slate-950 font-serif leading-tight sm:leading-[1.14] tracking-tight italic">
+            <h1 className="text-2xl sm:text-4xl lg:text-5xl font-extrabold text-slate-950 font-serif leading-tight sm:leading-[1.14] tracking-tight italic capa-contacto-titulo capa-titulo-hero">
               “La visión que necesitas para vivir como sueñas”
             </h1>
 
             <div>
-              <span className="inline-block font-extrabold text-slate-950 text-xs sm:text-sm pb-1 sm:pb-1.5 border-b-2 sm:border-b-[3px] border-nival-gold tracking-tight">
+              <span className="inline-block font-extrabold text-slate-950 text-xs sm:text-sm pb-1 sm:pb-1.5 border-b-2 sm:border-b-[3px] border-nival-gold tracking-tight capa-contacto-subtitulo capa-subtitulo">
                 Atención y Enlace Institucional · Contacto Directo
               </span>
             </div>
 
-            <p className="text-xs sm:text-sm text-slate-800 leading-snug sm:leading-relaxed font-normal">
+            <p className="text-xs sm:text-sm text-slate-800 leading-snug sm:leading-relaxed font-normal capa-contacto-parrafo capa-parrafo">
               Puntos formales de contacto para agendamiento de exámenes de laboratorio, tomas a domicilio, convenios corporativos para empresas, alianzas académicas y atención al usuario.
             </p>
 
@@ -80,7 +80,7 @@ export const CapaContacto: React.FC<CapaContactoProps> = ({ onSelectCapa }) => {
                   <span className="text-xs font-bold text-amber-700 uppercase tracking-wider block">
                     Información de Contacto
                   </span>
-                  <h3 className="text-xl font-extrabold text-slate-950 mt-1">
+                  <h3 className="text-xl font-extrabold text-slate-950 mt-1 capa-contacto-titulo capa-titulo">
                     Canales Oficiales
                   </h3>
                 </div>
@@ -169,10 +169,10 @@ export const CapaContacto: React.FC<CapaContactoProps> = ({ onSelectCapa }) => {
                   <span className="text-xs font-bold text-amber-700 uppercase tracking-wider block">
                     Comunicación Directa
                   </span>
-                  <h3 className="text-xl font-extrabold text-slate-950 mt-1">
+                  <h3 className="text-xl font-extrabold text-slate-950 mt-1 capa-contacto-titulo capa-titulo">
                     Formulario de Solicitudes y Enlace
                   </h3>
-                  <p className="text-xs text-slate-600 mt-1">
+                  <p className="text-xs text-slate-600 mt-1 capa-contacto-subtitulo capa-subtitulo">
                     Selecciona el tipo de comunicación institucional para dirigir tu mensaje al área correspondiente:
                   </p>
                 </div>

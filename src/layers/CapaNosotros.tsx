@@ -35,7 +35,7 @@ export const CapaNosotros: React.FC<CapaNosotrosProps> = ({ onSelectCapa }) => {
   ];
 
   return (
-    <div className="w-full bg-nival-main text-slate-900">
+    <div className="w-full bg-nival-main text-slate-900 capa-nosotros">
       
       {/* 1. HERO INSTITUCIONAL CON IMAGEN DE FONDO (fondo.jpeg) */}
       <section 
@@ -47,17 +47,17 @@ export const CapaNosotros: React.FC<CapaNosotrosProps> = ({ onSelectCapa }) => {
         <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-10 py-8 sm:py-16 lg:py-20">
           <div className="max-w-2xl text-left space-y-3 sm:space-y-4">
             
-            <h1 className="text-2xl sm:text-4xl lg:text-5xl font-extrabold text-slate-950 font-serif leading-tight sm:leading-[1.14] tracking-tight italic">
+            <h1 className="text-2xl sm:text-4xl lg:text-5xl font-extrabold text-slate-950 font-serif leading-tight sm:leading-[1.14] tracking-tight italic capa-nosotros-titulo capa-titulo-hero">
               “La visión que necesitas para vivir como sueñas”
             </h1>
 
             <div>
-              <span className="inline-block font-extrabold text-slate-950 text-xs sm:text-sm pb-1 sm:pb-1.5 border-b-2 sm:border-b-[3px] border-nival-gold tracking-tight">
+              <span className="inline-block font-extrabold text-slate-950 text-xs sm:text-sm pb-1 sm:pb-1.5 border-b-2 sm:border-b-[3px] border-nival-gold tracking-tight capa-nosotros-subtitulo capa-subtitulo">
                 Identidad Institucional · Ecosistema Integral de Salud
               </span>
             </div>
 
-            <p className="text-xs sm:text-sm text-slate-800 leading-snug sm:leading-relaxed font-normal">
+            <p className="text-xs sm:text-sm text-slate-800 leading-snug sm:leading-relaxed font-normal capa-nosotros-parrafo capa-parrafo">
               Conoce el propósito fundacional, la visión estratégica y los principios rectores que impulsan a NIVAL Sciences como un ecosistema orientado a articular diagnóstico de alta confiabilidad, asesoría profesional, prevención continua y tecnología médica.
             </p>
 
@@ -120,10 +120,10 @@ export const CapaNosotros: React.FC<CapaNosotrosProps> = ({ onSelectCapa }) => {
               <span className="text-xs font-bold text-amber-600 uppercase tracking-wider block">
                 Propósito Fundacional
               </span>
-              <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-950 tracking-tight">
+              <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-950 tracking-tight capa-nosotros-titulo capa-titulo">
                 Concepto Institucional
               </h2>
-              <p className="text-xs sm:text-sm text-slate-800 leading-relaxed">
+              <p className="text-xs sm:text-sm text-slate-800 leading-relaxed capa-nosotros-parrafo capa-parrafo">
                 <strong>NIVAL Sciences</strong> es una organización orientada al desarrollo de soluciones integrales de salud, asesoría y gestión del conocimiento. Su actividad articula servicios diagnósticos, prevención, acompañamiento y asesoría a personas naturales y empresas, formación, capacitación e innovación tecnológica.
               </p>
               
@@ -144,10 +144,10 @@ export const CapaNosotros: React.FC<CapaNosotrosProps> = ({ onSelectCapa }) => {
         <div className="max-w-6xl mx-auto space-y-10">
           
           <div className="text-center max-w-2xl mx-auto">
-            <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-950 tracking-tight">
+            <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-950 tracking-tight capa-nosotros-titulo capa-titulo">
               Misión y Visión Estratégica
             </h2>
-            <p className="text-xs sm:text-sm text-slate-600 mt-1.5">
+            <p className="text-xs sm:text-sm text-slate-600 mt-1.5 capa-nosotros-subtitulo capa-subtitulo">
               Los pilares esenciales que guían nuestro crecimiento y compromiso con la sociedad
             </p>
           </div>

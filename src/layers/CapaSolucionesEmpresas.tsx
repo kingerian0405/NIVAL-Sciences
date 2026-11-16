@@ -60,7 +60,7 @@ export const CapaSolucionesEmpresas: React.FC<CapaSolucionesEmpresasProps> = ({ 
   ];
 
   return (
-    <div className="w-full bg-nival-main text-slate-900">
+    <div className="w-full bg-nival-main text-slate-900 capa-soluciones-empresas">
       
       {/* 1. HERO INSTITUCIONAL CON IMAGEN DE FONDO (fondo.jpeg) */}
       <section 
@@ -72,17 +72,17 @@ export const CapaSolucionesEmpresas: React.FC<CapaSolucionesEmpresasProps> = ({ 
         <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-10 py-8 sm:py-16 lg:py-20">
           <div className="max-w-2xl text-left space-y-3 sm:space-y-4">
             
-            <h1 className="text-2xl sm:text-4xl lg:text-5xl font-extrabold text-slate-950 font-serif leading-tight sm:leading-[1.14] tracking-tight italic">
+            <h1 className="text-2xl sm:text-4xl lg:text-5xl font-extrabold text-slate-950 font-serif leading-tight sm:leading-[1.14] tracking-tight italic capa-soluciones-empresas-titulo capa-titulo-hero">
               “La visión que necesitas para vivir como sueñas”
             </h1>
 
             <div>
-              <span className="inline-block font-extrabold text-slate-950 text-xs sm:text-sm pb-1 sm:pb-1.5 border-b-2 sm:border-b-[3px] border-nival-gold tracking-tight">
+              <span className="inline-block font-extrabold text-slate-950 text-xs sm:text-sm pb-1 sm:pb-1.5 border-b-2 sm:border-b-[3px] border-nival-gold tracking-tight capa-soluciones-empresas-subtitulo capa-subtitulo">
                 Salud Corporativa B2B · Continuidad Operativa y Productividad
               </span>
             </div>
 
-            <p className="text-xs sm:text-sm text-slate-800 leading-snug sm:leading-relaxed font-normal">
+            <p className="text-xs sm:text-sm text-slate-800 leading-snug sm:leading-relaxed font-normal capa-soluciones-empresas-parrafo capa-parrafo">
               Diseñamos soluciones a la medida del perfil operativo y el número de colaboradores de tu organización, orientadas a mitigar riesgos biológicos, reducir el ausentismo y proteger a tu talento.
             </p>
 
@@ -121,11 +121,11 @@ export const CapaSolucionesEmpresas: React.FC<CapaSolucionesEmpresasProps> = ({ 
             <span>Alineación Estratégica con la Productividad</span>
           </div>
 
-          <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-950 tracking-tight">
+          <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-950 tracking-tight capa-soluciones-empresas-titulo capa-titulo">
             Salud Ocupacional con Impacto Real en el Negocio
           </h2>
 
-          <p className="text-xs sm:text-sm text-slate-700 leading-relaxed">
+          <p className="text-xs sm:text-sm text-slate-700 leading-relaxed capa-soluciones-empresas-parrafo capa-parrafo">
             En <strong>NIVAL Sciences</strong> concebimos la salud corporativa no como un mero requisito formal de cumplimiento, sino como un pilar estratégico de continuidad y bienestar para la organización. Diseñamos soluciones ajustadas al perfil operativo, número de colaboradores y habilitación de cada empresa.
           </p>
 
@@ -143,10 +143,10 @@ export const CapaSolucionesEmpresas: React.FC<CapaSolucionesEmpresasProps> = ({ 
         <div className="max-w-6xl mx-auto space-y-10">
           
           <div className="text-center max-w-2xl mx-auto">
-            <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-950 tracking-tight">
+            <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-950 tracking-tight capa-soluciones-empresas-titulo capa-titulo">
               Líneas de Solución Corporativa
             </h2>
-            <p className="text-xs sm:text-sm text-slate-600 mt-1.5">
+            <p className="text-xs sm:text-sm text-slate-600 mt-1.5 capa-soluciones-empresas-subtitulo capa-subtitulo">
               Cuatro ejes de servicio diseñados para pymes, instituciones y corporaciones
             </p>
           </div>

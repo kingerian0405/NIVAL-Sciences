@@ -68,8 +68,8 @@ export function App() {
         onSelectCapa={handleSelectCapa}
       />
 
-      {/* Vista de la Capa Activa */}
-      <main className="flex-1">
+      {/* Vista de la Capa Activa con clase identificadora para control tipográfico en index.css */}
+      <main className={`flex-1 capa-${activeCapaId}`}>
         {renderActiveCapa()}
       </main>
 
