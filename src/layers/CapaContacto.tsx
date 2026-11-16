@@ -102,9 +102,9 @@ export const CapaContacto: React.FC<CapaContactoProps> = ({ onSelectCapa }) => {
                       <Clock className="w-4 h-4" />
                     </div>
                     <div>
-                      <strong className="block text-slate-950 font-bold">Horario de Toma y Atención:</strong>
-                      <span className="text-slate-600 text-xs block">Lunes a Viernes: 7:00 AM – 4:00 PM</span>
-                      <span className="text-slate-600 text-xs block">Sábados: 7:30 AM – 1:00 PM</span>
+                      <strong className="block text-slate-950 font-bold">Horarios de Atención Oficial:</strong>
+                      <span className="text-slate-700 text-xs block font-medium">Lunes a Viernes: 7:00 AM – 7:00 PM</span>
+                      <span className="text-slate-700 text-xs block font-medium">Sábados y Domingos: 7:00 AM – 6:00 PM</span>
                       <span className="text-amber-800 text-[11px] font-semibold block mt-1">Toma a domicilio previa programación.</span>
                     </div>
                   </div>
@@ -114,9 +114,16 @@ export const CapaContacto: React.FC<CapaContactoProps> = ({ onSelectCapa }) => {
                       <Phone className="w-4 h-4" />
                     </div>
                     <div>
-                      <strong className="block text-slate-950 font-bold">Líneas de Atención:</strong>
-                      <span className="text-slate-600 text-xs block">+58 (412) 000-0000 (Atención general)</span>
-                      <span className="text-slate-600 text-xs block">+58 (212) 000-0000 (Sede administrativa)</span>
+                      <strong className="block text-slate-950 font-bold">Canal Oficial de WhatsApp:</strong>
+                      <a 
+                        href="https://wa.me/584129058894?text=Hola%20NIVAL%20Sciences,%20quisiera%20solicitar%20información%20y%20atención"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-emerald-700 hover:text-emerald-800 font-bold text-sm block hover:underline"
+                      >
+                        +58 412 9058894 (Atención Inmediata)
+                      </a>
+                      <span className="text-slate-600 text-xs block">Consultas, cotizaciones y agendamiento</span>
                     </div>
                   </div>
 
@@ -137,6 +144,18 @@ export const CapaContacto: React.FC<CapaContactoProps> = ({ onSelectCapa }) => {
                 <div className="pt-4 border-t border-slate-100 flex items-start space-x-2 text-[11px] text-slate-600">
                   <ShieldCheck className="w-4 h-4 text-emerald-700 shrink-0 mt-0.5" />
                   <span>Garantía de confidencialidad y estricto apego a normas de protección de datos sanitarios.</span>
+                </div>
+
+                <div className="pt-2">
+                  <a
+                    href="https://wa.me/584129058894?text=Hola%20NIVAL%20Sciences,%20quisiera%20solicitar%20información%20y%20atención"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-full py-3 px-4 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-extrabold text-xs sm:text-sm transition-colors flex items-center justify-center space-x-2 shadow-xs cursor-pointer"
+                  >
+                    <Phone className="w-4 h-4" />
+                    <span>Iniciar Chat por WhatsApp (+58 412 9058894)</span>
+                  </a>
                 </div>
               </div>
 

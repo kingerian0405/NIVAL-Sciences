@@ -1,5 +1,5 @@
 import React from 'react';
-import { ShieldCheck, ArrowRight } from 'lucide-react';
+import { ShieldCheck, ArrowRight, Clock, MessageCircle } from 'lucide-react';
 import { CAPAS } from '../layers/layerData';
 
 interface InstitutionalFooterProps {
@@ -32,10 +32,10 @@ export const InstitutionalFooter: React.FC<InstitutionalFooterProps> = ({ onSele
 
       {/* Contenido principal del pie de página */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14">
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-10">
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-8 lg:gap-10">
           
-          {/* Columna Marca (5 cols) */}
-          <div className="md:col-span-5 space-y-4">
+          {/* Columna Marca (4 cols) */}
+          <div className="md:col-span-4 space-y-4">
             <div className="flex items-center space-x-3 bg-white/95 p-2 rounded-xl border border-slate-400 w-fit">
               <img 
                 src={`${import.meta.env.BASE_URL}Nival.jpeg`} 
@@ -48,8 +48,8 @@ export const InstitutionalFooter: React.FC<InstitutionalFooterProps> = ({ onSele
               “La visión que necesitas para vivir como sueñas”
             </p>
 
-            <p className="text-slate-300 text-xs sm:text-sm leading-relaxed max-w-md">
-              Ecosistema integral de salud, asesoría, prevención, formación e innovación. Documento base para orientar el desarrollo institucional, la presencia digital y la expansión de servicios.
+            <p className="text-slate-300 text-xs leading-relaxed max-w-sm">
+              Ecosistema integral de salud, diagnóstico clínico, asesoría especializada, prevención y gestión del conocimiento.
             </p>
 
             <div className="pt-1 text-[11px] font-semibold text-slate-400 tracking-widest uppercase">
@@ -57,12 +57,12 @@ export const InstitutionalFooter: React.FC<InstitutionalFooterProps> = ({ onSele
             </div>
           </div>
 
-          {/* Columna Navegación (7 cols) */}
-          <div className="md:col-span-7">
+          {/* Columna Navegación (4 cols) */}
+          <div className="md:col-span-4">
             <h4 className="text-xs font-bold uppercase tracking-wider text-slate-300 mb-4">
               Navegación Institucional
             </h4>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5 text-xs">
               {CAPAS.map((capa) => (
                 <button
                   key={capa.id}
@@ -74,6 +74,34 @@ export const InstitutionalFooter: React.FC<InstitutionalFooterProps> = ({ onSele
                 </button>
               ))}
             </div>
+          </div>
+
+          {/* Columna Horarios y WhatsApp (4 cols) */}
+          <div className="md:col-span-4 space-y-4">
+            <h4 className="text-xs font-bold uppercase tracking-wider text-slate-300 mb-4">
+              Horarios y Atención Oficial
+            </h4>
+            
+            <div className="bg-slate-950 p-4 rounded-xl border border-slate-800 space-y-2 text-xs">
+              <div className="flex items-start space-x-2.5">
+                <Clock className="w-4 h-4 text-amber-400 shrink-0 mt-0.5" />
+                <div className="space-y-1 text-slate-300">
+                  <p className="text-white font-bold text-xs">Horario de Atención:</p>
+                  <p><strong>Lunes a Viernes:</strong> 7:00 AM – 7:00 PM</p>
+                  <p><strong>Sábados y Domingos:</strong> 7:00 AM – 6:00 PM</p>
+                </div>
+              </div>
+            </div>
+
+            <a
+              href="https://wa.me/584129058894?text=Hola%20NIVAL%20Sciences,%20quisiera%20solicitar%20información%20y%20atención"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-full py-2.5 px-4 rounded-lg bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs flex items-center justify-center space-x-2 transition-colors shadow-xs"
+            >
+              <MessageCircle className="w-4 h-4" />
+              <span>WhatsApp: +58 412 9058894</span>
+            </a>
           </div>
 
         </div>

@@ -6,7 +6,9 @@ import {
   Lightbulb, 
   HeartHandshake,
   ChevronLeft,
-  ChevronRight
+  ChevronRight,
+  Clock,
+  MessageCircle
 } from 'lucide-react';
 
 interface CapaInicioProps {
@@ -51,39 +53,65 @@ export const CapaInicio: React.FC<CapaInicioProps> = ({ onSelectCapa }) => {
         style={{ backgroundImage: `url(${import.meta.env.BASE_URL}fondo.jpeg)` }}
       >
         {/* Capa de iluminación y descanso óptico para garantizar máxima legibilidad */}
-        <div className="absolute inset-0 bg-gradient-to-r from-white/95 via-white/80 to-white/30 sm:to-transparent"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-white via-white/95 to-white/60 sm:to-white/30"></div>
 
-        <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-10 py-6 sm:py-16 lg:py-20">
-          <div className="max-w-xl text-left space-y-2.5 sm:space-y-4">
+        <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-10 py-8 sm:py-16 lg:py-20">
+          <div className="max-w-2xl text-left space-y-3 sm:space-y-4">
             
             {/* Lema Principal Oficial */}
-            <h1 className="text-2xl sm:text-4xl lg:text-5xl font-extrabold text-slate-950 font-serif leading-tight sm:leading-[1.14] tracking-tight italic">
+            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-black text-slate-950 font-serif leading-tight sm:leading-[1.14] tracking-tight italic">
               “La visión que necesitas para vivir como sueñas”
             </h1>
 
             {/* Franja de Enfoque Institucional con Subrayado Dorado */}
             <div>
-              <span className="inline-block font-extrabold text-slate-950 text-xs sm:text-sm pb-1 sm:pb-1.5 border-b-2 sm:border-b-[3px] border-nival-gold tracking-tight">
-                Salud integral con visión preventiva, tecnologia y acompañamiento profesional
+              <span className="inline-block font-extrabold text-slate-950 text-sm sm:text-base pb-1.5 border-b-2 sm:border-b-[3px] border-nival-gold tracking-tight">
+                Salud integral con visión preventiva, tecnología y acompañamiento profesional
               </span>
             </div>
 
-            {/* Párrafo Descriptivo Institucional */}
-            <p className="text-xs sm:text-sm text-slate-800 leading-snug sm:leading-relaxed font-normal">
-              Desarrollamos y ofrecemos soluciones integrales mediante servicios diagnósticos confiables, asesoría especializada a personas naturales y empresas, programas de prevención, formación científica e innovación tecnológica, integrando conocimiento, talento humano y herramientas digitales para facilitar decisiones oportunas, fortalecer capacidades y contribuir al bienestar individual, organizacional y colectivo.
+            {/* Párrafo Descriptivo Institucional (Acortado y con mayor tamaño para máxima legibilidad) */}
+            <p className="text-sm sm:text-base lg:text-lg text-slate-900 leading-relaxed font-medium">
+              Soluciones integrales en diagnóstico clínico, prevención y asesoría especializada. Combinamos rigor científico, tecnología moderna y calidez humana para cuidar de ti, tu familia y tu organización.
             </p>
 
-            {/* Botón de Acción Principal */}
-            <div className="pt-2 sm:pt-4">
+            {/* Botones de Acción: Cita y WhatsApp */}
+            <div className="pt-2 sm:pt-4 flex flex-col sm:flex-row items-stretch sm:items-center gap-3">
               <button
                 onClick={() => {
                   onSelectCapa('contacto');
                   window.scrollTo({ top: 0, behavior: 'smooth' });
                 }}
-                className="w-full sm:w-auto text-center px-6 py-2.5 sm:py-3 rounded-lg bg-nival-gold hover:bg-nival-gold-hover text-slate-950 font-extrabold text-xs sm:text-sm shadow-xs transition-all cursor-pointer"
+                className="w-full sm:w-auto text-center px-7 py-3 rounded-xl bg-nival-gold hover:bg-nival-gold-hover text-slate-950 font-extrabold text-sm sm:text-base shadow-xs transition-all cursor-pointer"
               >
                 Solicitar atención
               </button>
+
+              <a
+                href="https://wa.me/584129058894?text=Hola%20NIVAL%20Sciences,%20quisiera%20solicitar%20información%20y%20atención"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full sm:w-auto text-center px-6 py-3 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-sm sm:text-base shadow-xs transition-all flex items-center justify-center space-x-2"
+              >
+                <MessageCircle className="w-5 h-5" />
+                <span>WhatsApp: +58 412 9058894</span>
+              </a>
+            </div>
+
+            {/* Horarios de Atención Oficiales */}
+            <div className="pt-3 border-t border-slate-300/80 mt-2 flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4 text-xs sm:text-sm text-slate-800">
+              <div className="flex items-center space-x-1.5 text-slate-950 font-bold shrink-0">
+                <Clock className="w-4 h-4 text-amber-700 shrink-0" />
+                <span>Horarios de Atención:</span>
+              </div>
+              <div className="flex flex-wrap items-center gap-2 text-slate-800 font-semibold text-xs sm:text-sm">
+                <span className="bg-white/90 px-2.5 py-1 rounded-md border border-slate-300 shadow-2xs">
+                  Lun a Vie: 7:00 AM – 7:00 PM
+                </span>
+                <span className="bg-white/90 px-2.5 py-1 rounded-md border border-slate-300 shadow-2xs">
+                  Sáb y Dom: 7:00 AM – 6:00 PM
+                </span>
+              </div>
             </div>
 
           </div>

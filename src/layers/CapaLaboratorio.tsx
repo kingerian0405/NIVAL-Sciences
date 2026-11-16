@@ -409,8 +409,8 @@ export const CapaLaboratorio: React.FC<CapaLaboratorioProps> = ({ onSelectCapa }
                 Toma de muestras bajo condiciones controladas de bioseguridad, con personal altamente capacitado y atención por orden de llegada o cita previa.
               </p>
               <div className="pt-2 text-xs text-slate-800 space-y-1 bg-nival-section-light p-3.5 rounded-xl border border-slate-200">
-                <p><strong>Lunes a Viernes:</strong> 7:00 AM – 4:00 PM</p>
-                <p><strong>Sábados:</strong> 7:30 AM – 1:00 PM</p>
+                <p><strong>Lunes a Viernes:</strong> 7:00 AM – 7:00 PM</p>
+                <p><strong>Sábados y Domingos:</strong> 7:00 AM – 6:00 PM</p>
               </div>
             </div>
 
@@ -426,7 +426,17 @@ export const CapaLaboratorio: React.FC<CapaLaboratorioProps> = ({ onSelectCapa }
                 Equipo profesional de extracción trasladado con cadena de frío y materiales estériles para pacientes con movilidad reducida o jornadas programadas.
               </p>
               <div className="pt-2 text-xs text-slate-800 space-y-1 bg-nival-section-light p-3.5 rounded-xl border border-slate-200">
-                <p><strong>Coordinación previa:</strong> Canales de contacto institucional</p>
+                <p>
+                  <strong>Coordinación directa:</strong>{' '}
+                  <a 
+                    href="https://wa.me/584129058894?text=Hola%20NIVAL%20Sciences,%20quisiera%20agendar%20una%20toma%20de%20muestra%20a%20domicilio" 
+                    target="_blank" 
+                    rel="noopener noreferrer" 
+                    className="text-emerald-700 font-bold hover:underline"
+                  >
+                    WhatsApp +58 412 9058894
+                  </a>
+                </p>
                 <p><strong>Cobertura:</strong> Domicilios particulares, residencias y sedes corporativas</p>
               </div>
             </div>

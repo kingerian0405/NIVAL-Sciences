@@ -29,8 +29,19 @@ export const InstitutionalHeader: React.FC<InstitutionalHeaderProps> = ({
             <span className="text-slate-500 shrink-0">•</span>
             <span className="italic text-slate-200 truncate">“La visión que necesitas para vivir como sueñas”</span>
           </div>
-          <div className="hidden md:block text-slate-400 tracking-wider text-[10px] uppercase font-semibold shrink-0 ml-2">
-            Ciencia · Salud · Conocimiento · Innovación
+          <div className="hidden md:flex items-center space-x-4 shrink-0 ml-2">
+            <span className="text-slate-300 font-medium">
+              Lun a Vie: 7am – 7pm · Sáb y Dom: 7am – 6pm
+            </span>
+            <span className="text-slate-600">•</span>
+            <a 
+              href="https://wa.me/584129058894?text=Hola%20NIVAL%20Sciences,%20quisiera%20solicitar%20información%20y%20atención"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-emerald-400 hover:text-emerald-300 font-bold flex items-center space-x-1 transition-colors"
+            >
+              <span>WhatsApp: +58 412 9058894</span>
+            </a>
           </div>
         </div>
       </div>
@@ -116,6 +127,23 @@ export const InstitutionalHeader: React.FC<InstitutionalHeaderProps> = ({
               </button>
             );
           })}
+
+          {/* Horarios y WhatsApp en Menú Móvil */}
+          <div className="pt-4 mt-3 border-t border-slate-200 space-y-2.5">
+            <div className="text-[11px] text-slate-700 bg-slate-50 p-3 rounded-lg border border-slate-200 space-y-1">
+              <p className="font-bold text-slate-900">Horarios de Atención:</p>
+              <p>Lun a Vie: 7:00 AM – 7:00 PM</p>
+              <p>Sáb y Dom: 7:00 AM – 6:00 PM</p>
+            </div>
+            <a
+              href="https://wa.me/584129058894?text=Hola%20NIVAL%20Sciences,%20quisiera%20solicitar%20información%20y%20atención"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-full py-2.5 px-3 rounded-lg bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-xs flex items-center justify-center space-x-2 shadow-xs transition-colors"
+            >
+              <span>WhatsApp: +58 412 9058894</span>
+            </a>
+          </div>
         </div>
       )}
     </header>
