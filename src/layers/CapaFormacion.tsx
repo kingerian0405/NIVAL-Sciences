@@ -24,7 +24,7 @@ export const CapaFormacion: React.FC<CapaFormacionProps> = ({ onSelectCapa }) =>
   );
 
   return (
-    <div className="w-full bg-nival-main text-slate-900 capa-formacion">
+    <div className="w-full bg-nival-main text-slate-900 capa-formacion overflow-x-hidden">
       
       {/* 1. HERO INSTITUCIONAL CON IMAGEN DE FONDO (fondo.jpeg) */}
       <section 
@@ -117,8 +117,8 @@ export const CapaFormacion: React.FC<CapaFormacionProps> = ({ onSelectCapa }) =>
               </p>
             </div>
 
-            {/* Filtros */}
-            <div className="flex items-center gap-1.5 self-start sm:self-auto">
+            {/* Filtros adaptados para móviles sin desborde horizontal */}
+            <div className="flex flex-wrap items-center gap-1.5 self-start sm:self-auto max-w-full">
               {['todos', 'Profesionales', 'Empresas', 'Comunidad'].map((item) => (
                 <button
                   key={item}

@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
-import { 
-  Phone, 
-  Mail, 
-  MapPin, 
-  Clock, 
-  Send, 
-  CheckCircle2, 
+import {
+  Phone,
+  Mail,
+  MapPin,
+  Clock,
+  Send,
+  CheckCircle2,
   ShieldCheck,
   Building,
   User,
@@ -37,9 +37,9 @@ export const CapaContacto: React.FC<CapaContactoProps> = ({ onSelectCapa }) => {
 
   return (
     <div className="w-full bg-nival-main text-slate-900 capa-contacto">
-      
+
       {/* 1. HERO INSTITUCIONAL CON IMAGEN DE FONDO (fondo.jpeg) */}
-      <section 
+      <section
         className="relative w-full bg-cover bg-center overflow-hidden border-b border-slate-300"
         style={{ backgroundImage: `url(${import.meta.env.BASE_URL}fondo.jpeg)` }}
       >
@@ -47,7 +47,7 @@ export const CapaContacto: React.FC<CapaContactoProps> = ({ onSelectCapa }) => {
 
         <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-10 py-8 sm:py-16 lg:py-20">
           <div className="max-w-2xl text-left space-y-3 sm:space-y-4">
-            
+
             <h1 className="text-2xl sm:text-4xl lg:text-5xl font-extrabold text-slate-950 font-serif leading-tight sm:leading-[1.14] tracking-tight italic capa-contacto-titulo capa-titulo-hero">
               “La visión que necesitas para vivir como sueñas”
             </h1>
@@ -69,12 +69,12 @@ export const CapaContacto: React.FC<CapaContactoProps> = ({ onSelectCapa }) => {
       {/* 2. DIRECTORIO OFICIAL Y FORMULARIO INSTITUCIONAL */}
       <section className="bg-nival-section-light py-16 sm:py-20 px-4 sm:px-6 border-b border-slate-300">
         <div className="max-w-6xl mx-auto">
-          
+
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12">
-            
+
             {/* Columna Izquierda: Directorio de Atención (5 cols) */}
-            <div className="lg:col-span-5 space-y-6">
-              
+            <div className="lg:col-span-12 space-y-6">
+
               <div className="bg-white rounded-2xl p-6 sm:p-8 border border-slate-200 space-y-6 shadow-xs">
                 <div>
                   <span className="text-xs font-bold text-amber-700 uppercase tracking-wider block">
@@ -86,7 +86,7 @@ export const CapaContacto: React.FC<CapaContactoProps> = ({ onSelectCapa }) => {
                 </div>
 
                 <div className="space-y-5 text-xs sm:text-sm text-slate-800">
-                  
+
                   <div className="flex items-start space-x-3.5">
                     <div className="w-9 h-9 rounded-xl bg-amber-100 flex items-center justify-center text-amber-800 shrink-0">
                       <MapPin className="w-4 h-4" />
@@ -115,13 +115,13 @@ export const CapaContacto: React.FC<CapaContactoProps> = ({ onSelectCapa }) => {
                     </div>
                     <div>
                       <strong className="block text-slate-950 font-bold">Canal Oficial de WhatsApp:</strong>
-                      <a 
+                      <a
                         href="https://wa.me/584129058894?text=Hola%20NIVAL%20Sciences,%20quisiera%20solicitar%20información%20y%20atención"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="text-emerald-700 hover:text-emerald-800 font-bold text-sm block hover:underline"
                       >
-                        +58 412 9058894 (Atención Inmediata)
+                        <span className="whitespace-nowrap">+58 412 9058894</span> (Atención Inmediata)
                       </a>
                       <span className="text-slate-600 text-xs block">Consultas, cotizaciones y agendamiento</span>
                     </div>
@@ -151,17 +151,19 @@ export const CapaContacto: React.FC<CapaContactoProps> = ({ onSelectCapa }) => {
                     href="https://wa.me/584129058894?text=Hola%20NIVAL%20Sciences,%20quisiera%20solicitar%20información%20y%20atención"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="w-full py-3 px-4 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-extrabold text-xs sm:text-sm transition-colors flex items-center justify-center space-x-2 shadow-xs cursor-pointer"
+                    className="w-full py-3 px-4 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-extrabold text-xs sm:text-sm transition-colors flex items-center justify-center space-x-2 shadow-xs cursor-pointer text-center"
                   >
-                    <Phone className="w-4 h-4" />
-                    <span>Iniciar Chat por WhatsApp (+58 412 9058894)</span>
+                    <Phone className="w-4 h-4 shrink-0" />
+                    <span>
+                      Iniciar Chat por WhatsApp <span className="whitespace-nowrap">(+58 412 9058894)</span>
+                    </span>
                   </a>
                 </div>
               </div>
 
             </div>
 
-            {/* Columna Derecha: Formulario Formal de Solicitudes (7 cols) */}
+            {/* Columna Derecha: Formulario Formal de Solicitudes (7 cols) 
             <div className="lg:col-span-7">
               <div className="bg-white rounded-2xl p-6 sm:p-8 border border-slate-200 space-y-6 shadow-sm">
                 
@@ -177,7 +179,7 @@ export const CapaContacto: React.FC<CapaContactoProps> = ({ onSelectCapa }) => {
                   </p>
                 </div>
 
-                {/* Selector de Tipo de Gestión */}
+                {/* Selector de Tipo de Gestión 
                 <div className="grid grid-cols-3 gap-2">
                   <button
                     type="button"
@@ -315,13 +317,13 @@ export const CapaContacto: React.FC<CapaContactoProps> = ({ onSelectCapa }) => {
                     </button>
                   </form>
                 )}
-
-              </div>
+        </div>
             </div>
-
+*/}
           </div>
 
         </div>
+
       </section>
 
     </div>

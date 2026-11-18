@@ -163,22 +163,16 @@ export const CapaLaboratorio: React.FC<CapaLaboratorioProps> = ({ onSelectCapa }
       <section id="catalogo" className="bg-nival-section-light py-16 sm:py-20 px-4 sm:px-6 border-b border-slate-300">
         <div className="max-w-6xl mx-auto space-y-8">
 
-          <div className="flex flex-col md:flex-row md:items-end justify-between gap-4">
-            <div>
-              <span className="text-xs font-bold text-amber-600 uppercase tracking-wider block mb-1">
-                Baterías Analíticas y Exámenes Individuales
-              </span>
-              <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-950 tracking-tight capa-laboratorio-titulo capa-titulo">
-                Catálogo Oficial de Servicios Diagnósticos
-              </h2>
-              <p className="text-xs sm:text-sm text-slate-600 mt-1 capa-laboratorio-subtitulo capa-subtitulo">
-                Consulta requisitos preanalíticos, tiempos de entrega y tarifas oficiales:
-              </p>
-            </div>
-
-            <div className="text-xs text-slate-600 font-semibold bg-white px-3.5 py-1.5 rounded-xl border border-slate-200 self-start md:self-auto shadow-2xs">
-              Mostrando <strong className="text-slate-950">{filteredTests.length}</strong> de <strong className="text-slate-950">{LAB_TESTS.length}</strong> pruebas
-            </div>
+          <div>
+            <span className="text-xs font-bold text-amber-600 uppercase tracking-wider block mb-1">
+              Baterías Analíticas y Exámenes Individuales
+            </span>
+            <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-950 tracking-tight capa-laboratorio-titulo capa-titulo">
+              Catálogo Oficial de Servicios Diagnósticos
+            </h2>
+            <p className="text-xs sm:text-sm text-slate-600 mt-1 capa-laboratorio-subtitulo capa-subtitulo">
+              Consulta requisitos preanalíticos, tiempos de entrega y tarifas oficiales:
+            </p>
           </div>
 
           {/* Barra de Filtro y Búsqueda */}
@@ -195,27 +189,18 @@ export const CapaLaboratorio: React.FC<CapaLaboratorioProps> = ({ onSelectCapa }
             </div>
 
             <div className="flex items-center overflow-x-auto gap-1.5 pb-1 no-scrollbar">
-              {categories.map((cat) => {
-                const count = cat.id === 'todos'
-                  ? LAB_TESTS.length
-                  : LAB_TESTS.filter(t => t.category === cat.id).length;
-                return (
-                  <button
-                    key={cat.id}
-                    onClick={() => setSelectedCategory(cat.id)}
-                    className={`px-3 py-1.5 rounded-lg text-xs font-semibold whitespace-nowrap cursor-pointer transition-colors flex items-center space-x-1.5 ${selectedCategory === cat.id
-                      ? 'bg-nival-gold text-slate-950 font-bold shadow-xs'
-                      : 'bg-white text-slate-700 hover:bg-slate-100 border border-slate-200'
-                      }`}
-                  >
-                    <span>{cat.label}</span>
-                    <span className={`text-[10px] px-1.5 py-0.2 rounded-full font-mono ${selectedCategory === cat.id ? 'bg-slate-950/20 text-slate-950 font-bold' : 'bg-slate-100 text-slate-600'
-                      }`}>
-                      {count}
-                    </span>
-                  </button>
-                );
-              })}
+              {categories.map((cat) => (
+                <button
+                  key={cat.id}
+                  onClick={() => setSelectedCategory(cat.id)}
+                  className={`px-3 py-1.5 rounded-lg text-xs font-semibold whitespace-nowrap cursor-pointer transition-colors ${selectedCategory === cat.id
+                    ? 'bg-nival-gold text-slate-950 font-bold shadow-xs'
+                    : 'bg-white text-slate-700 hover:bg-slate-100 border border-slate-200'
+                    }`}
+                >
+                  <span>{cat.label}</span>
+                </button>
+              ))}
             </div>
           </div>
 
@@ -426,13 +411,13 @@ export const CapaLaboratorio: React.FC<CapaLaboratorioProps> = ({ onSelectCapa }
                 Equipo profesional de extracción trasladado con cadena de frío y materiales estériles para pacientes con movilidad reducida o jornadas programadas.
               </p>
               <div className="pt-2 text-xs text-slate-800 space-y-1 bg-nival-section-light p-3.5 rounded-xl border border-slate-200">
-                <p>
-                  <strong>Coordinación directa:</strong>{' '}
-                  <a 
-                    href="https://wa.me/584129058894?text=Hola%20NIVAL%20Sciences,%20quisiera%20agendar%20una%20toma%20de%20muestra%20a%20domicilio" 
-                    target="_blank" 
-                    rel="noopener noreferrer" 
-                    className="text-emerald-700 font-bold hover:underline"
+                <p className="flex flex-wrap items-center gap-x-1.5">
+                  <strong>Coordinación directa:</strong>
+                  <a
+                    href="https://wa.me/584129058894?text=Hola%20NIVAL%20Sciences,%20quisiera%20agendar%20una%20toma%20de%20muestra%20a%20domicilio"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-emerald-700 font-bold hover:underline inline-block whitespace-nowrap"
                   >
                     WhatsApp +58 412 9058894
                   </a>
