@@ -46,9 +46,9 @@ export const CapaInicio: React.FC<CapaInicioProps> = ({ onSelectCapa }) => {
   return (
     <div className="w-full bg-nival-main text-slate-900 capa-inicio">
 
-      {/* SECCIÓN 1: HERO CON VIDEO DE FONDO (Nival video.mp4) - PANTALLA COMPLETA */}
+      {/* SECCIÓN 1: HERO CON VIDEO DE FONDO (Nival video.mp4) - AJUSTADO EXACTO A LA VISTA DE LA PANTALLA */}
       <section
-        className="relative w-full min-h-[calc(100vh-74px)] min-h-[calc(100dvh-74px)] lg:min-h-[calc(100vh-96px)] lg:min-h-[calc(100dvh-96px)] flex flex-col justify-between overflow-hidden border-b border-slate-300 bg-slate-950"
+        className="relative w-full h-[calc(100vh-74px)] h-[calc(100dvh-74px)] lg:h-[calc(100vh-96px)] lg:h-[calc(100dvh-96px)] min-h-[460px] flex flex-col justify-between overflow-hidden border-b border-slate-300 bg-slate-950"
       >
         {/* Video en bucle continuo de fondo */}
         <video
@@ -65,27 +65,27 @@ export const CapaInicio: React.FC<CapaInicioProps> = ({ onSelectCapa }) => {
         {/* Pequeño gradiente azul rey en la izquierda para acentuar el texto y dar profundidad */}
         <div className="absolute inset-0 z-1 bg-gradient-to-r from-[#0d1e42]/85 via-[#0d1e42]/35 via-40% to-transparent pointer-events-none"></div>
 
-        <div className="relative z-10 w-full max-w-6xl mx-auto px-4 sm:px-10 py-16 sm:py-24 lg:py-28 my-auto">
-          <div className="max-w-2xl text-left space-y-4 sm:space-y-6">
+        <div className="relative z-10 w-full max-w-6xl mx-auto px-4 sm:px-10 py-6 sm:py-10 lg:py-12 my-auto">
+          <div className="max-w-2xl text-left space-y-3 sm:space-y-4 lg:space-y-5">
 
             {/* Lema Principal Oficial - Texto blanco con sombra para destacar sobre el video */}
-            <h1 className="text-3xl sm:text-5xl lg:text-6xl font-black text-white font-serif leading-tight sm:leading-[1.12] tracking-tight italic drop-shadow-[0_2px_12px_rgba(0,0,0,0.85)] capa-inicio-titulo-hero capa-titulo-hero">
+            <h1 className="text-2xl sm:text-4xl lg:text-5xl xl:text-6xl font-black text-white font-serif leading-tight sm:leading-[1.12] tracking-tight italic drop-shadow-[0_2px_12px_rgba(0,0,0,0.85)] capa-inicio-titulo-hero capa-titulo-hero">
               “La visión que necesitas para vivir como sueñas”
             </h1>
 
             {/* Franja de Enfoque Institucional - Texto blanco nítido y limpio */}
-            <p className="text-white font-semibold text-base sm:text-lg lg:text-xl tracking-tight leading-relaxed drop-shadow-[0_1px_6px_rgba(0,0,0,0.85)] capa-inicio-subtitulo capa-subtitulo">
+            <p className="text-white font-semibold text-sm sm:text-base lg:text-lg tracking-tight leading-relaxed drop-shadow-[0_1px_6px_rgba(0,0,0,0.85)] capa-inicio-subtitulo capa-subtitulo">
               Salud integral con visión preventiva, tecnología y acompañamiento profesional.
             </p>
 
-            {/* Botón de Acción Principal - Ubicado más abajo según requerimiento */}
-            <div className="pt-8 sm:pt-14 lg:pt-16">
+            {/* Botón de Acción Principal - Ubicado con separación armónica */}
+            <div className="pt-4 sm:pt-6 lg:pt-8">
               <button
                 onClick={() => {
                   onSelectCapa('contacto');
                   window.scrollTo({ top: 0, behavior: 'smooth' });
                 }}
-                className="w-full sm:w-auto text-center px-8 py-3.5 sm:py-4 rounded-xl bg-nival-gold hover:bg-nival-gold-hover text-slate-950 font-extrabold text-base sm:text-lg shadow-lg hover:shadow-xl transition-all cursor-pointer"
+                className="w-full sm:w-auto text-center px-8 py-3 sm:py-3.5 rounded-xl bg-nival-gold hover:bg-nival-gold-hover text-slate-950 font-extrabold text-sm sm:text-base lg:text-lg shadow-lg hover:shadow-xl transition-all cursor-pointer"
               >
                 Solicitar atención
               </button>
@@ -95,7 +95,7 @@ export const CapaInicio: React.FC<CapaInicioProps> = ({ onSelectCapa }) => {
         </div>
 
         {/* Indicador sutil de scroll hacia valores */}
-        <div className="relative z-10 w-full text-center pb-4 pt-2 hidden sm:flex flex-col items-center justify-center text-white/70 hover:text-white text-[11px] font-semibold tracking-widest uppercase opacity-80 hover:opacity-100 transition-opacity">
+        <div className="relative z-10 w-full text-center pb-3 pt-1 hidden sm:flex flex-col items-center justify-center text-white/70 hover:text-white text-[11px] font-semibold tracking-widest uppercase opacity-80 hover:opacity-100 transition-opacity">
           <span>Desliza para explorar</span>
           <ChevronDown className="w-4 h-4 animate-bounce mt-1 text-white/80" />
         </div>
