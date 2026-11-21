@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import {
   Clock,
   Droplet,
@@ -11,7 +11,13 @@ import {
   ShieldCheck,
   FileText,
   FileCheck2,
-  Sparkles
+  Sparkles,
+  ShoppingCart,
+  Plus,
+  Check,
+  Trash2,
+  X,
+  MessageCircle
 } from 'lucide-react';
 import { LAB_TESTS } from '../data/labTests';
 import { LabTest } from '../types';
@@ -24,6 +30,75 @@ export const CapaLaboratorio: React.FC<CapaLaboratorioProps> = ({ onSelectCapa }
   const [search, setSearch] = useState('');
   const [selectedCategory, setSelectedCategory] = useState<string>('todos');
   const [activeTest, setActiveTest] = useState<LabTest | null>(LAB_TESTS[0]);
+
+  // Carrito de compras / lista de exámenes para cotización directa
+  const [cart, setCart] = useState<LabTest[]>(() => {
+    try {
+      const saved = localStorage.getItem('nival_lab_cart');
+      return saved ? JSON.parse(saved) : [];
+    } catch {
+      return [];
+    }
+  });
+  const [isCartOpen, setIsCartOpen] = useState(false);
+
+  useEffect(() => {
+    try {
+      localStorage.setItem('nival_lab_cart', JSON.stringify(cart));
+    } catch {
+      // ignore
+    }
+  }, [cart]);
+
+  const parsePrice = (priceStr?: string): number => {
+    if (!priceStr) return 0;
+    const cleaned = priceStr.replace(',', '.').replace(/[^0-9.]/g, '');
+    const val = parseFloat(cleaned);
+    return isNaN(val) ? 0 : val;
+  };
+
+  const formatPriceUSD = (val: number): string => {
+    return `$${val.toFixed(2).replace('.', ',')}`;
+  };
+
+  const isInCart = (id: string) => cart.some(item => item.id === id);
+
+  const toggleCartItem = (test: LabTest) => {
+    setCart(prev => {
+      if (prev.some(item => item.id === test.id)) {
+        return prev.filter(item => item.id !== test.id);
+      } else {
+        return [...prev, test];
+      }
+    });
+  };
+
+  const removeFromCart = (id: string) => {
+    setCart(prev => prev.filter(item => item.id !== id));
+  };
+
+  const clearCart = () => {
+    setCart([]);
+  };
+
+  const totalUSD = cart.reduce((acc, test) => acc + parsePrice(test.price), 0);
+  const maxFastingHours = cart.length > 0 ? Math.max(...cart.map(t => t.fastingHours || 0)) : 0;
+
+  const handleWhatsAppCheckout = () => {
+    if (cart.length === 0) return;
+    const testLines = cart
+      .map((t, idx) => `• ${t.name}${t.abbreviation ? ` [${t.abbreviation}]` : ''}: ${t.price || 'A consultar'} USD`)
+      .join('\n');
+
+    const fastingText = maxFastingHours > 0
+      ? `\n⏳ *Ayuno recomendado:* ${maxFastingHours} horas continuas`
+      : '\n⏳ *Ayuno:* No requiere ayuno estricto';
+
+    const text = `Hola NIVAL Sciences, quisiera solicitar presupuesto y coordinar los siguientes exámenes de laboratorio:\n\n${testLines}\n\n📊 *Total de exámenes:* ${cart.length}\n💵 *Total estimado:* ${formatPriceUSD(totalUSD)} USD\n🇻🇪 *(Referencia en Bolívares pagadero a tasa oficial BCV del día)*${fastingText}\n\n¿Podrían indicarme disponibilidad para la toma de muestra y los pasos para confirmar? ¡Muchas gracias!`;
+
+    const url = `https://wa.me/584129058894?text=${encodeURIComponent(text)}`;
+    window.open(url, '_blank');
+  };
 
   const categories = [
     { id: 'todos', label: 'Todos los Exámenes' },
@@ -170,10 +245,63 @@ export const CapaLaboratorio: React.FC<CapaLaboratorioProps> = ({ onSelectCapa }
             <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-950 tracking-tight capa-laboratorio-titulo capa-titulo">
               Catálogo Oficial de Servicios Diagnósticos
             </h2>
-            <p className="text-xs sm:text-sm text-slate-600 mt-1 capa-laboratorio-subtitulo capa-subtitulo">
-              Consulta requisitos preanalíticos, tiempos de entrega y tarifas oficiales:
-            </p>
+            <div className="flex flex-wrap items-center gap-2 mt-1.5">
+              <p className="text-xs sm:text-sm text-slate-600 capa-laboratorio-subtitulo capa-subtitulo">
+                Consulta requisitos preanalíticos, tiempos de entrega y tarifas oficiales:
+              </p>
+              <span className="inline-flex items-center text-[11px] font-bold text-emerald-900 bg-emerald-100 px-2.5 py-0.5 rounded-md border border-emerald-300">
+                Tarifas en USD · Ref. en Bolívares (Bs.) a tasa oficial BCV
+              </span>
+              {cart.length > 0 && (
+                <button
+                  onClick={() => setIsCartOpen(true)}
+                  className="inline-flex items-center space-x-1.5 text-[11px] font-bold text-slate-950 bg-nival-gold hover:bg-nival-gold-hover px-2.5 py-0.5 rounded-md shadow-2xs cursor-pointer transition-colors"
+                >
+                  <ShoppingCart className="w-3.5 h-3.5" />
+                  <span>Mi lista: {cart.length} {cart.length === 1 ? 'examen' : 'exámenes'} ({formatPriceUSD(totalUSD)} USD)</span>
+                </button>
+              )}
+            </div>
           </div>
+
+          {/* Barra de Resumen en Página de Exámenes Seleccionados (cuando hay al menos 1) */}
+          {cart.length > 0 && (
+            <div className="bg-gradient-to-r from-slate-950 via-slate-900 to-slate-950 text-white p-4 sm:p-5 rounded-2xl shadow-md border border-amber-500/40 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+              <div className="flex items-center space-x-3.5">
+                <div className="w-10 h-10 rounded-xl bg-nival-gold text-slate-950 flex items-center justify-center font-bold text-sm shrink-0 shadow-xs">
+                  <ShoppingCart className="w-5 h-5" />
+                </div>
+                <div>
+                  <div className="flex items-center space-x-2 flex-wrap">
+                    <span className="font-extrabold text-sm text-white">
+                      {cart.length} {cart.length === 1 ? 'examen seleccionado' : 'exámenes seleccionados'} en tu lista
+                    </span>
+                    <span className="bg-nival-gold/20 text-amber-300 text-xs font-mono font-bold px-2 py-0.5 rounded-md border border-nival-gold/40">
+                      Total: {formatPriceUSD(totalUSD)} USD
+                    </span>
+                  </div>
+                  <p className="text-[11px] text-slate-300 mt-1">
+                    *Precios de referencia en USD · Pagaderos en Bolívares (Bs.) a tasa oficial del Banco Central de Venezuela (BCV) del día.
+                  </p>
+                </div>
+              </div>
+              <div className="flex items-center gap-2.5 shrink-0">
+                <button
+                  onClick={() => setIsCartOpen(true)}
+                  className="px-4 py-2 rounded-xl bg-white/10 hover:bg-white/20 text-white text-xs font-bold border border-white/20 transition-all cursor-pointer flex items-center space-x-1"
+                >
+                  <span>Ver lista ({cart.length})</span>
+                </button>
+                <button
+                  onClick={handleWhatsAppCheckout}
+                  className="px-4 py-2 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-extrabold shadow-md transition-all cursor-pointer flex items-center space-x-1.5"
+                >
+                  <MessageCircle className="w-4 h-4 fill-current shrink-0" />
+                  <span>Pedir por WhatsApp</span>
+                </button>
+              </div>
+            </div>
+          )}
 
           {/* Barra de Filtro y Búsqueda */}
           <div className="space-y-3">
@@ -211,13 +339,16 @@ export const CapaLaboratorio: React.FC<CapaLaboratorioProps> = ({ onSelectCapa }
             <div className="lg:col-span-5 space-y-2 max-h-[620px] overflow-y-auto pr-1">
               {filteredTests.map((test) => {
                 const isSelected = activeTest?.id === test.id;
+                const inCart = isInCart(test.id);
                 return (
                   <div
                     key={test.id}
                     onClick={() => setActiveTest(test)}
                     className={`p-4 rounded-xl border text-left cursor-pointer transition-all ${isSelected
                       ? 'bg-nival-gold text-slate-950 border-nival-gold shadow-sm scale-[1.01]'
-                      : 'bg-white text-slate-950 border-slate-200 hover:border-slate-400 shadow-2xs'
+                      : inCart
+                        ? 'bg-emerald-50/50 text-slate-950 border-emerald-300 shadow-2xs'
+                        : 'bg-white text-slate-950 border-slate-200 hover:border-slate-400 shadow-2xs'
                       }`}
                   >
                     <div className="flex items-center justify-between text-[11px] mb-1.5 gap-2">
@@ -225,24 +356,60 @@ export const CapaLaboratorio: React.FC<CapaLaboratorioProps> = ({ onSelectCapa }
                         {test.categoryLabel}
                       </span>
                       {test.price && (
-                        <span className={`font-mono font-bold text-xs shrink-0 px-2 py-0.5 rounded ${isSelected
-                          ? 'bg-slate-950/15 text-slate-800 border border-slate-950/20'
-                          : 'bg-slate-100 text-slate-900 border border-slate-200'
-                          }`}>
-                          {test.price}
-                        </span>
+                        <div className="flex flex-col items-end shrink-0">
+                          <span className={`font-mono font-bold text-xs px-2 py-0.5 rounded ${isSelected
+                            ? 'bg-slate-950/15 text-slate-950 border border-slate-950/20'
+                            : inCart
+                              ? 'bg-emerald-100 text-emerald-900 border border-emerald-300'
+                              : 'bg-slate-100 text-slate-900 border border-slate-200'
+                            }`}>
+                            {test.price} USD
+                          </span>
+                          <span className={`text-[9px] font-semibold mt-0.5 ${isSelected ? 'text-slate-800' : 'text-slate-500'}`}>
+                            Ref. Bs. BCV
+                          </span>
+                        </div>
                       )}
                     </div>
                     <h4 className="font-bold text-sm leading-snug">
                       {test.name}
                     </h4>
                     <div className="flex items-center justify-between text-[11px] mt-2 pt-2 border-t border-slate-200/60">
-                      <span className={`font-mono font-semibold ${isSelected ? 'text-slate-800' : 'text-slate-700'}`}>
-                        {test.abbreviation ? `[${test.abbreviation}]` : ''}
-                      </span>
-                      <span className={isSelected ? 'text-slate-800 font-medium' : 'text-slate-600'}>
-                        {test.fastingHours > 0 ? `${test.fastingHours}h ayuno` : 'Sin ayuno'}
-                      </span>
+                      <div className="flex items-center space-x-2">
+                        <span className={`font-mono font-semibold ${isSelected ? 'text-slate-800' : 'text-slate-700'}`}>
+                          {test.abbreviation ? `[${test.abbreviation}]` : ''}
+                        </span>
+                        <span className={isSelected ? 'text-slate-800 font-medium' : 'text-slate-600'}>
+                          {test.fastingHours > 0 ? `${test.fastingHours}h ayuno` : 'Sin ayuno'}
+                        </span>
+                      </div>
+                      <button
+                        type="button"
+                        onClick={(e) => {
+                          e.stopPropagation();
+                          toggleCartItem(test);
+                        }}
+                        className={`px-2.5 py-1 rounded-md text-[11px] font-bold transition-all cursor-pointer flex items-center space-x-1 ${
+                          inCart
+                            ? 'bg-emerald-600 text-white hover:bg-emerald-700 shadow-2xs'
+                            : isSelected
+                              ? 'bg-slate-950 text-white hover:bg-slate-800 shadow-2xs'
+                              : 'bg-slate-100 hover:bg-nival-gold text-slate-800 hover:text-slate-950 border border-slate-200'
+                        }`}
+                        title={inCart ? 'Quitar de la lista' : 'Agregar a la lista'}
+                      >
+                        {inCart ? (
+                          <>
+                            <Check className="w-3 h-3 text-white" />
+                            <span>En lista</span>
+                          </>
+                        ) : (
+                          <>
+                            <Plus className="w-3 h-3" />
+                            <span>+ Lista</span>
+                          </>
+                        )}
+                      </button>
                     </div>
                   </div>
                 );
@@ -281,24 +448,40 @@ export const CapaLaboratorio: React.FC<CapaLaboratorioProps> = ({ onSelectCapa }
                           <span className="text-[10px] uppercase font-bold tracking-wider text-slate-700 block">
                             Tarifa Oficial del Examen
                           </span>
-                          <div className="flex items-baseline space-x-1.5 mt-0.5">
+                          <div className="flex flex-wrap items-baseline gap-x-2 gap-y-1 mt-0.5">
                             <span className="text-2xl sm:text-3xl font-black font-mono text-slate-950">
                               {activeTest.price}
                             </span>
                             <span className="text-xs text-slate-700 font-bold">
                               USD
                             </span>
+                            <span className="text-[11px] font-bold text-emerald-900 bg-emerald-100 px-2 py-0.5 rounded-md border border-emerald-300">
+                              Ref. en Bs. a tasa oficial BCV
+                            </span>
                           </div>
                         </div>
-                        <button
-                          onClick={() => {
-                            onSelectCapa('contacto');
-                            window.scrollTo({ top: 0, behavior: 'smooth' });
-                          }}
-                          className="px-5 py-2.5 rounded-lg bg-nival-gold hover:bg-nival-gold-hover text-slate-950 text-xs font-bold transition-all shadow-xs cursor-pointer text-center"
-                        >
-                          Consultar / Agendar este Examen &rarr;
-                        </button>
+                        <div className="flex flex-wrap items-center gap-2">
+                          <button
+                            onClick={() => toggleCartItem(activeTest)}
+                            className={`px-4 py-2.5 rounded-xl text-xs font-bold transition-all shadow-xs cursor-pointer flex items-center space-x-1.5 ${
+                              isInCart(activeTest.id)
+                                ? 'bg-emerald-600 hover:bg-emerald-700 text-white'
+                                : 'bg-nival-gold hover:bg-nival-gold-hover text-slate-950'
+                            }`}
+                          >
+                            {isInCart(activeTest.id) ? (
+                              <>
+                                <Check className="w-4 h-4" />
+                                <span>En tu lista (Quitar)</span>
+                              </>
+                            ) : (
+                              <>
+                                <Plus className="w-4 h-4" />
+                                <span>Agregar a mi lista</span>
+                              </>
+                            )}
+                          </button>
+                        </div>
                       </div>
                     )}
 
@@ -430,6 +613,200 @@ export const CapaLaboratorio: React.FC<CapaLaboratorioProps> = ({ onSelectCapa }
 
         </div>
       </section>
+
+      {/* 5. CARRITO FLOTANTE / BARRA DE ACCIÓN DIRECTA */}
+      {cart.length > 0 && (
+        <div className="fixed bottom-4 sm:bottom-6 left-1/2 -translate-x-1/2 w-[calc(100%-2rem)] max-w-xl z-40 bg-slate-950/95 backdrop-blur-md text-white rounded-2xl shadow-2xl p-3 sm:p-4 border border-amber-500/50 flex items-center justify-between gap-3 animate-in fade-in slide-in-from-bottom-4 duration-300">
+          <div
+            onClick={() => setIsCartOpen(true)}
+            className="flex items-center space-x-3 cursor-pointer group min-w-0"
+          >
+            <div className="relative">
+              <div className="w-10 h-10 rounded-xl bg-nival-gold text-slate-950 flex items-center justify-center font-bold shadow-xs">
+                <ShoppingCart className="w-5 h-5" />
+              </div>
+              <span className="absolute -top-1.5 -right-1.5 bg-emerald-500 text-white text-[10px] font-black w-5 h-5 rounded-full flex items-center justify-center border-2 border-slate-950 shadow-xs">
+                {cart.length}
+              </span>
+            </div>
+            <div className="min-w-0">
+              <div className="flex items-baseline space-x-1.5 truncate">
+                <span className="font-extrabold text-xs sm:text-sm text-white">
+                  {cart.length} {cart.length === 1 ? 'examen' : 'exámenes'}
+                </span>
+                <span className="text-amber-400 font-mono font-black text-sm sm:text-base">
+                  {formatPriceUSD(totalUSD)} USD
+                </span>
+              </div>
+              <span className="text-[10px] text-slate-400 block truncate">
+                Ref. en Bs. a tasa oficial BCV
+              </span>
+            </div>
+          </div>
+
+          <div className="flex items-center gap-2 shrink-0">
+            <button
+              onClick={() => setIsCartOpen(true)}
+              className="hidden sm:inline-flex px-3 py-2 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 text-xs font-semibold border border-slate-700 transition-colors cursor-pointer"
+            >
+              Ver lista
+            </button>
+            <button
+              onClick={handleWhatsAppCheckout}
+              className="px-4 py-2 sm:py-2.5 rounded-xl bg-emerald-500 hover:bg-emerald-600 text-white font-extrabold text-xs sm:text-sm shadow-md hover:shadow-lg transition-all flex items-center space-x-1.5 cursor-pointer whitespace-nowrap"
+            >
+              <MessageCircle className="w-4 h-4 fill-current shrink-0" />
+              <span>Pedir por WhatsApp</span>
+            </button>
+          </div>
+        </div>
+      )}
+
+      {/* 6. MODAL / DETALLE DE LA LISTA DE EXÁMENES (CARRITO) */}
+      {isCartOpen && (
+        <div 
+          className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-950/70 backdrop-blur-xs animate-in fade-in duration-200"
+          onClick={() => setIsCartOpen(false)}
+        >
+          <div
+            className="bg-white w-full max-w-2xl rounded-3xl shadow-2xl border border-slate-200 overflow-hidden flex flex-col max-h-[90vh] animate-in zoom-in-95 duration-200"
+            onClick={(e) => e.stopPropagation()}
+          >
+            {/* Header del Modal */}
+            <div className="bg-slate-900 text-white px-6 py-4.5 flex items-center justify-between border-b border-slate-800">
+              <div className="flex items-center space-x-2.5">
+                <div className="w-8 h-8 rounded-lg bg-amber-400 text-slate-950 flex items-center justify-center font-bold">
+                  <ShoppingCart className="w-4 h-4" />
+                </div>
+                <div>
+                  <h3 className="font-extrabold text-base text-white">
+                    Mi Lista de Exámenes para Cotizar
+                  </h3>
+                  <span className="text-[11px] text-slate-300">
+                    {cart.length} {cart.length === 1 ? 'prueba seleccionada' : 'pruebas seleccionadas'}
+                  </span>
+                </div>
+              </div>
+              <button
+                onClick={() => setIsCartOpen(false)}
+                className="p-1.5 rounded-lg text-slate-400 hover:text-white hover:bg-slate-800 transition-colors cursor-pointer"
+              >
+                <X className="w-5 h-5" />
+              </button>
+            </div>
+
+            {/* Lista de Exámenes agregados */}
+            <div className="p-4 sm:p-6 overflow-y-auto space-y-2.5 divide-y divide-slate-100 flex-1">
+              {cart.map((test) => (
+                <div key={test.id} className="pt-2.5 first:pt-0 flex items-center justify-between gap-3">
+                  <div className="min-w-0 flex-1">
+                    <div className="flex items-center gap-1.5 flex-wrap">
+                      <span className="font-bold text-xs sm:text-sm text-slate-950 leading-snug">
+                        {test.name}
+                      </span>
+                      {test.abbreviation && (
+                        <span className="text-[10px] font-mono text-slate-500 bg-slate-100 px-1.5 py-0.5 rounded">
+                          {test.abbreviation}
+                        </span>
+                      )}
+                    </div>
+                    <div className="flex items-center gap-2 text-[11px] text-slate-500 mt-0.5">
+                      <span className="truncate">{test.categoryLabel}</span>
+                      <span>•</span>
+                      <span>{test.fastingHours > 0 ? `${test.fastingHours}h ayuno` : 'Sin ayuno'}</span>
+                    </div>
+                  </div>
+
+                  <div className="flex items-center space-x-3 shrink-0">
+                    <div className="text-right">
+                      <span className="font-mono font-black text-sm text-slate-950 block">
+                        {test.price || 'Consultar'}
+                      </span>
+                      <span className="text-[10px] text-slate-500 font-medium block">
+                        USD (Ref. BCV)
+                      </span>
+                    </div>
+                    <button
+                      onClick={() => removeFromCart(test.id)}
+                      className="p-1.5 rounded-lg text-rose-500 hover:bg-rose-50 hover:text-rose-700 transition-colors cursor-pointer"
+                      title="Eliminar de la lista"
+                    >
+                      <Trash2 className="w-4 h-4" />
+                    </button>
+                  </div>
+                </div>
+              ))}
+
+              {cart.length === 0 && (
+                <div className="py-12 text-center space-y-2">
+                  <p className="text-sm text-slate-500 font-medium">
+                    No has agregado ningún examen a tu lista aún.
+                  </p>
+                  <p className="text-xs text-slate-400">
+                    Explora el catálogo y presiona "+ Lista" o "Agregar a mi lista".
+                  </p>
+                </div>
+              )}
+            </div>
+
+            {/* Footer con Totales y Botón WhatsApp */}
+            {cart.length > 0 && (
+              <div className="bg-slate-50 border-t border-slate-200 p-4 sm:p-6 space-y-4">
+                
+                {/* Nota de ayuno e indicación BCV */}
+                <div className="bg-amber-50 rounded-xl p-3 border border-amber-200 text-xs text-amber-900 space-y-1">
+                  <div className="flex items-center space-x-1.5 font-bold">
+                    <Clock className="w-3.5 h-3.5 text-amber-700 shrink-0" />
+                    <span>
+                      {maxFastingHours > 0
+                        ? `Ayuno máximo requerido: ${maxFastingHours} horas continuas.`
+                        : 'Ninguno de los exámenes agregados requiere ayuno prolongado.'}
+                    </span>
+                  </div>
+                  <p className="text-[11px] text-amber-800 leading-relaxed font-normal">
+                    * Todos los precios en dólares (USD) son referenciales. Los pagos en Bolívares (Bs.) se liquidan a la tasa oficial del Banco Central de Venezuela (BCV) del día de la atención.
+                  </p>
+                </div>
+
+                {/* Subtotal y Total */}
+                <div className="flex items-center justify-between pt-1">
+                  <div>
+                    <span className="text-xs font-bold uppercase tracking-wider text-slate-500 block">
+                      Total Estimado ({cart.length} {cart.length === 1 ? 'examen' : 'exámenes'})
+                    </span>
+                    <span className="text-[11px] text-slate-600 font-medium">
+                      Pagadero en Bs. a tasa oficial BCV
+                    </span>
+                  </div>
+                  <div className="text-right">
+                    <span className="text-2xl sm:text-3xl font-black font-mono text-slate-950 block">
+                      {formatPriceUSD(totalUSD)} <span className="text-sm font-sans font-bold text-slate-600">USD</span>
+                    </span>
+                  </div>
+                </div>
+
+                {/* Botones de Acción */}
+                <div className="flex flex-col sm:flex-row items-center gap-2.5 pt-2">
+                  <button
+                    onClick={clearCart}
+                    className="w-full sm:w-auto px-4 py-3 rounded-xl bg-slate-200 hover:bg-slate-300 text-slate-700 text-xs font-bold transition-colors cursor-pointer text-center"
+                  >
+                    Vaciar Lista
+                  </button>
+                  <button
+                    onClick={handleWhatsAppCheckout}
+                    className="w-full sm:flex-1 px-6 py-3.5 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-extrabold text-sm shadow-md hover:shadow-lg transition-all flex items-center justify-center space-x-2 cursor-pointer"
+                  >
+                    <MessageCircle className="w-4 h-4 fill-current shrink-0" />
+                    <span>Pedir esta lista por WhatsApp (+58 412 9058894)</span>
+                  </button>
+                </div>
+
+              </div>
+            )}
+          </div>
+        </div>
+      )}
 
     </div>
   );
