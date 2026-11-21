@@ -62,6 +62,9 @@ export const CapaInicio: React.FC<CapaInicioProps> = ({ onSelectCapa }) => {
           <source src={`${import.meta.env.BASE_URL}nival-video.mp4`} type="video/mp4" />
         </video>
 
+        {/* Pequeño gradiente azul rey en la izquierda para acentuar el texto y dar profundidad */}
+        <div className="absolute inset-0 z-1 bg-gradient-to-r from-[#0d1e42]/85 via-[#0d1e42]/35 via-40% to-transparent pointer-events-none"></div>
+
         <div className="relative z-10 w-full max-w-6xl mx-auto px-4 sm:px-10 py-16 sm:py-24 lg:py-28 my-auto">
           <div className="max-w-2xl text-left space-y-4 sm:space-y-6">
 
