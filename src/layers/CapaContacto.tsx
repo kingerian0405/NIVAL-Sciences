@@ -43,22 +43,22 @@ export const CapaContacto: React.FC<CapaContactoProps> = ({ onSelectCapa }) => {
         className="relative w-full bg-cover bg-center overflow-hidden border-b border-slate-300"
         style={{ backgroundImage: `url(${import.meta.env.BASE_URL}fondo.jpeg)` }}
       >
-        <div className="absolute inset-0 bg-gradient-to-r from-white/95 via-white/85 to-white/40 sm:to-transparent"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-[#0d1e42]/85 via-[#0d1e42]/35 via-40% to-transparent pointer-events-none"></div>
 
         <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-10 py-8 sm:py-16 lg:py-20">
           <div className="max-w-2xl text-left space-y-3 sm:space-y-4">
             
-            <h1 className="text-2xl sm:text-4xl lg:text-5xl font-extrabold text-slate-950 font-serif leading-tight sm:leading-[1.14] tracking-tight italic capa-contacto-titulo capa-titulo-hero">
+            <h1 className="text-2xl sm:text-4xl lg:text-5xl font-extrabold text-white font-serif leading-tight sm:leading-[1.14] tracking-tight italic drop-shadow-[0_2px_12px_rgba(0,0,0,0.85)] capa-contacto-titulo capa-titulo-hero">
               “La visión que necesitas para vivir como sueñas”
             </h1>
 
             <div>
-              <span className="inline-block font-extrabold text-slate-950 text-xs sm:text-sm pb-1 sm:pb-1.5 border-b-2 sm:border-b-[3px] border-nival-gold tracking-tight capa-contacto-subtitulo capa-subtitulo">
+              <span className="inline-block font-extrabold text-white text-xs sm:text-sm pb-1 sm:pb-1.5 border-b-2 sm:border-b-[3px] border-nival-gold tracking-tight drop-shadow-[0_1px_6px_rgba(0,0,0,0.85)] capa-contacto-subtitulo capa-subtitulo">
                 Atención y Enlace Institucional · Contacto Directo
               </span>
             </div>
 
-            <p className="text-xs sm:text-sm text-slate-800 leading-snug sm:leading-relaxed font-normal capa-contacto-parrafo capa-parrafo">
+            <p className="text-xs sm:text-sm text-white/95 leading-snug sm:leading-relaxed font-normal drop-shadow-[0_1px_4px_rgba(0,0,0,0.85)] capa-contacto-parrafo capa-parrafo">
               Puntos formales de contacto para agendamiento de exámenes de laboratorio, tomas a domicilio, convenios corporativos para empresas, alianzas académicas y atención al usuario.
             </p>
 
