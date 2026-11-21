@@ -63,12 +63,8 @@ export const CapaInicio: React.FC<CapaInicioProps> = ({ onSelectCapa }) => {
           <source src={`${import.meta.env.BASE_URL}nival-video.mp4`} type="video/mp4" />
         </video>
 
-        {/* Capa de iluminación y descanso óptico equilibrada: protege el texto a la izquierda y deja el video visible y vibrante */}
-        <div className="absolute inset-0 z-1 bg-gradient-to-r from-white/95 via-white/80 to-white/20 sm:to-transparent pointer-events-none"></div>
-        <div className="absolute inset-0 z-1 bg-gradient-to-t from-white/80 via-transparent to-black/10 pointer-events-none"></div>
-
         <div className="relative z-10 w-full max-w-6xl mx-auto px-4 sm:px-10 py-12 sm:py-20 lg:py-24 my-auto">
-          <div className="max-w-2xl text-left space-y-4 sm:space-y-6 sm:bg-white/40 sm:backdrop-blur-[2px] sm:p-8 sm:rounded-3xl sm:border sm:border-white/50 sm:shadow-xs">
+          <div className="max-w-2xl text-left space-y-4 sm:space-y-6">
 
             {/* Lema Principal Oficial */}
             <h1 className="text-3xl sm:text-5xl lg:text-6xl font-black text-slate-950 font-serif leading-tight sm:leading-[1.12] tracking-tight italic drop-shadow-2xs capa-inicio-titulo capa-titulo-hero">
