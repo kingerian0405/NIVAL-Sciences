@@ -62,12 +62,9 @@ export const InstitutionalHeader: React.FC<InstitutionalHeaderProps> = ({
                 className="h-8 sm:h-12 w-auto object-contain rounded-md"
               />
             </div>
-            <div className="hidden sm:flex flex-col border-l border-slate-200 pl-3">
-              <span className="text-xs font-bold text-slate-950 tracking-tight">
+            <div className="hidden sm:flex flex-col border-l border-slate-200 pl-3 justify-center">
+              <span className="text-xs sm:text-sm font-bold text-slate-950 tracking-tight">
                 Ecosistema Integral de Salud
-              </span>
-              <span className="text-[11px] text-amber-800 italic font-semibold">
-                “La visión que necesitas para vivir como sueñas”
               </span>
             </div>
           </button>
