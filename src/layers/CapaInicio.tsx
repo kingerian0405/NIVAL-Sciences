@@ -7,8 +7,7 @@ import {
   HeartHandshake,
   ChevronLeft,
   ChevronRight,
-  ChevronDown,
-  Clock
+  ChevronDown
 } from 'lucide-react';
 
 interface CapaInicioProps {
@@ -63,57 +62,39 @@ export const CapaInicio: React.FC<CapaInicioProps> = ({ onSelectCapa }) => {
           <source src={`${import.meta.env.BASE_URL}nival-video.mp4`} type="video/mp4" />
         </video>
 
-        <div className="relative z-10 w-full max-w-6xl mx-auto px-4 sm:px-10 py-12 sm:py-20 lg:py-24 my-auto">
+        <div className="relative z-10 w-full max-w-6xl mx-auto px-4 sm:px-10 py-16 sm:py-24 lg:py-28 my-auto">
           <div className="max-w-2xl text-left space-y-4 sm:space-y-6">
 
-            {/* Lema Principal Oficial */}
-            <h1 className="text-3xl sm:text-5xl lg:text-6xl font-black text-slate-950 font-serif leading-tight sm:leading-[1.12] tracking-tight italic drop-shadow-2xs capa-inicio-titulo capa-titulo-hero">
+            {/* Lema Principal Oficial - Texto blanco con sombra para destacar sobre el video */}
+            <h1 className="text-3xl sm:text-5xl lg:text-6xl font-black text-white font-serif leading-tight sm:leading-[1.12] tracking-tight italic drop-shadow-[0_2px_12px_rgba(0,0,0,0.85)] capa-inicio-titulo-hero capa-titulo-hero">
               “La visión que necesitas para vivir como sueñas”
             </h1>
 
-            {/* Franja de Enfoque Institucional con Subrayado Dorado (visible solo en pantallas sm/desktop) */}
-            <div>
-              <span className="inline-block font-extrabold text-slate-950 text-sm sm:text-lg pb-0 sm:pb-2 border-b-0 sm:border-b-[3px] border-nival-gold tracking-tight capa-inicio-subtitulo capa-subtitulo">
-                Salud integral con visión preventiva, tecnología y acompañamiento profesional
-              </span>
-            </div>
+            {/* Franja de Enfoque Institucional - Texto blanco nítido y limpio */}
+            <p className="text-white font-semibold text-base sm:text-lg lg:text-xl tracking-tight leading-relaxed drop-shadow-[0_1px_6px_rgba(0,0,0,0.85)] capa-inicio-subtitulo capa-subtitulo">
+              Salud integral con visión preventiva, tecnología y acompañamiento profesional.
+            </p>
 
-            {/* Botón de Acción Principal */}
-            <div className="pt-2 sm:pt-4">
+            {/* Botón de Acción Principal - Ubicado más abajo según requerimiento */}
+            <div className="pt-8 sm:pt-14 lg:pt-16">
               <button
                 onClick={() => {
                   onSelectCapa('contacto');
                   window.scrollTo({ top: 0, behavior: 'smooth' });
                 }}
-                className="w-full sm:w-auto text-center px-8 py-3.5 sm:py-4 rounded-xl bg-nival-gold hover:bg-nival-gold-hover text-slate-950 font-extrabold text-base sm:text-lg shadow-sm hover:shadow-md transition-all cursor-pointer"
+                className="w-full sm:w-auto text-center px-8 py-3.5 sm:py-4 rounded-xl bg-nival-gold hover:bg-nival-gold-hover text-slate-950 font-extrabold text-base sm:text-lg shadow-lg hover:shadow-xl transition-all cursor-pointer"
               >
                 Solicitar atención
               </button>
-            </div>
-
-            {/* Horarios de Atención Oficiales */}
-            <div className="pt-4 border-t border-slate-300/80 mt-4 flex flex-col sm:flex-row sm:items-center gap-2.5 sm:gap-4 text-xs sm:text-sm text-slate-800">
-              <div className="flex items-center space-x-1.5 text-slate-950 font-bold shrink-0">
-                <Clock className="w-4 h-4 text-amber-700 shrink-0" />
-                <span>Horarios de Atención:</span>
-              </div>
-              <div className="flex flex-wrap items-center gap-2 text-slate-800 font-semibold text-xs sm:text-sm">
-                <span className="bg-white/95 px-3 py-1 rounded-md border border-slate-300 shadow-2xs">
-                  Lun a Vie: 7:00 AM – 7:00 PM
-                </span>
-                <span className="bg-white/95 px-3 py-1 rounded-md border border-slate-300 shadow-2xs">
-                  Sáb y Dom: 7:00 AM – 6:00 PM
-                </span>
-              </div>
             </div>
 
           </div>
         </div>
 
         {/* Indicador sutil de scroll hacia valores */}
-        <div className="relative z-10 w-full text-center pb-4 pt-2 hidden sm:flex flex-col items-center justify-center text-slate-600 text-[11px] font-semibold tracking-wider uppercase opacity-80 hover:opacity-100 transition-opacity">
+        <div className="relative z-10 w-full text-center pb-4 pt-2 hidden sm:flex flex-col items-center justify-center text-white/70 hover:text-white text-[11px] font-semibold tracking-widest uppercase opacity-80 hover:opacity-100 transition-opacity">
           <span>Desliza para explorar</span>
-          <ChevronDown className="w-4 h-4 animate-bounce mt-1 text-slate-700" />
+          <ChevronDown className="w-4 h-4 animate-bounce mt-1 text-white/80" />
         </div>
       </section>
 

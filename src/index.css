@@ -43,6 +43,7 @@
      3. TAMAÑOS PERSONALIZABLES POR CAPA (Modifica aquí individualmente)
      -------------------------------------------------------------------------- */
   /* Capa Inicio */
+  --capa-inicio-hero-title: var(--nival-font-hero-title);
   --capa-inicio-titulo: var(--nival-font-section-title);
   --capa-inicio-subtitulo: var(--nival-font-subtitle);
   --capa-inicio-parrafo: var(--nival-font-body);
@@ -198,6 +199,11 @@
    ========================================================================== */
 
 /* --- 1. CAPA INICIO --- */
+.capa-inicio-titulo-hero,
+.capa-inicio .capa-titulo-hero {
+  font-size: var(--capa-inicio-hero-title) !important;
+  line-height: 1.15 !important;
+}
 .capa-inicio-titulo,
 .capa-inicio .capa-titulo {
   font-size: var(--capa-inicio-titulo) !important;
