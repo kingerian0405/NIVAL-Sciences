@@ -47,16 +47,28 @@ export const CapaInicio: React.FC<CapaInicioProps> = ({ onSelectCapa }) => {
   return (
     <div className="w-full bg-nival-main text-slate-900 capa-inicio">
 
-      {/* SECCIÓN 1: HERO CON IMAGEN DE FONDO (fondo.jpeg) - PANTALLA COMPLETA */}
+      {/* SECCIÓN 1: HERO CON VIDEO DE FONDO (Nival video.mp4) - PANTALLA COMPLETA */}
       <section
-        className="relative w-full min-h-[calc(100vh-74px)] min-h-[calc(100dvh-74px)] lg:min-h-[calc(100vh-96px)] lg:min-h-[calc(100dvh-96px)] flex flex-col justify-between bg-cover bg-center overflow-hidden border-b border-slate-300"
-        style={{ backgroundImage: `url(${import.meta.env.BASE_URL}fondo.jpeg)` }}
+        className="relative w-full min-h-[calc(100vh-74px)] min-h-[calc(100dvh-74px)] lg:min-h-[calc(100vh-96px)] lg:min-h-[calc(100dvh-96px)] flex flex-col justify-between overflow-hidden border-b border-slate-300 bg-slate-950"
       >
-        {/* Capa de iluminación y descanso óptico para garantizar máxima legibilidad */}
-        <div className="absolute inset-0 bg-gradient-to-r from-white via-white/95 to-white/60 sm:to-white/30"></div>
+        {/* Video en bucle continuo de fondo */}
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          poster={`${import.meta.env.BASE_URL}fondo.jpeg`}
+          className="absolute inset-0 w-full h-full object-cover z-0 pointer-events-none"
+        >
+          <source src={`${import.meta.env.BASE_URL}nival-video.mp4`} type="video/mp4" />
+        </video>
+
+        {/* Capa de iluminación y descanso óptico equilibrada: protege el texto a la izquierda y deja el video visible y vibrante */}
+        <div className="absolute inset-0 z-1 bg-gradient-to-r from-white/95 via-white/80 to-white/20 sm:to-transparent pointer-events-none"></div>
+        <div className="absolute inset-0 z-1 bg-gradient-to-t from-white/80 via-transparent to-black/10 pointer-events-none"></div>
 
         <div className="relative z-10 w-full max-w-6xl mx-auto px-4 sm:px-10 py-12 sm:py-20 lg:py-24 my-auto">
-          <div className="max-w-2xl text-left space-y-4 sm:space-y-6">
+          <div className="max-w-2xl text-left space-y-4 sm:space-y-6 sm:bg-white/40 sm:backdrop-blur-[2px] sm:p-8 sm:rounded-3xl sm:border sm:border-white/50 sm:shadow-xs">
 
             {/* Lema Principal Oficial */}
             <h1 className="text-3xl sm:text-5xl lg:text-6xl font-black text-slate-950 font-serif leading-tight sm:leading-[1.12] tracking-tight italic drop-shadow-2xs capa-inicio-titulo capa-titulo-hero">
@@ -90,10 +102,10 @@ export const CapaInicio: React.FC<CapaInicioProps> = ({ onSelectCapa }) => {
                 <span>Horarios de Atención:</span>
               </div>
               <div className="flex flex-wrap items-center gap-2 text-slate-800 font-semibold text-xs sm:text-sm">
-                <span className="bg-white/90 px-3 py-1 rounded-md border border-slate-300 shadow-2xs">
+                <span className="bg-white/95 px-3 py-1 rounded-md border border-slate-300 shadow-2xs">
                   Lun a Vie: 7:00 AM – 7:00 PM
                 </span>
-                <span className="bg-white/90 px-3 py-1 rounded-md border border-slate-300 shadow-2xs">
+                <span className="bg-white/95 px-3 py-1 rounded-md border border-slate-300 shadow-2xs">
                   Sáb y Dom: 7:00 AM – 6:00 PM
                 </span>
               </div>
@@ -103,9 +115,9 @@ export const CapaInicio: React.FC<CapaInicioProps> = ({ onSelectCapa }) => {
         </div>
 
         {/* Indicador sutil de scroll hacia valores */}
-        <div className="relative z-10 w-full text-center pb-4 pt-2 hidden sm:flex flex-col items-center justify-center text-slate-500 text-[11px] font-semibold tracking-wider uppercase opacity-70 hover:opacity-100 transition-opacity">
+        <div className="relative z-10 w-full text-center pb-4 pt-2 hidden sm:flex flex-col items-center justify-center text-slate-600 text-[11px] font-semibold tracking-wider uppercase opacity-80 hover:opacity-100 transition-opacity">
           <span>Desliza para explorar</span>
-          <ChevronDown className="w-4 h-4 animate-bounce mt-1 text-slate-600" />
+          <ChevronDown className="w-4 h-4 animate-bounce mt-1 text-slate-700" />
         </div>
       </section>
 
